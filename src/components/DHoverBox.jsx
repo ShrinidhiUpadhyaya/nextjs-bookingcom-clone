@@ -7,7 +7,7 @@ const DHoverCard = ({ label = "label", value = "value", selected = true, onClick
     <div
       className={cn("flex px-4 py-4 text-sm rounded-md text-black ", {
         "bg-[#006ce40f] text-[#006ce4]": selected,
-        "hover:bg-[#dfe4e6]": !selected,
+        "hover:bg-[#F2F2F2]": !selected,
       })}
       onClick={onClick}
     >

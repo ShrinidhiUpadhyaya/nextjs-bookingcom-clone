@@ -8,97 +8,13 @@ import { buttonVariants } from "./ui/button";
 import DSquareButton from "./DSquareButton";
 import { Globe } from "lucide-react";
 import { HelpCircle } from "lucide-react";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { af } from "date-fns/locale";
 import DHoverBox from "./DHoverBox";
-import { Button } from "@/components/ui/button";
-const suggestedCurrencies = [
-  {
-    id: "usdDollar",
-    name: "U.S. Dollar",
-    currencyCode: "USD",
-    selected: false,
-  },
-  {
-    id: "swissFranc",
-    name: "Swiss Franc",
-    currencyCode: "CHF",
-    selected: false,
-  },
-  {
-    id: "mexicanPeso",
-    name: "Mecian Peso",
-    currencyCode: "MXN",
-    selected: false,
-  },
-  {
-    id: "poundSterling",
-    name: "Pound Sterling",
-    currencyCode: "GBP",
-    selected: false,
-  },
-  {
-    id: "brazilianReal",
-    name: "Brazilian Real",
-    currencyCode: "BRL",
-    selected: false,
-  },
-  {
-    id: "indianRupee",
-    name: "Indian Rupee",
-    currencyCode: "INR",
-    selected: true,
-  },
-];
+import { suggestedCurrencies, currencyDialogStrings } from "@/lib/constants";
+import DDialog from "./DDialog";
 
 const TopNavBar = () => {
-  const [languageDialog, setLanguageDialog] = useState(false);
-  const [currentCurrency, setCurrentCurrency] = useState([
-    {
-      id: "usdDollar",
-      name: "U.S. Dollar",
-      currencyCode: "USD",
-      selected: false,
-    },
-    {
-      id: "swissFranc",
-      name: "Swiss Franc",
-      currencyCode: "CHF",
-      selected: false,
-    },
-    {
-      id: "mexicanPeso",
-      name: "Mecian Peso",
-      currencyCode: "MXN",
-      selected: false,
-    },
-    {
-      id: "poundSterling",
-      name: "Pound Sterling",
-      currencyCode: "GBP",
-      selected: false,
-    },
-    {
-      id: "brazilianReal",
-      name: "Brazilian Real",
-      currencyCode: "BRL",
-      selected: false,
-    },
-    {
-      id: "indianRupee",
-      name: "Indian Rupee",
-      currencyCode: "INR",
-      selected: true,
-    },
-  ]);
+  const [currencyDialog, setCurrencyDialog] = useState(false);
+  const [currentCurrency, setCurrentCurrency] = useState(suggestedCurrencies);
 
   const handleCurrencyChange = (index) => {
     const temp = currentCurrency.map((data, tempIndex) => ({
@@ -108,25 +24,15 @@ const TopNavBar = () => {
     setCurrentCurrency(temp);
   };
 
-
   return (
     <div className="flex items-center justify-between gap-4 my-2">
-      <Dialog
-        open={languageDialog}
-        onOpenChange={(open) => !open && setLanguageDialog(false)}
+      <DDialog
+        open={currencyDialog}
+        onOpenChange={(open) => !open && setCurrencyDialog(false)}
+        title= {currencyDialogStrings.title}
+        description={currencyDialogStrings.description}
       >
-        <DialogContent className="min-w-[50%]">
-          <DialogHeader>
-            <DialogTitle>Select your currency</DialogTitle>
-            <DialogDescription className="flex flex-col gap-6">
-              <p>
-                Where applicable, prices will be converted to--and shown in--the
-                currency you select. The currency you pay in may differ based on
-                your reservation, and a service fee may also apply.
-              </p>
-            </DialogDescription>
-          </DialogHeader>
-
+        <>
           <div className="flex flex-col gap-2">
             <h3 className="text-sm font-bold text-black">Suggested for you</h3>
 
@@ -155,15 +61,13 @@ const TopNavBar = () => {
               ))}
             </div>
           </div>
-        </DialogContent>
-      </Dialog>
-
-      <Button onClick={() => handleCurrencyChange(0)}>Click Me</Button>
+        </>
+      </DDialog>
 
       <h2 className="text-white text-2xl">Booking.com</h2>
       <div className="flex items-center">
-        <div className="flex gap-4">
-          <DSquareButton label="EUR" onClick={() => setLanguageDialog(true)} />
+        <div className="flex gap-2">
+          <DSquareButton label="EUR" onClick={() => setCurrencyDialog(true)} />
           <DSquareButton Icon={<Globe />} />
           <DSquareButton Icon={<HelpCircle />} />
         </div>

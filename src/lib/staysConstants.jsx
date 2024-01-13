@@ -1,8 +1,7 @@
-
 export const offersData = {
-  title: '',
-  description: '',
-  data:  [
+  title: "",
+  description: "",
+  data: [
     {
       id: "flight",
       title: "Fly away to your dream vacation",
@@ -21,12 +20,13 @@ export const offersData = {
     {
       id: "adventure",
       title: "New year, new adventures",
-      description: "Save 15% or more when you book and stay before April 1,2024",
+      description:
+        "Save 15% or more when you book and stay before April 1,2024",
       buttonText: "Find Early 2024 Deals",
       imgSource: "/surfing.png",
     },
-  ]
-}
+  ],
+};
 
 export const exploreData = {
   title: "Explore Germany",
@@ -241,68 +241,386 @@ export const tripPlannerButtonsData = [
 
 export const tripPlannerRomanceData = [
   {
-    title:'Volkach',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Volkach",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Zirndof',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Zirndof",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Wurzburg',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Wurzburg",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Veitschochhleim',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Veitschochhleim",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Wolframs-Eschenbach',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Wolframs-Eschenbach",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'WeiBenstadt',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "WeiBenstadt",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Suhl',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Suhl",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Zella-Mehlis',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Zella-Mehlis",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Tauberbischofsheim',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Tauberbischofsheim",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Weiden',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Weiden",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Weirtheim',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Weirtheim",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Waldassen',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Waldassen",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
   {
-    title:'Tambach-Dietharz',
-    description: '47 km away',
-    imgSource: '/cities/munich.png'
+    title: "Tambach-Dietharz",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
   },
-]
+];
+
+export const destinationsButtonOptions = [
+  {
+    label: "Regions",
+    selected: true,
+  },
+  {
+    label: "Cities",
+    selected: false,
+  },
+  {
+    label: "Place of interst",
+    selected: false,
+  },
+];
+
+export const destinationsData = [
+  {
+    label: "Tennerlife",
+    description: "9604",
+  },
+  {
+    label: "Santorini",
+    description: "1763",
+  },
+  {
+    label: "Hawaii",
+    description: "5516",
+  },
+  {
+    label: "Bali",
+    description: "12705",
+  },
+  {
+    label: "England",
+    description: "74201",
+  },
+  {
+    label: "Isle of Wight",
+    description: "936",
+  },
+  {
+    label: "Guernsey",
+    description: "9604",
+  },
+  {
+    label: "Uttar Pradesh",
+    description: "4381",
+  },
+  {
+    label: "Ras AI Khaimah",
+    description: "113",
+  },
+  {
+    label: "Mykonos",
+    description: "1453",
+  },
+  {
+    label: "Bora Bora",
+    description: "59",
+  },
+  {
+    label: "Zanzibar",
+    description: "836",
+  },
+  {
+    label: "Cornwall",
+    description: "5283",
+  },
+  {
+    label: "Jersey",
+    description: "89",
+  },
+  {
+    label: "Lake District",
+    description: "2415",
+  },
+  {
+    label: "Ibiza",
+    description: "1644",
+  },
+  {
+    label: "Texel",
+    description: "411",
+  },
+  {
+    label: "Phuket Province",
+    description: "5498",
+  },
+  {
+    label: "Bihar",
+    description: "792",
+  },
+];
+
+export const footerTopContent = [
+  {
+    label: "Mobile version",
+    href: "/",
+  },
+  {
+    label: "Your account",
+    href: "/",
+  },
+  {
+    label: "Make changes online to your booking",
+    href: "/",
+  },
+  {
+    label: "Customer Service Help",
+    href: "/",
+  },
+  {
+    label: "Become an affiliate",
+    href: "/",
+  },
+  {
+    label: "Booking.com for Business",
+    href: "/",
+  },
+];
+
+export const footerBottomContent = {
+  data1: [
+    {
+      label: "Countries",
+      href: "/",
+    },
+    {
+      label: "Regions",
+      href: "/",
+    },
+    {
+      label: "Cities",
+      href: "/",
+    },
+    {
+      label: "Districts",
+      href: "/",
+    },
+    {
+      label: "Airports",
+      href: "/",
+    },
+    {
+      label: "Hotels",
+      href: "/",
+    },
+    {
+      label: "Places of interest",
+      href: "/",
+    },
+  ],
+  data2: [
+    {
+      label: "Homes",
+      href: "/",
+    },
+    {
+      label: "Apartments",
+      href: "/",
+    },
+    {
+      label: "Resorts",
+      href: "/",
+    },
+    {
+      label: "Villas",
+      href: "/",
+    },
+    {
+      label: "Hostels",
+      href: "/",
+    },
+    {
+      label: "B&Bs",
+      href: "/",
+    },
+    {
+      label: "Guest Houses",
+      href: "/",
+    },
+  ],
+  data3: [
+    {
+      label: "Unique places to staty",
+      href: "/",
+    },
+    {
+      label: "All destinations",
+      href: "/",
+    },
+    {
+      label: "All flight destintions",
+      href: "/",
+    },
+    {
+      label: "All car rental locations",
+      href: "/",
+    },
+    {
+      label: "Discover",
+      href: "/",
+    },
+    {
+      label: "Reviews",
+      href: "/",
+    },
+    {
+      label: "Discover monthly stays",
+      href: "/",
+    },
+    {
+      label: "Unpacked: Travel articles",
+      href: "/",
+    },
+    {
+      label: "Seasonal and holiday deals",
+      href: "/",
+    },
+    {
+      label: "Traveller review awards",
+      href: "/",
+    },
+  ],
+  data4: [
+    {
+      label: "Car rental",
+      href: "/",
+    },
+    {
+      label: "Flight finder",
+      href: "/",
+    },
+    {
+      label: "Restaurent reservations",
+      href: "/",
+    },
+    {
+      label: "Booking.com for travel agents",
+      href: "/",
+    },
+  ],
+  data5: [
+    {
+      label: "Coronavirus (COVID-19) FAQs",
+      href: "/",
+    },
+    {
+      label: "About Booking.com",
+      href: "/",
+    },
+    {
+      label: "Customer Service Help",
+      href: "/",
+    },
+    {
+      label: "Partner Help",
+      href: "/",
+    },
+    {
+      label: "Careers",
+      href: "/",
+    },
+    {
+      label: "Sustainability",
+      href: "/",
+    },
+    {
+      label: "Press center",
+      href: "/",
+    },
+    {
+      label: "Safety resource center",
+      href: "/",
+    },
+    {
+      label: "Investor relations",
+      href: "/",
+    },
+    {
+      label: "Terms & Conditions",
+      href: "/",
+    },
+    {
+      label: "Partner dispute",
+      href: "/",
+    },
+    {
+      label: "How we work",
+      href: "/",
+    },
+    {
+      label: "Privacy & cookie statement",
+      href: "/",
+    },
+    {
+      label: "Manage cookie settings",
+      href: "/",
+    },
+    {
+      label: "Managed personalized recommendations",
+      href: "/",
+    },
+    {
+      label: "MSA statement",
+      href: "/",
+    },
+    {
+      label: "Corporate contact",
+      href: "/",
+    },
+    {
+      label: "Content guidelines and reporting",
+      href: "/",
+    },
+  ],
+};

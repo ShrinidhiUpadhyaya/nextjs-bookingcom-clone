@@ -15,8 +15,15 @@ import PropertyTypeCarousel from "./components/PropertyTypeCarousel";
 import PropertyTypeContent from "./content/PropertyTypeContent";
 import TrendingContent from "./content/TrendingContent";
 
-import { exploreData, propertyTypeData, trendingDestinationsData } from "@/lib/staysConstants";
+import {
+  exploreData,
+  propertyTypeData,
+  trendingDestinationsData,
+} from "@/lib/staysConstants";
 import TripPlannerContent from "./content/TripPlannerContent";
+import UniquePropertiesContent from "./content/UniquePropertiesContent";
+import DestinationsContent from "./content/DestinationsContent";
+import FooterContent from "./content/FooterContent";
 
 const page = () => {
   return (
@@ -49,11 +56,17 @@ const page = () => {
 
           <OffersContent />
           <ExploreContent title={exploreData.title} data={exploreData.data} />
-          <PropertyTypeContent data={propertyTypeData.data}/>
-          <TrendingContent topData={trendingDestinationsData.topData} bottomData={trendingDestinationsData.bottomData}/>
+          <PropertyTypeContent data={propertyTypeData.data} />
+          <TrendingContent
+            topData={trendingDestinationsData.topData}
+            bottomData={trendingDestinationsData.bottomData}
+          />
           <TripPlannerContent />
+          <UniquePropertiesContent />
+          <DestinationsContent />
         </div>
       </div>
+      <FooterContent />
     </>
   );
 };

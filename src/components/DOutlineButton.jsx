@@ -16,7 +16,8 @@ const DOutlineButton = ({ label, Icon, selected = false, onClick }) => {
       )}
       onClick={onClick}
     >
-      <Icon />
+      {Icon && <Icon />}
+
       {label}
     </Button>
   );

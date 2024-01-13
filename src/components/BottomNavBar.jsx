@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import { BedDouble, Plane, TreeDeciduous, CarTaxiFront } from "lucide-react";
-import DOutlineButton from "./DOutlineButton";
+import DOutlineLink from "./DOutlineLink";
 
 const bottomNavBarOptions = [
   {
@@ -62,7 +62,7 @@ const BottomNavBar = () => {
   return (
     <div className="my-2 flex gap-4">
       {navBarOptions.map((option, index) => (
-        <DOutlineButton
+        <DOutlineLink
           key={option.id}
           label={option.label}
           Icon={option.Icon}

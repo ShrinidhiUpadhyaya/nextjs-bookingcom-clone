@@ -1,20 +1,24 @@
 import React from "react";
-import Link from "next/link";
+import { Button } from "./ui/button";
+import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/button";
-const DOutlineButton = ({ label, Icon, active, href, onClick, className }) => {
+const DOutlineButton = ({ label, Icon, selected = false, onClick }) => {
   return (
-    <Link
+    <Button
+      variant={selected ? "outline" : "ghost"}
       className={cn(
-        "flex border-[white] bg-transparent hover:bg-[#1A4FA0] rounded-3xl py-2 px-4 gap-2 text-base font-light text-white",
-        { "bg-[#1A4FA0] border-red-50 border": active },
+        {
+          "border-[#006CE4] text-[#006CE4] hover:bg-[transparent] hover:text-[#006CE4]":
+            selected,
+        },
+        { "hover:bg-[#F2F2F2]": !selected },
+        "rounded-3xl gap-2 font-normal p-4"
       )}
       onClick={onClick}
-      href= {href}
     >
-      {<Icon />}
+      <Icon />
       {label}
-    </Link>
+    </Button>
   );
 };
 

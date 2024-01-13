@@ -11,6 +11,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import OffersContent from "./content/OffersContent";
 import ExploreContent from "./content/ExploreContent";
+import PropertyTypeCarousel from "./components/PropertyTypeCarousel";
+import PropertyTypeContent from "./content/PropertyTypeContent";
+import TrendingContent from "./content/TrendingContent";
+
+import { exploreData, propertyTypeData, trendingDestinationsData } from "@/lib/staysConstants";
+import TripPlannerContent from "./content/TripPlannerContent";
 
 const page = () => {
   return (
@@ -42,7 +48,10 @@ const page = () => {
           </div>
 
           <OffersContent />
-          <ExploreContent />
+          <ExploreContent title={exploreData.title} data={exploreData.data} />
+          <PropertyTypeContent data={propertyTypeData.data}/>
+          <TrendingContent topData={trendingDestinationsData.topData} bottomData={trendingDestinationsData.bottomData}/>
+          <TripPlannerContent />
         </div>
       </div>
     </>

@@ -83,97 +83,97 @@ export const propertyTypeData = {
   data: [
     {
       title: "Hotels",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/hotels.png",
     },
     {
       title: "Apartments",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/apartments.png",
     },
     {
       title: "Resorts",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/resorts.png",
     },
     {
       title: "Villas",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/villas.png",
     },
     {
       title: "Cabins",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/cabins.png",
     },
     {
       title: "Cottages",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/cottages.png",
     },
     {
       title: "Glamping",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/glamping.png",
     },
 
     {
       title: "Serviced Apartments",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/servicedApartments.png",
     },
     {
       title: "Vacation Homes",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/vacationHomes.png",
     },
     {
       title: "Guest Houses",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/guestHouses.png",
     },
     {
       title: "Hostels",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/hostels.png",
     },
     {
       title: "MotB&Bsels",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/bbs.png",
     },
 
     {
       title: "Ryokans",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/ryokans.png",
     },
     {
       title: "Riads",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/riads.png",
     },
     {
       title: "Resort Villages",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/resortVillages.png",
     },
     {
       title: "Homestays",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/homestays.png",
     },
     {
       title: "Campgrounds",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/campgrounds.png",
     },
     {
       title: "Country Houses",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/countryHouses.png",
     },
     {
       title: "Farm Stays",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/farmStays.png",
     },
     {
       title: "Boats",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/boats.png",
     },
     {
       title: "Luxury Tents",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/luxuryTents.png",
     },
     {
       title: "Self-catering Accommodations",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/selfCateringAccommodations.png",
     },
     {
       title: "Tiny houses",
-      imgSource: "/cities/hamburg.png",
+      imgSource: "/propertyType/tinyHouses.png",
     },
   ],
 };

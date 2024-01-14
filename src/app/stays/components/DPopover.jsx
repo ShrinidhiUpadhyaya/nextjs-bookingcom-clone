@@ -17,9 +17,8 @@ const DPopover = ({ label, Icon, children, className }) => {
       <Popover>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
             role="combobox"
-            className="w-full py-6 px-4 justify-start"
+            className="w-full py-6 px-4 justify-start border border-[white] bg-[white] text-[#1a1a1a] hover:bg-[#F2F2F2] hover:border-[#FFB700]"
           >
             {<Icon />}
             <span className="px-2">{label}</span>

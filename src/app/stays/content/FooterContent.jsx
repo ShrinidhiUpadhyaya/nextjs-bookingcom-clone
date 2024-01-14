@@ -38,9 +38,9 @@ const FooterContent = () => {
 
       <Separator />
 
-      <div className="bg-[#003B95] p-4 flex gap-4 justify-center text-white text-xs font-semibold underline">
+      <div className="bg-[#003B95] flex gap-4 justify-center text-white text-xs font-semibold underline">
         {footerTopContent.map((content) => (
-          <Link href={content.href}>{content.label}</Link>
+          <Link href={content.href} className="p-4 hover:bg-[#00224F]">{content.label}</Link>
         ))}
       </div>
 
@@ -94,7 +94,9 @@ const FooterContent = () => {
       </div>
 
       <div className="flex justify-center p-16 text-[#006ce4]">
-        <Link href='/' className="hover:underline">Extranet Log-in</Link>
+        <Link href="/" className="hover:underline">
+          Extranet Log-in
+        </Link>
       </div>
     </div>
   );

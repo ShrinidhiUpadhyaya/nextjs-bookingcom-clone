@@ -64,7 +64,7 @@ const TopNavBar = () => {
         </>
       </DDialog>
 
-      <h2 className="text-white text-2xl">Booking.com</h2>
+      <h2 className="text-white text-2xl font-semibold">Booking.com</h2>
       <div className="flex items-center">
         <div className="flex gap-2">
           <DSquareButton label="EUR" onClick={() => setCurrencyDialog(true)} />
@@ -73,7 +73,7 @@ const TopNavBar = () => {
         </div>
 
         <div className="flex items-center gap-4 text-white ">
-          <Link href="/" className="hover:bg-[#1A4FA0] text-center py-4 px-4">
+          <Link href="/" className="hover:bg-[#1A4FA0] text-center py-4 px-4 rounded-md">
             Register your accomodation
           </Link>
           <Link href="/" className={cn(buttonVariants(), "py-2 px-4")}>

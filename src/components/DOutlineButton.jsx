@@ -8,7 +8,7 @@ const DOutlineButton = ({ label, Icon, selected = false, onClick }) => {
       variant={selected ? "outline" : "ghost"}
       className={cn(
         {
-          "border-[#006CE4] text-[#006CE4] hover:bg-[transparent] hover:text-[#006CE4]":
+          "border-[#006CE4] text-[#006CE4] hover:bg-transparent hover:text-[#006CE4]":
             selected,
         },
         { "hover:bg-[#F2F2F2]": !selected },

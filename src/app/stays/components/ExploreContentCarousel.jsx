@@ -18,7 +18,7 @@ const ExploreContentCarousel = ({ carouselData }) => {
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}
-          className="group lg:basis-1/6 items-center justify-start flex gap-0 cursor-pointer"
+          className="group basis-1/3 md:basis-1/6 items-center justify-start flex gap-0 cursor-pointer"
         >
           <div className="p-1 flex-1">
             <Card className="border-none">

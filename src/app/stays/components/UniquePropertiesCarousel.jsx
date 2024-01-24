@@ -12,7 +12,7 @@ const UniquePropertiesCarousel = () => {
     <div className="mb-10">
       <DCarousel prevButtonStyle="-mt-8" nextButtonStyle="-mt-8">
         {tripPlannerRomanceData.map((data) => (
-          <CarouselItem key={data.title} className="basis-1/4 ">
+          <CarouselItem key={data.title} className="basis-1/2 sm:basis-1/3 md:basis-1/4 ">
             <Card>
               <CardContent className="p-0 pb-8 border-none">
                 <div className="flex flex-col">

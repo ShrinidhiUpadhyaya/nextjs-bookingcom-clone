@@ -17,7 +17,7 @@ const FooterContent = () => {
             </p>
           </div>
 
-          <div className="flex gap-2 w-[30%]">
+          <div className="flex gap-2 w-full sm:w-[75%] md:w-[60%] lg:w-[50%] xl:w-[30%]">
             <Input
               className="text-xl font-extralight text-black"
               placeholder="Your email address"
@@ -37,15 +37,21 @@ const FooterContent = () => {
       </div>
 
       <Separator />
-
-      <div className="bg-[#003B95] flex gap-4 justify-center text-white text-xs font-semibold underline">
-        {footerTopContent.map((content) => (
-          <Link href={content.href} className="p-4 hover:bg-[#00224F]">{content.label}</Link>
-        ))}
+      <div className="bg-[#003B95] flex justify-center items-center">
+        <div className="2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%] grid grid-cols-3 grid-rows-2 md:grid-cols-6 md:grid-rows-1 gap-4 justify-center text-white text-xs font-semibold underline">
+          {footerTopContent.map((content) => (
+            <Link
+              href={content.href}
+              className="p-4 hover:bg-[#00224F] flex items-center justify-center"
+            >
+              {content.label}
+            </Link>
+          ))}
+        </div>
       </div>
 
-      <div className="flex justify-between px-16 py-4">
-        <div className="flex flex-col text-sm text-[#006ce4]">
+      <div className="flex lg:justify-between px-16 py-4 text-xs lg:text-sm gap-4">
+        <div className="flex flex-col text-[#006ce4]">
           {footerBottomContent.data1.map((content) => (
             <Link href={content.href} className="hover:underline">
               {content.label}
@@ -53,7 +59,7 @@ const FooterContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col text-sm text-[#006ce4]">
+        <div className="flex flex-col text-[#006ce4]">
           {footerBottomContent.data2.map((content) => (
             <Link href={content.href} className="hover:underline">
               {content.label}
@@ -61,7 +67,7 @@ const FooterContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col text-sm text-[#006ce4]">
+        <div className="flex flex-col text-[#006ce4]">
           {footerBottomContent.data3.map((content) => (
             <Link href={content.href} className="hover:underline">
               {content.label}
@@ -69,7 +75,7 @@ const FooterContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col text-sm text-[#006ce4]">
+        <div className="flex flex-col text-[#006ce4]">
           {footerBottomContent.data4.map((content) => (
             <Link href={content.href} className="hover:underline">
               {content.label}
@@ -77,14 +83,14 @@ const FooterContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col text-sm text-[#006ce4]">
+        <div className="flex flex-col text-[#006ce4]">
           {footerBottomContent.data4.map((content) => (
             <Link href={content.href} className="hover:underline">
               {content.label}
             </Link>
           ))}
         </div>
-        <div className="flex flex-col text-sm text-[#006ce4]">
+        <div className="flex flex-col text-[#006ce4]">
           {footerBottomContent.data5.map((content) => (
             <Link href={content.href} className="hover:underline">
               {content.label}

@@ -18,7 +18,7 @@ const PropertyTypeCarousel = ({ carouselData }) => {
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}
-          className="group lg:basis-1/4 items-center justify-start flex gap-0 cursor-pointer"
+          className="group basis-1/2 md:basis-1/4 items-center justify-start flex gap-0 cursor-pointer"
         >
           <div className="p-1 flex-1">
             <Card className="border-none">

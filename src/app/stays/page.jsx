@@ -29,24 +29,24 @@ const page = () => {
   return (
     <>
       <div className="bg-[#003B95] py-16 pb-4 flex flex-col items-center justify-center">
-        <div className="w-[60%] flex flex-col">
-          <h1 className="text-5xl text-[white] font-bold my-2">
+        <div className="2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%] flex flex-col">
+          <h1 className="text-3xl xl:text-5xl text-[white] font-bold my-2 transition">
             Find your next accomodation
           </h1>
-          <h3 className="text-white text-2xl my-2">
+          <h3 className="text-white text-lg md:text-2xl my-2">
             Find deals on hotels, vacation rentals and more...
           </h3>
         </div>
 
-        <div className="w-[60%] flex items-center relative top-12 bg-[#FFB700] p-1 rounded-md gap-1">
+        <div className="2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%] grid grid-rows-4 md:grid md:grid-cols-4 md:grid-rows-1 items-center relative top-12 bg-[#FFB700] p-1 rounded-md gap-1">
           <LocationPopover />
           <CheckInDatePopover />
           <PersonCountPopover />
-          <Button className="py-6 px-8 text-lg flex-0">Search</Button>
+          <Button className="py-6 px-8 text-lg">Search</Button>
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex flex-col gap-4 mt-12 w-[60%]">
+        <div className="flex flex-col gap-4 mt-12 2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%]">
           <div className="flex gap-2">
             <Checkbox className="h-5 w-5" />
             <Label className="text-sm font-normal">

@@ -9,10 +9,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-const DCarousel = ({ children, prevButtonStyle, nextButtonStyle }) => {
+const DCarousel = ({ children, prevButtonStyle, nextButtonStyle, className }) => {
   return (
-    <div className="flex items-center">
-      <Carousel className="w-full items-center" opts={{
+    <div className={cn("flex items-center", className)}>
+      <Carousel className="w-full flex items-center" opts={{
         slidesToScroll: 2,
       }}>
         <CarouselContent className='h-full'>

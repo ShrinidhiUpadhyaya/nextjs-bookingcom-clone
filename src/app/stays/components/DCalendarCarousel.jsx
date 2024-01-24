@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import DCalendarCarouselBox from "./DCalendarCarouselBox";
 import { monthNames } from "@/lib/constants";
+import DCarousel from "./DCarousel";
 const DCalendarCarousel = () => {
   const getCurrentAndNextMonths = () => {
     const currentDate = new Date();
@@ -41,12 +42,11 @@ const DCalendarCarousel = () => {
     setDisplayMonths(temp);
   };
   return (
-    <Carousel className="w-[80%] items-center justify-center flex">
-      <CarouselContent className="gap-4">
+    <DCarousel>
         {displayMonths.map((month, index) => (
           <CarouselItem
             key={month.name}
-            className="flex items-center basis-1/5 gap-0 aspect-square p-0 justify-center"
+            className="group lg:basis-1/6 items-center justify-start flex gap-0 cursor-pointer"
           >
             <DCalendarCarouselBox
               month={month.name}
@@ -57,10 +57,7 @@ const DCalendarCarousel = () => {
             />
           </CarouselItem>
         ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    </DCarousel>
   );
 };
 

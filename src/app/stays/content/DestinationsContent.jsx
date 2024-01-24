@@ -19,7 +19,7 @@ const DestinationsContent = () => {
   };
   return (
     <div>
-      <h2 className="font-bold text-xl">Stay at our top unique properties</h2>
+      <h2 className="font-bold text-xl">Destinations we love</h2>
       <div className="mt-4 flex gap-2">
         {destinationsFilter.map((option, index) => (
           <DOutlineButton
@@ -30,7 +30,7 @@ const DestinationsContent = () => {
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-5 gap-y-4">
+      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-4">
         {destinationsData.map((data) => (
           <DColumnTexts
             label={data.label}

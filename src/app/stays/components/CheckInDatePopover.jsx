@@ -21,7 +21,7 @@ const CheckInDatePopover = () => {
     >
       <Command>
         <CommandGroup>
-          <Tabs defaultValue="calendar" className="w-[500px]">
+          <Tabs defaultValue="calendar">
             <TabsList className="w-full">
               <TabsTrigger value="calendar" className="flex-1">
                 Calendar
@@ -38,23 +38,23 @@ const CheckInDatePopover = () => {
               />
             </TabsContent>
             <TabsContent value="flexible">
-              <div className="p-4 flex flex-col gap-4">
+              <div className="p-4 flex flex-col gap-8">
                 <div className="flex flex-col gap-1">
                   <h3 className="font-bold text-base">
                     How long do you want to stay?
                   </h3>
-                  <RadioGroup defaultValue="comfortable" className="flex gap-4">
+                  <RadioGroup defaultValue="comfortable" className="flex gap-4 ">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="default" id="r1" />
-                      <Label htmlFor="r1">Default</Label>
+                      <Label htmlFor="r1" className='text-sm font-normal'>Default</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="comfortable" id="r2" />
-                      <Label htmlFor="r2">Comfortable</Label>
+                      <Label htmlFor="r2" className='text-sm font-normal'>Comfortable</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="compact" id="r3" />
-                      <Label htmlFor="r3">Compact</Label>
+                      <Label htmlFor="r3" className='text-sm font-normal'>Compact</Label>
                     </div>
                   </RadioGroup>
                 </div>
@@ -63,12 +63,8 @@ const CheckInDatePopover = () => {
                   <h3 className="font-bold text-base">
                     When do you want to go?
                   </h3>
-                  <p>Select up to 3 months</p>
-                  <div className="flex justify-center h-56">
-                    <div className="w-full flex justify-center">
+                  <p className='text-sm font-normal'>Select up to 3 months</p>
                       <DCalendarCarousel />
-                    </div>
-                  </div>
                 </div>
 
                 <Separator />

@@ -60,7 +60,7 @@ const BottomNavBar = () => {
     );
   }
   return (
-    <div className="my-2 flex gap-4">
+    <div className="my-2 flex items-center gap-4">
       {navBarOptions.map((option, index) => (
         <DOutlineLink
           key={option.id}

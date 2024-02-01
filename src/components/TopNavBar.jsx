@@ -87,7 +87,7 @@ const TopNavBar = () => {
             >
               Register your accomodation
             </Link>
-            <Link href="/" className={cn(buttonVariants(), "py-2 px-4")}>
+            <Link href="/register" className={cn("bg-white rounded-md text-[#006CE4] font-medium","py-2 px-4")}>
               Log In
             </Link>
             <Link
@@ -100,15 +100,12 @@ const TopNavBar = () => {
               Sign Up
             </Link>
           </div>
-
-         
-
         </div>
 
         <div className="flex gap-2 lg:hidden">
-            <DSquareButton Icon={<CircleUser />} />
-            <DSquareButton Icon={<Menu />} />
-          </div>
+          <DSquareButton Icon={<CircleUser />} />
+          <DSquareButton Icon={<Menu />} />
+        </div>
       </div>
     </>
   );

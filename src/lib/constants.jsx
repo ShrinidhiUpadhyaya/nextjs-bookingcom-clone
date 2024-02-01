@@ -44,16 +44,31 @@ export const currencyDialogStrings = {
 };
 
 export const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+export const registerOptions = [
+  {
+    tooltip: "Facebook",
+    label: "Facebook",
+  },
+  {
+    tooltip: "Gmail",
+    label: "Gmail",
+  },
+  {
+    tooltip: "Apple",
+    label: "Apple",
+  },
+];

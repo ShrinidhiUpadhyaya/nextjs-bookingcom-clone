@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Leaf } from "lucide-react";
 import { SlidersHorizontal } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -14,7 +14,8 @@ import DCombobox from "../stays/components/DCombobox";
 import DBadge from "../stays/components/DBadge";
 import { Separator } from "@/components/ui/separator";
 import { filters } from "@/lib/hotelFiltersConstants";
-
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 import DDialog from "@/components/DDialog";
 import {
   Dialog,
@@ -140,19 +141,17 @@ const page = () => {
           <DCombobox />
         </div>
 
-        <div className="grid grid-cols-2 w-full gap-8 mt-4">
+        <div className="grid 2xl:grid-cols-2 grid-cols-1 w-full gap-8 mt-4">
           {hotels.map((hotel) => (
             <Card key={hotel.name}>
               <CardContent className="flex p-2 w-full gap-4">
-                <div className="relative h-full w-72">
-                  <AspectRatio ratio={4 / 4.5}>
-                    <Image
-                      src="/propertyType/apartments.png"
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-md"
-                    />
-                  </AspectRatio>
+                <div className="min-h-52 max-h-52 min-w-52 relative">
+                  <Image
+                    src="/propertyType/apartments.png"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-md"
+                  />
                 </div>
 
                 <div className="flex gap-2">
@@ -173,7 +172,7 @@ const page = () => {
                     </div>
                     <div className="text-sm">{hotel.description}</div>
                   </div>
-                  <div className="rightDiv gap-2">
+                  <div className="rightDiv gap-2 flex flex-col">
                     <div className="flex gap-2">
                       <div>
                         <p className="text-base font-semibold">
@@ -188,7 +187,15 @@ const page = () => {
                         {hotel.rating}
                       </div>
                     </div>
-                    <Button className="mt-8">Show prices</Button>
+                    <Link
+                      href="/hotels"
+                      className={cn(
+                        buttonVariants({ variant: "default" }),
+                        "py-2 px-4 mt-8"
+                      )}
+                    >
+                      Show prices
+                    </Link>
                   </div>
                 </div>
               </CardContent>

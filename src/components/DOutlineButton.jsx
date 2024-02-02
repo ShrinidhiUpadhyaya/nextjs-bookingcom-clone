@@ -2,7 +2,9 @@ import React from "react";
 import { Button } from "./ui/button";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
-const DOutlineButton = ({ className, label, Icon, selected = false, onClick }) => {
+import Image from "next/image";
+
+const DOutlineButton = ({ className, label, Icon, children, selected = false, onClick }) => {
   return (
     <Button
       variant={selected ? "outline" : "ghost"}
@@ -19,7 +21,12 @@ const DOutlineButton = ({ className, label, Icon, selected = false, onClick }) =
     >
       {Icon && <Icon />}
 
-      {label}
+      {label && label}
+
+      {/* <p>Hello</p> */}
+      {/* <Image height={32} width={32} src={"/socialMediaIcons/facebook.png"}/> */}
+
+      {children}
     </Button>
   );
 };

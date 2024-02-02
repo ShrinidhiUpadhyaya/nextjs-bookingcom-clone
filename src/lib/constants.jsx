@@ -61,14 +61,14 @@ export const monthNames = [
 export const registerOptions = [
   {
     tooltip: "Facebook",
-    label: "Facebook",
+    imgSource: "/socialMediaIcons/facebook.png",
   },
   {
     tooltip: "Gmail",
-    label: "Gmail",
+    imgSource: "/socialMediaIcons/google.png",
   },
   {
     tooltip: "Apple",
-    label: "Apple",
+    imgSource: "/socialMediaIcons/apple.png",
   },
 ];

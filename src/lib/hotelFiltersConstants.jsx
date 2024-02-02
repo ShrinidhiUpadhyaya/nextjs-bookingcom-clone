@@ -66,44 +66,62 @@ export const filters = {
     ],
   },
   roomFacilities: {
-    label: 'Room Facilities',
+    label: "Room Facilities",
     values: [
-        {
-            label: 'Private bathroom',
-        },
-        {
-            label: 'Kitchen',
-        },
-        {
-            label: 'Balcony',
-        },
-        {
-            label: 'Air conditioning',
-        },
-        {
-            label: 'Refrigrator',
-        },
-        {
-            label: 'Terrace',
-        },
-        {
-            label: 'Washing machine',
-        },
-        {
-            label: 'Shower',
-        },
-        {
-            label: 'Towels',
-        },
-        {
-            label: 'TV',
-        },
-        {
-            label: 'Coffee/Tea maker',
-        },
-        {
-            label: 'Electric Kettle',
-        },
-    ]
-  }
+      {
+        label: "Private bathroom",
+      },
+      {
+        label: "Kitchen",
+      },
+      {
+        label: "Balcony",
+      },
+      {
+        label: "Air conditioning",
+      },
+      {
+        label: "Refrigrator",
+      },
+      {
+        label: "Terrace",
+      },
+      {
+        label: "Washing machine",
+      },
+      {
+        label: "Shower",
+      },
+      {
+        label: "Towels",
+      },
+      {
+        label: "TV",
+      },
+      {
+        label: "Coffee/Tea maker",
+      },
+      {
+        label: "Electric Kettle",
+      },
+    ],
+  },
 };
+
+export const hotelOverviewOptions = [
+  {
+    label: "Overview",
+  },
+  {
+    label: "Info & rules",
+  },
+  {
+    label: "Facilities",
+  },
+  {
+    label: "House rules",
+  },
+  {
+    label: "Guest reviews(915)",
+  },
+];

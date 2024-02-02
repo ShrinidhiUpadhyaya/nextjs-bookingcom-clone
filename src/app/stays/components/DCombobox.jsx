@@ -17,26 +17,43 @@ import {
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import { ArrowUpDown } from "lucide-react";
-const frameworks = [
+
+const sortByOptions = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "toppicks",
+    label: "Top picks for long stays",
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
+    value: "homes",
+    label: "Homes & apartment first",
   },
   {
-    value: "nuxt.js",
-    label: "Nuxt.js",
+    value: "lowprice",
+    label: "Price(lowest first)",
   },
   {
-    value: "remix",
-    label: "Remix",
+    value: "bestreviwedandlowestprice",
+    label: "Best reviewed and lowest price",
   },
   {
-    value: "astro",
-    label: "Astro",
+    value: "hightolow",
+    label: "Property rating(high to low)",
+  },
+  {
+    value: "lowtohigh",
+    label: "Property rating(low to high)",
+  },
+  {
+    value: "ratingandprice",
+    label: "Property rating and price",
+  },
+  {
+    value: "distancefromcity",
+    label: "Distance from city center",
+  },
+  {
+    value: "topreviewed",
+    label: "Top reviewed",
   },
 ];
 
@@ -51,31 +68,33 @@ export default function DCombobox() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between text-base text-[#1a1a1a] border border-[#868686] rounded-3xl font-normal hover:primaryTextColor hover:bg-accent"
+          className="justify-between text-base text-[#1a1a1a] border border-[#868686] rounded-3xl font-normal hover:primaryTextColor hover:bg-accent"
         >
           Sort by: {" "}
           {value ?
-            frameworks.find((framework) => framework.value === value)?.label : ""}
+            sortByOptions.find((option) => option.value === value)?.label : ""}
           <ArrowUpDown className="ml-2 shrink-0 opacity-60" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
           <CommandGroup>
-            {frameworks.map((framework) => (
+            {sortByOptions.map((option) => (
               <CommandItem
-                key={framework.value}
-                value={framework.value}
+                key={option.value}
+                value={option.value}
                 onSelect={(currentValue) => {
+                  console.log(currentValue);
+                  console.log(sortByOptions.find((option) => option))
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
                 }}
               >
-                {framework.label}
+                {option.label}
                 <Check
                   className={cn(
                     "ml-auto h-4 w-4",
-                    value === framework.value ? "opacity-100" : "opacity-0"
+                    value === option.value ? "opacity-100" : "opacity-0"
                   )}
                 />
               </CommandItem>

@@ -109,10 +109,10 @@ const page = () => {
   const filterKeys = Object.entries(filters);
 
   return (
-    <div className="flex flex-col gap-8 items-center justify-center ">
-      <div className="w-full flex justify-center relative">
+    <div className="flexCol gap-8 items-center justify-center">
+      <div className="w-full flexHCenter relative">
         <div className="h-12 w-full bg-[#003B95]"></div>
-        <div className="2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%] grid grid-rows-4 md:grid md:grid-cols-4 md:grid-rows-1 items-center absolute top-6 bg-[#FFB700] p-1 rounded-md gap-1">
+        <div className="contentWidth grid grid-rows-4 md:grid md:grid-cols-4 md:grid-rows-1 items-center absolute top-6 bg-[#FFB700] p-1 rounded-md gap-1">
           <LocationPopover />
           <CheckInDatePopover />
           <PersonCountPopover />
@@ -121,10 +121,10 @@ const page = () => {
       </div>
       <Separator className="mt-8" />
 
-      <div className="2xl:w-[85%] xl:w-[75%] lg:w-[90%] w-[95%] flex flex-col gap-8 justify-center p-4 pt-0">
+      <div className="contentWidth flexCol gap-8 justify-center p-4 pt-0">
         <h2 className="font-bold text-xl">Hamburg: 728 properties found</h2>
-        <div className="flex gap-4 items-center">
-          <div className="flex-1 flex gap-2 items-center">
+        <div className="flex gap-4">
+          <div className="flex-1 flex gap-2">
             <DBadge>Property type: Hotels</DBadge>
 
             <DBadge>Property rating: 4 stars</DBadge>
@@ -141,9 +141,9 @@ const page = () => {
           <DCombobox />
         </div>
 
-        <div className="grid 2xl:grid-cols-2 grid-cols-1 w-full gap-8 mt-4">
+        <div className="grid grid-cols-1 w-full gap-4 mt-4">
           {hotels.map((hotel) => (
-            <Card key={hotel.name}>
+            <Card key={hotel.name} className='cursor-pointer'>
               <CardContent className="flex p-2 w-full gap-4">
                 <div className="min-h-52 max-h-52 min-w-52 relative">
                   <Image
@@ -155,7 +155,7 @@ const page = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <div className="leftDiv flex-1 flex flex-col gap-2">
+                  <div className="leftDiv flex-1 flexCol gap-2">
                     <h2 className="primaryTextColor font-semibold text-xl">
                       {hotel.name}
                     </h2>
@@ -172,7 +172,7 @@ const page = () => {
                     </div>
                     <div className="text-sm">{hotel.description}</div>
                   </div>
-                  <div className="rightDiv gap-2 flex flex-col">
+                  <div className="rightDiv gap-2 flexCol">
                     <div className="flex gap-2">
                       <div>
                         <p className="text-base font-semibold">
@@ -191,7 +191,7 @@ const page = () => {
                       href="/hotels"
                       className={cn(
                         buttonVariants({ variant: "default" }),
-                        "py-2 px-4 mt-8"
+                        "py-2 px-4 mt-8 hover:bg-[#003B95]"
                       )}
                     >
                       Show prices
@@ -211,10 +211,10 @@ const page = () => {
         className="max-h-[75%]"
       >
         <div className="flex-1 max-h-[80%]">
-          <div className="flex-1 flex flex-col h-full">
+          <div className="flex-1 flexCol h-full">
             <div className="grid gap-4 py-4 overflow-y-auto h-full">
               {filterKeys.map(([key, filter]) => (
-                <div key={key} className="flex flex-col gap-2">
+                <div key={key} className="flexCol gap-2">
                   <h2 className="text-lg font-medium">{filter.label}</h2>
                   <div className="grid grid-cols-3 gap-y-4">
                     {filter.values.map((value) => (
@@ -230,9 +230,9 @@ const page = () => {
         <Separator />
 
         <DialogFooter className="h-15">
-          <div className="flex justify-between items-center w-full pr-4">
+          <div className="flex justify-between w-full pr-4">
             <DOutlineButton label="Clear all" className="font-medium" />
-            <Button>Show places</Button>
+            <Button className='hover-[#003B95]'>Show places</Button>
           </div>
         </DialogFooter>
       </DDialog>

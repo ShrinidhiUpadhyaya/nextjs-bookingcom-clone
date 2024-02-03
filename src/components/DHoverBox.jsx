@@ -6,7 +6,7 @@ const DHoverCard = ({ label = "label", value = "value", selected = true, onClick
   return (
     <div
       className={cn("flex px-4 py-4 text-sm rounded-md text-black ", {
-        "bg-[#006ce40f] text-[#006ce4]": selected,
+        "bg-[#006ce40f] primaryTextColor": selected,
         "hover:bg-[#F2F2F2]": !selected,
       })}
       onClick={onClick}
@@ -17,7 +17,7 @@ const DHoverCard = ({ label = "label", value = "value", selected = true, onClick
       </div>
 
       {selected && (
-        <div className="flex-0 flex items-center">
+        <div className="flex-0 flexVCenter">
           <Check />
         </div>
       )}

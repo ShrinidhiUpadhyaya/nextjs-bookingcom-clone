@@ -3,7 +3,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 export default function DCheckbox({ label }) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flexVCenter gap-2">
       <Checkbox id="checkbox" className="border-[#868686] h-5 w-5" />
       <label
         htmlFor="checkbox"

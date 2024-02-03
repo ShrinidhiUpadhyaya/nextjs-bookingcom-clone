@@ -34,32 +34,32 @@ const CheckInDatePopover = () => {
               <Calendar
                 mode="single"
                 selected={new Date()}
-                className="rounded-md border w-full flex justify-center"
+                className="rounded-md border w-full flexHCenter"
               />
             </TabsContent>
             <TabsContent value="flexible">
-              <div className="p-4 flex flex-col gap-8">
-                <div className="flex flex-col gap-1">
+              <div className="p-4 flexCol gap-8">
+                <div className="flexCol gap-1">
                   <h3 className="font-bold text-base">
                     How long do you want to stay?
                   </h3>
                   <RadioGroup defaultValue="comfortable" className="flex gap-4 ">
-                    <div className="flex items-center space-x-2">
+                    <div className="flexCenter space-x-2">
                       <RadioGroupItem value="default" id="r1" />
                       <Label htmlFor="r1" className='text-sm font-normal'>Default</Label>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flexCenter space-x-2">
                       <RadioGroupItem value="comfortable" id="r2" />
                       <Label htmlFor="r2" className='text-sm font-normal'>Comfortable</Label>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flexCenter space-x-2">
                       <RadioGroupItem value="compact" id="r3" />
                       <Label htmlFor="r3" className='text-sm font-normal'>Compact</Label>
                     </div>
                   </RadioGroup>
                 </div>
 
-                <div className="flex flex-col gap-1">
+                <div className="flexCol gap-1">
                   <h3 className="font-bold text-base">
                     When do you want to go?
                   </h3>
@@ -68,7 +68,7 @@ const CheckInDatePopover = () => {
                 </div>
 
                 <Separator />
-                <div className="flex gap-4 items-center justify-end">
+                <div className="flexCenter gap-4 justify-end">
                   <span className="text-sm">Warning</span>
                   <Button className="text-sm">Select Dates</Button>
                 </div>

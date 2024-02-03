@@ -10,7 +10,7 @@ const DOutlineButton = ({ className, label, Icon, children, selected = false, on
       variant={selected ? "outline" : "ghost"}
       className={cn(
         {
-          "border-[#006CE4] text-[#006CE4] hover:bg-transparent hover:text-[#006CE4]":
+          "border-[#006CE4] primaryTextColor hover:bg-transparent hover:text-[#006CE4]":
             selected,
         },
         { "hover:bg-[#F2F2F2]": !selected },
@@ -22,10 +22,7 @@ const DOutlineButton = ({ className, label, Icon, children, selected = false, on
       {Icon && <Icon />}
 
       {label && label}
-
-      {/* <p>Hello</p> */}
-      {/* <Image height={32} width={32} src={"/socialMediaIcons/facebook.png"}/> */}
-
+      
       {children}
     </Button>
   );

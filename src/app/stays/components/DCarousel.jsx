@@ -11,8 +11,8 @@ import {
 import { cn } from "@/lib/utils";
 const DCarousel = ({ children, prevButtonStyle, nextButtonStyle, className }) => {
   return (
-    <div className={cn("flex items-center", className)}>
-      <Carousel className="w-full flex items-center" opts={{
+    <div className={cn("flexCenter", className)}>
+      <Carousel className="w-full flexCenter" opts={{
         slidesToScroll: 2,
       }}>
         <CarouselContent className='h-full'>

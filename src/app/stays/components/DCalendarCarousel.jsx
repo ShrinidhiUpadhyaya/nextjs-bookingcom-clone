@@ -46,7 +46,7 @@ const DCalendarCarousel = () => {
         {displayMonths.map((month, index) => (
           <CarouselItem
             key={month.name}
-            className="group lg:basis-1/6 items-center justify-start flex gap-0 cursor-pointer"
+            className="group lg:basis-1/6 justify-start flexCenter gap-0 cursor-pointer"
           >
             <DCalendarCarouselBox
               month={month.name}

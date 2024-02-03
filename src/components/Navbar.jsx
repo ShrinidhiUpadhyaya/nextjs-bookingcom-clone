@@ -4,8 +4,8 @@ import TopNavBar from "./TopNavBar";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-[#003B95] flex justify-center">
-      <div className="flex flex-col 2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%]">
+    <div className="w-full bg-[#003B95] flexHCenter">
+      <div className="flexCol contentWidth">
         <TopNavBar />
         <BottomNavBar />
       </div>

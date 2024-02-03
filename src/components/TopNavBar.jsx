@@ -28,7 +28,7 @@ const TopNavBar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between gap-4 my-2 transition">
+      <div className="flexVCenter justify-between gap-4 my-2 transition">
         <DDialog
           open={currencyDialog}
           onOpenChange={(open) => !open && setCurrencyDialog(false)}
@@ -36,7 +36,7 @@ const TopNavBar = () => {
           description={currencyDialogStrings.description}
         >
           <>
-            <div className="flex flex-col gap-2">
+            <div className="flexCol gap-2">
               <h3 className="text-sm font-bold text-black">
                 Suggested for you
               </h3>
@@ -53,7 +53,7 @@ const TopNavBar = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flexCol gap-2">
               <h3 className="text-sm font-bold text-black">All currencies</h3>
 
               <div className="grid grid-cols-4 gap-4">
@@ -80,24 +80,32 @@ const TopNavBar = () => {
             <DSquareButton Icon={<HelpCircle />} />
           </div>
 
-          <div className="flex items-center gap-4 text-white ">
+          <div className="flexVCenter gap-4 text-white ">
             <Link
               href="/"
               className="hover:bg-[#1A4FA0] text-center py-4 px-4 rounded-md"
             >
               Register your accomodation
             </Link>
-            <Link href="/register" className={cn("bg-white rounded-md text-[#006CE4] font-medium","py-2 px-4")}>
-              Log In
-            </Link>
+
             <Link
-              href="/"
+              href="/register"
               className={cn(
-                buttonVariants({ variant: "outline" }),
+                "bg-transparent border border-white rounded-lg hover:bg-white text-lg hover:text-[#006CE4] font-medium",
                 "py-2 px-4"
               )}
             >
-              Sign Up
+              Log In
+            </Link>
+
+            <Link
+              href="/register"
+              className={cn(
+                "bg-white rounded-md primaryTextColor font-medium hover:bg-secondary/90 text-lg",
+                "py-2 px-4"
+              )}
+            >
+              Sign In
             </Link>
           </div>
         </div>

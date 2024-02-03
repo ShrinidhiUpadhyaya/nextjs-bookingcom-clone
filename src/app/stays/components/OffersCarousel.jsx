@@ -43,13 +43,13 @@ const OffersCarousel = () => {
       {carouselData.map((data) => (
         <CarouselItem
           key={data.id}
-          className="lg:basis-1/2 h-44 items-center justify-start flex gap-0"
+          className="lg:basis-1/2 h-44 justify-start flexCenter gap-0"
         >
           <div className="p-1 h-full flex-1">
             <Card className="h-full">
               <CardContent className="h-full p-0">
                 <div className="flex h-full justify-between">
-                  <div className="leftDiv flex flex-col justify-between p-4">
+                  <div className="leftDiv flexCol justify-between p-4">
                     <div>
                       <h3 className="font-bold text-base">{data.title}</h3>
                       <p className="text-base font-normal">

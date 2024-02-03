@@ -70,10 +70,10 @@ export default function page() {
 
 
   return (
-    <div className="flex justify-center">
-      <div className="2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%] flex flex-col gap-2">
+    <div className="flexHCenter">
+      <div className="contentWidth flexCol gap-2">
         <div className="flex gap-4">
-          <div className="min-w-[25%] flex items-center justify-center bg-[#EBF3FF] text-[#0071c2]">
+          <div className="min-w-[25%] flexHVCenter bg-[#EBF3FF] text-[#0071c2]">
             We Match Price
           </div>
           <div className="flex relative w-full">
@@ -90,11 +90,11 @@ export default function page() {
           <div>
             <p className="text-xl font-semibold">CAB</p>
             <p className="flex">
-              <MapPin className="text-[#006CE4]" />
+              <MapPin className="primaryTextColor" />
               Location
             </p>
           </div>
-          <div className="text-[#006CE4] flex gap-6 items-center">
+          <div className="primaryTextColor flexVCenter gap-6">
             <Heart />
             <Share2 />
             <Button>Reserve</Button>
@@ -137,7 +137,7 @@ export default function page() {
                 objectFit="cover"
               ></Image>
             </div>
-            <div className="flex gap-2 absolute right-6 bottom-6 bg-white p-2 rounded-lg text-sm items-center font-medium">
+            <div className="flexVCenter gap-2 absolute right-6 bottom-6 bg-white p-2 rounded-lg text-sm font-medium">
               <Grip />
               Show all photos
             </div>
@@ -166,7 +166,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-[#EBF3FF] p-4 flex flex-col gap-2 min-w-[30%]">
+          <div className="bg-[#EBF3FF] p-4 flexCol gap-2 min-w-[30%]">
             <p className="font-semibold">Property highlights</p>
             <p className="text-sm font-semibold mt-2">
               Perfect for a 10-night stay
@@ -205,27 +205,27 @@ export default function page() {
                       <p className="text-lg font-semibold my-2 mb-4">
                         Apartment
                       </p>
-                      <p className="flex gap-1 items-center">
+                      <p className="flexHCenter gap-1">
                         <Check size={14} />
                         57m2
                       </p>
 
-                      <p className="flex gap-1 items-center">
+                      <p className="flexHCenter gap-1">
                         <Check size={14} />
                         Private Kitchen
                       </p>
 
-                      <p className="flex gap-1 items-center">
+                      <p className="flexHCenter gap-1">
                         <Check size={14} />
                         Private Bathroom
                       </p>
 
-                      <p className="flex gap-1 items-center">
+                      <p className="flexHCenter gap-1">
                         <Check size={14} />
                         Flat-screen TV
                       </p>
 
-                      <p className="flex gap-1 items-center">
+                      <p className="flexHCenter gap-1">
                         <Check size={14} />
                         Coffee Machine
                       </p>

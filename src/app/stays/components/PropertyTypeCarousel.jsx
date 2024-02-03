@@ -18,12 +18,12 @@ const PropertyTypeCarousel = ({ carouselData }) => {
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}
-          className="group basis-1/2 md:basis-1/4 items-center justify-start flex gap-0 cursor-pointer"
+          className="group basis-1/2 md:basis-1/4 justify-start flexCenter gap-0 cursor-pointer"
         >
           <div className="p-1 flex-1">
             <Card className="border-none">
               <CardContent className="p-0">
-                <div className="flex flex-col">
+                <div className="flexCol">
                   <div className="flex-1 relative group-hover:opacity-90">
                     <AspectRatio ratio={4 / 3}>
                       <Image

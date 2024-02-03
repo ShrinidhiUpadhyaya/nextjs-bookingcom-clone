@@ -75,6 +75,26 @@
   }
 }
 
+.contentWidth {
+  @apply 2xl:w-[55%] xl:w-[75%] lg:w-[90%] w-[95%]
+}
 .primaryTextColor {
   @apply text-[#006CE4];
+}
+
+.flexVCenter {
+  @apply flex items-center;
+}
+
+.flexHCenter {
+  @apply flex justify-center;
+}
+
+.flexHVCenter {
+  @apply flex items-center justify-center;
+  
+}
+
+.flexCol {
+  @apply flex flex-col;
 }

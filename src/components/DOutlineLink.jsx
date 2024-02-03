@@ -7,7 +7,7 @@ const DOutlineLink = ({ label, Icon, active, href, onClick, className }) => {
     <div>
     <Link
       className={cn(
-        "flex items-center justify-center border-[white] bg-transparent border border-transparent hover:bg-[#1A4FA0] rounded-3xl py-2 px-4 gap-2 text-base font-light text-white",
+        "flexHVCenter border-[white] bg-transparent border border-transparent hover:bg-[#1A4FA0] rounded-3xl py-2 px-4 gap-2 text-base font-light text-white",
         { "bg-[#1A4FA0] border-red-50": active }
       )}
       onClick={onClick}

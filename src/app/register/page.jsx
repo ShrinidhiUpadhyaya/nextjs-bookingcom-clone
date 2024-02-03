@@ -11,8 +11,8 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="flex justify-center">
-      <div className="flex items-center justify-center flex-col w-[25%] p-10">
+    <div className="flexHCenter">
+      <div className="flexCol items-center justify-center w-[25%] p-10">
         <h3 className="font-bold text-xl w-full">
           Sign in or create an account
         </h3>

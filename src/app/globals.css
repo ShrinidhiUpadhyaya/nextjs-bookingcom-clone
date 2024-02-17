@@ -98,3 +98,10 @@
 .flexCol {
   @apply flex flex-col;
 }
+
+.primaryTitle {
+  @apply font-bold text-xl;
+}
+.secondaryTitle {
+  @apply font-bold;
+}

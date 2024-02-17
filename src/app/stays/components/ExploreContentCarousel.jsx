@@ -12,13 +12,14 @@ import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import DCarousel from "./DCarousel";
 
-const ExploreContentCarousel = ({ carouselData }) => {
+const ExploreContentCarousel = ({ carouselData, onClick }) => {
   return (
-    <DCarousel prevButtonStyle='-mt-8' nextButtonStyle='-mt-8'>
+    <DCarousel prevButtonStyle='-mt-8' nextButtonStyle='-mt-8' >
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}
           className="group basis-1/3 md:basis-1/6 justify-start flexCenter gap-0 cursor-pointer"
+          onClick={onClick}
         >
           <div className="p-1 flex-1">
             <Card className="border-none">

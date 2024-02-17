@@ -2,7 +2,15 @@
 
 import Image from "next/image";
 import React, { useRef } from "react";
-import { Grip, Heart, Share2, MapPin, Utensils, Check } from "lucide-react";
+import {
+  Grip,
+  Heart,
+  Share2,
+  MapPin,
+  Utensils,
+  Check,
+  CigaretteOff,
+} from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -41,6 +49,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import DIconLabel from "../stays/components/DIconLabel";
+import {
+  hotelFacilities,
+  hotelPopularFacilities,
+  nearByPlaces,
+  topAttractions,
+  restaurentCafes,
+  naturalBeauty,
+  closestAirports,
+  reviewCategories,
+} from "@/lib/hotelFeatures";
+import HotelFacilities from "../stays/components/HotelFacilities";
+import HotelSurroundings from "../stays/components/HotelSurroundings";
+import DProgressBar from "../stays/components/DProgressBar";
 
 const FormSchema = z.object({
   email: z
@@ -54,8 +76,6 @@ function onSubmit(data) {
   console.log("OnSubmit function called", data);
 }
 
-
-
 export default function page() {
   const formRef = useRef();
 
@@ -64,13 +84,12 @@ export default function page() {
   });
 
   function handleButtonClick() {
-    console.log('Handlebutton click')
+    console.log("Handlebutton click");
     form.handleSubmit(onSubmit)();
   }
 
-
   return (
-    <div className="flexHCenter">
+    <div className="flexHCenter pb-10">
       <div className="contentWidth flexCol gap-2">
         <div className="flex gap-4">
           <div className="min-w-[25%] flexHVCenter bg-[#EBF3FF] text-[#0071c2]">
@@ -205,27 +224,27 @@ export default function page() {
                       <p className="text-lg font-semibold my-2 mb-4">
                         Apartment
                       </p>
-                      <p className="flexHCenter gap-1">
+                      <p className="flexVCenter gap-1">
                         <Check size={14} />
                         57m2
                       </p>
 
-                      <p className="flexHCenter gap-1">
+                      <p className="flexVCenter gap-1">
                         <Check size={14} />
                         Private Kitchen
                       </p>
 
-                      <p className="flexHCenter gap-1">
+                      <p className="flexVCenter gap-1">
                         <Check size={14} />
                         Private Bathroom
                       </p>
 
-                      <p className="flexHCenter gap-1">
+                      <p className="flexVCenter gap-1">
                         <Check size={14} />
                         Flat-screen TV
                       </p>
 
-                      <p className="flexHCenter gap-1">
+                      <p className="flexVCenter gap-1">
                         <Check size={14} />
                         Coffee Machine
                       </p>
@@ -254,10 +273,8 @@ export default function page() {
                     </p>
                   </TableCell>
                   <TableCell className="text-right">
-                    <Form {...form} >
-                      <form
-                        onSubmit={form.handleSubmit(onSubmit)}
-                      >
+                    <Form {...form}>
+                      <form onSubmit={form.handleSubmit(onSubmit)}>
                         <FormField
                           control={form.control}
                           name="email"
@@ -288,9 +305,77 @@ export default function page() {
               </TableBody>
             </Table>
 
-            <Button className="mt-[5%]" type="submit" onClick={handleButtonClick}>
+            <Button
+              className="mt-[5%]"
+              type="submit"
+              onClick={handleButtonClick}
+            >
               Reserve
             </Button>
+          </div>
+        </div>
+
+        <div>
+          <h2>Facilities</h2>
+          <h3>Most popular facilities</h3>
+          <div className="flex gap-4">
+            {hotelPopularFacilities.map((facility) => (
+              <DIconLabel label={facility.label} Icon={facility.icon} />
+            ))}
+          </div>
+
+          <div className="grid grid-cols-3 break-inside-avoid-column">
+            {hotelFacilities.map((facility) => (
+              <HotelFacilities
+                label={facility.label}
+                Icon={facility.Icon}
+                facilities={facility.facilities}
+              />
+            ))}
+          </div>
+
+          <div>
+            <h2 className="primaryTitle mb-4">Hotel Surroundings</h2>
+            <div className="grid grid-cols-3 gap-4">
+              <HotelSurroundings
+                label={nearByPlaces.label}
+                placesList={nearByPlaces.places}
+              />
+              <HotelSurroundings
+                label={topAttractions.label}
+                placesList={topAttractions.places}
+              />
+              <HotelSurroundings
+                label={restaurentCafes.label}
+                placesList={restaurentCafes.places}
+              />
+              <HotelSurroundings
+                label={naturalBeauty.label}
+                placesList={naturalBeauty.places}
+              />
+              <HotelSurroundings
+                label={closestAirports.label}
+                placesList={closestAirports.places}
+              />
+            </div>
+          </div>
+
+          <div>
+            <h2 className="primaryTitle mb-2">Guest reviews</h2>
+            <p className="flex gap-2 mb-8 text-sm">
+              <span>Good </span>
+              <span>1,356 reviews</span>
+            </p>
+            <div className="grid grid-cols-3 gap-4">
+              {
+                reviewCategories.map((category) => (
+                  <DProgressBar label={category.label} value={category.value}/>
+                ) )
+              }
+            </div>
+            <div>
+              <p>See what guests loved the most</p>
+            </div>
           </div>
         </div>
       </div>

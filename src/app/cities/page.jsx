@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
@@ -27,86 +28,22 @@ import {
 } from "@/components/ui/dialog";
 import DCheckbox from "../stays/components/DCheckbox";
 import DOutlineButton from "@/components/DOutlineButton";
-
-const hotels = [
-  {
-    name: "CAB1",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB2",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB3",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB4",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB5",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB6",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB7",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-  {
-    name: "CAB8",
-    rating: 9.4,
-    wordsRating: "Very good",
-    reviews: 8095,
-    description:
-      "Featuring stunning designs where history and tradition meet modernity. The CAB Hotel Hamburg reopened in July 2015 and is located in the heart of Hamburg.",
-    sustainable: 2,
-  },
-];
+import getAllProperties from "@/lib/getAllProperties";
 
 const page = () => {
   const [openFilterDialog, setOpenFilterDialog] = useState(false);
+  const [allProperties, setAllProperties] = useState([]);
 
   const filterKeys = Object.entries(filters);
+
+  async function fetchProperties() {
+    const response = await getAllProperties();
+    setAllProperties(response.data);
+  }
+
+  useEffect(() => {
+    fetchProperties();
+  }, []);
 
   return (
     <div className="flexCol gap-8 items-center justify-center">
@@ -142,11 +79,12 @@ const page = () => {
         </div>
 
         <div className="grid grid-cols-1 w-full gap-4 mt-4">
-          {hotels.map((hotel) => (
-            <Card key={hotel.name} className='cursor-pointer'>
+          {allProperties?.map((property) => (
+            <Card key={property.name} className="cursor-pointer">
               <CardContent className="flex p-2 w-full gap-4">
                 <div className="min-h-52 max-h-52 min-w-52 relative">
                   <Image
+                    alt="Properties Image"
                     src="/propertyType/apartments.png"
                     layout="fill"
                     objectFit="cover"
@@ -157,7 +95,7 @@ const page = () => {
                 <div className="flex gap-2">
                   <div className="leftDiv flex-1 flexCol gap-2">
                     <h2 className="primaryTextColor font-semibold text-xl">
-                      {hotel.name}
+                      {property.name}
                     </h2>
                     <p className="text-sm">
                       Location <span>1.1Km</span>
@@ -170,25 +108,25 @@ const page = () => {
                       </div>
                       Sustainable level
                     </div>
-                    <div className="text-sm">{hotel.description}</div>
+                    <div className="text-sm">{property.description}</div>
                   </div>
                   <div className="rightDiv gap-2 flexCol">
                     <div className="flex gap-2">
                       <div>
                         <p className="text-base font-semibold">
-                          {hotel.wordsRating}
+                          {property.wordsRating}
                         </p>
                         <p className="text-xs font-normal">
-                          {hotel.reviews} reviews
+                          {property.reviews} reviews
                         </p>
                       </div>
 
                       <div className="bg-[#003B95] text-white p-2 rounded-sm flex items-center justify-center">
-                        {hotel.rating}
+                        {property.rating}
                       </div>
                     </div>
                     <Link
-                      href="/hotels"
+                      href= {"/hotels/" + property.id}
                       className={cn(
                         buttonVariants({ variant: "default" }),
                         "py-2 px-4 mt-8 hover:bg-[#003B95]"
@@ -232,7 +170,7 @@ const page = () => {
         <DialogFooter className="h-15">
           <div className="flex justify-between w-full pr-4">
             <DOutlineButton label="Clear all" className="font-medium" />
-            <Button className='hover-[#003B95]'>Show places</Button>
+            <Button className="hover-[#003B95]">Show places</Button>
           </div>
         </DialogFooter>
       </DDialog>

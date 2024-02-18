@@ -44,6 +44,7 @@ const TopNavBar = () => {
               <div className="grid grid-cols-4 gap-4">
                 {currentCurrency.map((currency, index) => (
                   <DHoverBox
+                    key={currency.name}
                     label={currency.name}
                     value={currency.currencyCode}
                     selected={currency.selected}
@@ -59,6 +60,7 @@ const TopNavBar = () => {
               <div className="grid grid-cols-4 gap-4">
                 {currentCurrency.map((currency, index) => (
                   <DHoverBox
+                    key={currency.name}
                     label={currency.name}
                     value={currency.currencyCode}
                     selected={currency.selected}

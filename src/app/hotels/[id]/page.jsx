@@ -2,46 +2,24 @@
 
 import Image from "next/image";
 import React, { useRef } from "react";
-import {
-  Grip,
-  Heart,
-  Share2,
-  MapPin,
-  Utensils,
-  Check,
-  CigaretteOff,
-} from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { hotelOverviewOptions } from "@/lib/hotelFiltersConstants";
-
-import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 
-import { toast } from "@/components/ui/use-toast";
+import { Grip, Heart, Share2, MapPin, Utensils, Check } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
 import {
   Select,
   SelectContent,
@@ -49,7 +27,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import DIconLabel from "../stays/components/DIconLabel";
+import DProgressBar from "../../stays/components/DProgressBar";
+
+import DIconLabel from "../../stays/components/DIconLabel";
+
+import { hotelOverviewOptions } from "@/lib/hotelFiltersConstants";
 import {
   hotelFacilities,
   hotelPopularFacilities,
@@ -60,9 +42,8 @@ import {
   closestAirports,
   reviewCategories,
 } from "@/lib/hotelFeatures";
-import HotelFacilities from "../stays/components/HotelFacilities";
-import HotelSurroundings from "../stays/components/HotelSurroundings";
-import DProgressBar from "../stays/components/DProgressBar";
+import HotelFacilities from "../../stays/components/HotelFacilities";
+import HotelSurroundings from "../../stays/components/HotelSurroundings";
 
 const FormSchema = z.object({
   email: z
@@ -76,7 +57,7 @@ function onSubmit(data) {
   console.log("OnSubmit function called", data);
 }
 
-export default function page() {
+export default function page({ params: { id } }) {
   const formRef = useRef();
 
   const form = useForm({
@@ -367,11 +348,9 @@ export default function page() {
               <span>1,356 reviews</span>
             </p>
             <div className="grid grid-cols-3 gap-4">
-              {
-                reviewCategories.map((category) => (
-                  <DProgressBar label={category.label} value={category.value}/>
-                ) )
-              }
+              {reviewCategories.map((category) => (
+                <DProgressBar label={category.label} value={category.value} />
+              ))}
             </div>
             <div>
               <p>See what guests loved the most</p>

@@ -12,11 +12,11 @@ import Link from "next/link";
 const page = () => {
   return (
     <div className="flexHCenter">
-      <div className="flexCol items-center justify-center w-[25%] p-10">
-        <h3 className="font-bold text-xl w-full">
+      <div className="flexCol w-[25%] items-center justify-center p-10">
+        <h3 className="w-full text-xl font-bold">
           Sign in or create an account
         </h3>
-        <div className="text-md w-full mt-8">
+        <div className="text-md mt-8 w-full">
           <p>Email address</p>
           <Input
             className="font-medium"
@@ -24,24 +24,24 @@ const page = () => {
           />
         </div>
 
-        <Button className="w-full mt-4">Continue with email</Button>
-        <div className="relative w-full mt-4">
+        <Button className="mt-4 w-full">Continue with email</Button>
+        <div className="relative mt-4 w-full">
           <Separator
             orientation="vertical"
-            className="w-full h-[1px] mt-4 bg-black/20"
+            className="mt-4 h-[1px] w-full bg-black/20"
           />
-          <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 z:2 text-center border-0 bg-white px-2 text-sm">
+          <span className="z:2 absolute left-1/2 top-1/2 -translate-x-1/2 transform border-0 bg-white px-2 text-center text-sm">
             or use one of the options
           </span>
         </div>
 
-        <div className="flex mt-4 p-4">
+        <div className="mt-4 flex p-4">
           {registerOptions.map((option) => (
             <DOutlineButton
               key={option.tooltip}
-              className="border border-transparent hover:border-[#006CE4] hover:border hover:bg-transparent p-12 rounded-md"
+              className="rounded-md border border-transparent p-12 hover:border hover:border-[#006CE4] hover:bg-transparent"
             >
-              <Link href='/api/auth/signin'>
+              <Link href="/api/auth/signin">
                 <Image height={100} width={100} src={option.imgSource} />
               </Link>
             </DOutlineButton>
@@ -50,17 +50,17 @@ const page = () => {
 
         <Separator
           orientation="vertical"
-          className="w-full h-[1px] mt-4 bg-black/20 m-4"
+          className="m-4 mt-4 h-[1px] w-full bg-black/20"
         />
 
-        <p className="text-xs text-center">
+        <p className="text-center text-xs">
           By signing in or creating an account, you agree with our{" "}
           <span>Terms & conditions and Privacy Statements</span>
         </p>
 
         <Separator
           orientation="vertical"
-          className="w-full h-[1px] mt-4 bg-black/20 m-4"
+          className="m-4 mt-4 h-[1px] w-full bg-black/20"
         />
       </div>
     </div>

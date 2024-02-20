@@ -2,11 +2,16 @@ import React from "react";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const DHoverCard = ({ label = "label", value = "value", selected = true, onClick }) => {
+const DHoverCard = ({
+  label = "label",
+  value = "value",
+  selected = true,
+  onClick,
+}) => {
   return (
     <div
-      className={cn("flex px-4 py-4 text-sm rounded-md text-black ", {
-        "bg-[#006ce40f] primaryTextColor": selected,
+      className={cn("flex rounded-md px-4 py-4 text-sm text-black ", {
+        "primaryTextColor bg-[#006ce40f]": selected,
         "hover:bg-[#F2F2F2]": !selected,
       })}
       onClick={onClick}

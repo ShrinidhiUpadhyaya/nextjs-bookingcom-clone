@@ -73,17 +73,17 @@ export default function page({ params: { id } }) {
     <div className="flexHCenter pb-10">
       <div className="contentWidth flexCol gap-2">
         <div className="flex gap-4">
-          <div className="min-w-[25%] flexHVCenter bg-[#EBF3FF] text-[#0071c2]">
+          <div className="flexHVCenter min-w-[25%] bg-[#EBF3FF] text-[#0071c2]">
             We Match Price
           </div>
-          <div className="flex relative w-full">
+          <div className="relative flex w-full">
             {hotelOverviewOptions.map((option) => (
-              <div className="p-4 hover:text-[#006CE4] hover:bg-accent cursor-pointer">
+              <div className="cursor-pointer p-4 hover:bg-accent hover:text-[#006CE4]">
                 {option.label}
               </div>
             ))}
 
-            <Separator className="absolute w-full bottom-0" />
+            <Separator className="absolute bottom-0 w-full" />
           </div>
         </div>
         <div className="flex justify-between">
@@ -101,14 +101,14 @@ export default function page({ params: { id } }) {
           </div>
         </div>
         <div className="flex gap-2">
-          <div className="flex-1 max-w-[50%] relative">
+          <div className="relative max-w-[50%] flex-1">
             <Image
               src="/hotels/hotel1.png"
               layout="fill"
               objectFit="cover"
             ></Image>
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-2 relative  h-full flex-1">
+          <div className="relative grid h-full flex-1 grid-cols-2  grid-rows-2 gap-2">
             <div className=" relative h-60 w-full">
               <Image
                 src="/hotels/hotel2.png"
@@ -137,7 +137,7 @@ export default function page({ params: { id } }) {
                 objectFit="cover"
               ></Image>
             </div>
-            <div className="flexVCenter gap-2 absolute right-6 bottom-6 bg-white p-2 rounded-lg text-sm font-medium">
+            <div className="flexVCenter absolute bottom-6 right-6 gap-2 rounded-lg bg-white p-2 text-sm font-medium">
               <Grip />
               Show all photos
             </div>
@@ -145,7 +145,7 @@ export default function page({ params: { id } }) {
         </div>
 
         <div className="flex justify-between gap-8">
-          <div className="text-sm leading-8 font-light">
+          <div className="text-sm font-light leading-8">
             <p>
               You're eligible for a Genius discount at Sonnenhotel Weingut
               Römmert! To save at this property, all you have to do is sign in.
@@ -166,15 +166,15 @@ export default function page({ params: { id } }) {
             </p>
           </div>
 
-          <div className="bg-[#EBF3FF] p-4 flexCol gap-2 min-w-[30%]">
+          <div className="flexCol min-w-[30%] gap-2 bg-[#EBF3FF] p-4">
             <p className="font-semibold">Property highlights</p>
-            <p className="text-sm font-semibold mt-2">
+            <p className="mt-2 text-sm font-semibold">
               Perfect for a 10-night stay
             </p>
             <p className="text-sm font-light">
               Top Location: Highly rated by recent guests (8.5)
             </p>
-            <p className="text-sm font-semibold mt-2">Rooms with:</p>
+            <p className="mt-2 text-sm font-semibold">Rooms with:</p>
             <p className="text-sm font-light">Quiet street view</p>
             <p className="text-sm font-light">
               Free private parking available at the hotel
@@ -202,7 +202,7 @@ export default function page({ params: { id } }) {
                 <TableRow>
                   <TableCell>
                     <div className="text-xs">
-                      <p className="text-lg font-semibold my-2 mb-4">
+                      <p className="my-2 mb-4 text-lg font-semibold">
                         Apartment
                       </p>
                       <p className="flexVCenter gap-1">
@@ -305,7 +305,7 @@ export default function page({ params: { id } }) {
             ))}
           </div>
 
-          <div className="grid grid-cols-3 break-inside-avoid-column">
+          <div className="grid break-inside-avoid-column grid-cols-3">
             {hotelFacilities.map((facility) => (
               <HotelFacilities
                 label={facility.label}
@@ -343,7 +343,7 @@ export default function page({ params: { id } }) {
 
           <div>
             <h2 className="primaryTitle mb-2">Guest reviews</h2>
-            <p className="flex gap-2 mb-8 text-sm">
+            <p className="mb-8 flex gap-2 text-sm">
               <span>Good </span>
               <span>1,356 reviews</span>
             </p>

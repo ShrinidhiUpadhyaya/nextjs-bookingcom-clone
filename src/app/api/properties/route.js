@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const hotels = [
   {
-    id: 'IDCAB1',
+    id: "IDCAB1",
     name: "CAB1",
     rating: 9.4,
     wordsRating: "Very good",
@@ -12,7 +12,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB2',
+    id: "IDCAB2",
     name: "CAB2",
     rating: 9.4,
     wordsRating: "Very good",
@@ -22,7 +22,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB3',
+    id: "IDCAB3",
     name: "CAB3",
     rating: 9.4,
     wordsRating: "Very good",
@@ -32,7 +32,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB4',
+    id: "IDCAB4",
     name: "CAB4",
     rating: 9.4,
     wordsRating: "Very good",
@@ -42,7 +42,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB5',
+    id: "IDCAB5",
     name: "CAB5",
     rating: 9.4,
     wordsRating: "Very good",
@@ -52,7 +52,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB6',
+    id: "IDCAB6",
     name: "CAB6",
     rating: 9.4,
     wordsRating: "Very good",
@@ -62,7 +62,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB7',
+    id: "IDCAB7",
     name: "CAB7",
     rating: 9.4,
     wordsRating: "Very good",
@@ -72,7 +72,7 @@ const hotels = [
     sustainable: 2,
   },
   {
-    id: 'IDCAB8',
+    id: "IDCAB8",
     name: "CAB8",
     rating: 9.4,
     wordsRating: "Very good",

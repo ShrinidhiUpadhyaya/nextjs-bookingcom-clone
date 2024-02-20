@@ -46,22 +46,22 @@ const page = () => {
   }, []);
 
   return (
-    <div className="flexCol gap-8 items-center justify-center">
-      <div className="w-full flexHCenter relative">
+    <div className="flexCol items-center justify-center gap-8">
+      <div className="flexHCenter relative w-full">
         <div className="h-12 w-full bg-[#003B95]"></div>
-        <div className="contentWidth grid grid-rows-4 md:grid md:grid-cols-4 md:grid-rows-1 items-center absolute top-6 bg-[#FFB700] p-1 rounded-md gap-1">
+        <div className="contentWidth absolute top-6 grid grid-rows-4 items-center gap-1 rounded-md bg-[#FFB700] p-1 md:grid md:grid-cols-4 md:grid-rows-1">
           <LocationPopover />
           <CheckInDatePopover />
           <PersonCountPopover />
-          <Button className="py-6 px-8 text-lg">Search</Button>
+          <Button className="px-8 py-6 text-lg">Search</Button>
         </div>
       </div>
       <Separator className="mt-8" />
 
-      <div className="contentWidth flexCol gap-8 justify-center p-4 pt-0">
-        <h2 className="font-bold text-xl">Hamburg: 728 properties found</h2>
+      <div className="contentWidth flexCol justify-center gap-8 p-4 pt-0">
+        <h2 className="text-xl font-bold">Hamburg: 728 properties found</h2>
         <div className="flex gap-4">
-          <div className="flex-1 flex gap-2">
+          <div className="flex flex-1 gap-2">
             <DBadge>Property type: Hotels</DBadge>
 
             <DBadge>Property rating: 4 stars</DBadge>
@@ -69,7 +69,7 @@ const page = () => {
             <DBadge>Facilities: Restaurents</DBadge>
           </div>
           <Button
-            className="bg-white text-[#1a1a1a] border border-[#868686] text-base font-normal rounded-3xl hover:text-[#006CE4] hover:bg-accent"
+            className="rounded-3xl border border-[#868686] bg-white text-base font-normal text-[#1a1a1a] hover:bg-accent hover:text-[#006CE4]"
             onClick={() => setOpenFilterDialog(!openFilterDialog)}
           >
             <SlidersHorizontal className="m-2 opacity-60" />
@@ -78,11 +78,11 @@ const page = () => {
           <DCombobox />
         </div>
 
-        <div className="grid grid-cols-1 w-full gap-4 mt-4">
+        <div className="mt-4 grid w-full grid-cols-1 gap-4">
           {allProperties?.map((property) => (
             <Card key={property.name} className="cursor-pointer">
-              <CardContent className="flex p-2 w-full gap-4">
-                <div className="min-h-52 max-h-52 min-w-52 relative">
+              <CardContent className="flex w-full gap-4 p-2">
+                <div className="relative max-h-52 min-h-52 min-w-52">
                   <Image
                     alt="Properties Image"
                     src="/propertyType/apartments.png"
@@ -93,14 +93,14 @@ const page = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <div className="leftDiv flex-1 flexCol gap-2">
-                    <h2 className="primaryTextColor font-semibold text-xl">
+                  <div className="leftDiv flexCol flex-1 gap-2">
+                    <h2 className="primaryTextColor text-xl font-semibold">
                       {property.name}
                     </h2>
                     <p className="text-sm">
                       Location <span>1.1Km</span>
                     </p>
-                    <div className="text-xs items-center bg-[#F1FEF6] px-2 py-1 flex gap-2 text-[#008234] max-w-max">
+                    <div className="flex max-w-max items-center gap-2 bg-[#F1FEF6] px-2 py-1 text-xs text-[#008234]">
                       <div className="flex">
                         <Leaf size={18} />
                         <Leaf size={18} />
@@ -110,7 +110,7 @@ const page = () => {
                     </div>
                     <div className="text-sm">{property.description}</div>
                   </div>
-                  <div className="rightDiv gap-2 flexCol">
+                  <div className="rightDiv flexCol gap-2">
                     <div className="flex gap-2">
                       <div>
                         <p className="text-base font-semibold">
@@ -121,15 +121,15 @@ const page = () => {
                         </p>
                       </div>
 
-                      <div className="bg-[#003B95] text-white p-2 rounded-sm flex items-center justify-center">
+                      <div className="flex items-center justify-center rounded-sm bg-[#003B95] p-2 text-white">
                         {property.rating}
                       </div>
                     </div>
                     <Link
-                      href= {"/hotels/" + property.id}
+                      href={"/hotels/" + property.id}
                       className={cn(
                         buttonVariants({ variant: "default" }),
-                        "py-2 px-4 mt-8 hover:bg-[#003B95]"
+                        "mt-8 px-4 py-2 hover:bg-[#003B95]",
                       )}
                     >
                       Show prices
@@ -148,9 +148,9 @@ const page = () => {
         title="Filters"
         className="max-h-[75%]"
       >
-        <div className="flex-1 max-h-[80%]">
-          <div className="flex-1 flexCol h-full">
-            <div className="grid gap-4 py-4 overflow-y-auto h-full">
+        <div className="max-h-[80%] flex-1">
+          <div className="flexCol h-full flex-1">
+            <div className="grid h-full gap-4 overflow-y-auto py-4">
               {filterKeys.map(([key, filter]) => (
                 <div key={key} className="flexCol gap-2">
                   <h2 className="text-lg font-medium">{filter.label}</h2>
@@ -168,7 +168,7 @@ const page = () => {
         <Separator />
 
         <DialogFooter className="h-15">
-          <div className="flex justify-between w-full pr-4">
+          <div className="flex w-full justify-between pr-4">
             <DOutlineButton label="Clear all" className="font-medium" />
             <Button className="hover-[#003B95]">Show places</Button>
           </div>

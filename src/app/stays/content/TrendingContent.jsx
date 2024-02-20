@@ -5,15 +5,15 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const TrendingContent = ({ topData, bottomData }) => {
   return (
     <div className="flexCol gap-1">
-      <h2 className="font-bold text-xl">Trending Choices</h2>
+      <h2 className="text-xl font-bold">Trending Choices</h2>
       <p className="text-base">
         Most popular choices for travelers from Germany
       </p>
 
-      <div className="grid grid-row gap-4">
+      <div className="grid-row grid gap-4">
         <div className="flex gap-4">
           {topData.map((data) => (
-            <div className="flex-1 relative rounded-md">
+            <div className="relative flex-1 rounded-md">
               <AspectRatio ratio={16 / 9}>
                 <Image
                   src={data.imgSource}
@@ -23,7 +23,7 @@ const TrendingContent = ({ topData, bottomData }) => {
                 />
               </AspectRatio>
 
-              <h2 className="font-bold text-2xl absolute top-0 px-4 py-8 text-[white]">
+              <h2 className="absolute top-0 px-4 py-8 text-2xl font-bold text-[white]">
                 {data.title}
               </h2>
             </div>
@@ -32,7 +32,7 @@ const TrendingContent = ({ topData, bottomData }) => {
 
         <div className="flex gap-4">
           {bottomData.map((data) => (
-            <div className="flex-1 relative rounded-md">
+            <div className="relative flex-1 rounded-md">
               <AspectRatio ratio={4 / 3}>
                 <Image
                   src={data.imgSource}
@@ -42,7 +42,7 @@ const TrendingContent = ({ topData, bottomData }) => {
                 />
               </AspectRatio>
 
-              <h2 className="font-bold text-2xl absolute top-0 px-4 py-8 text-[white]">
+              <h2 className="absolute top-0 px-4 py-8 text-2xl font-bold text-[white]">
                 {data.title}
               </h2>
             </div>

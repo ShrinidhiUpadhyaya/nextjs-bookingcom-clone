@@ -4,11 +4,7 @@ import { BedDouble } from "lucide-react";
 
 const LocationPopover = () => {
   return (
-    <DPopover
-      className="flex-1"
-      label="Where are you going?"
-      Icon={BedDouble}
-    >
+    <DPopover className="flex-1" label="Where are you going?" Icon={BedDouble}>
       {" "}
     </DPopover>
   );

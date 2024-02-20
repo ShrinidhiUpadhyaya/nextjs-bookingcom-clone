@@ -11,8 +11,8 @@ function DBadge({ children }) {
     <Badge
       variant="outline"
       className={cn(
-        "border border-[#868686] text-sm font-normal p-2 px-4 cursor-pointer hover:bg-accent hover:text-[#006CE4]",
-        { "border-[#006CE4] primaryTextColor": selected }
+        "cursor-pointer border border-[#868686] p-2 px-4 text-sm font-normal hover:bg-accent hover:text-[#006CE4]",
+        { "primaryTextColor border-[#006CE4]": selected },
       )}
       onClick={() => setSelected(!selected)}
     >

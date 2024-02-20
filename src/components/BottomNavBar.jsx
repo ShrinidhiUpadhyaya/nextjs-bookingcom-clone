@@ -18,14 +18,7 @@ const bottomNavBarOptions = [
     label: "Flights",
     Icon: Plane,
     active: false,
-    href: "/",
-  },
-  {
-    id: "flightHotel",
-    label: "Flight + Hotel",
-    Icon: TreeDeciduous,
-    active: false,
-    href: "/",
+    href: "/flights",
   },
   {
     id: "rentalCar",
@@ -56,11 +49,11 @@ const BottomNavBar = () => {
       prevState.map((item, tempIndex) => ({
         ...item,
         active: index === tempIndex,
-      }))
+      })),
     );
   }
   return (
-    <div className="my-2 flexVCenter gap-4">
+    <div className="flexVCenter my-2 gap-4">
       {navBarOptions.map((option, index) => (
         <DOutlineLink
           key={option.id}

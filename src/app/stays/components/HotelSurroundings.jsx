@@ -6,7 +6,7 @@ const HotelSurroundings = ({ Icon, label, placesList }) => {
       <p className="secondaryTitle">What's nearby</p>
       <div className="flexCol gap-4">
         {placesList.map((place) => (
-          <p className="flex gap-2 justify-between items-center text-sm font-light">
+          <p className="flex items-center justify-between gap-2 text-sm font-light">
             <span>{place.name}</span>
             <span>{place.distance}</span>
           </p>

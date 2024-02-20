@@ -10,7 +10,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-
 const DPopover = ({ label, Icon, children, className }) => {
   return (
     <div className={className}>
@@ -18,16 +17,14 @@ const DPopover = ({ label, Icon, children, className }) => {
         <PopoverTrigger asChild>
           <Button
             role="combobox"
-            className="w-full py-6 px-4 justify-start border border-[white] bg-[white] text-[#1a1a1a] hover:bg-[#F2F2F2] hover:border-[#FFB700]"
+            className="w-full justify-start border border-[white] bg-[white] px-4 py-6 text-[#1a1a1a] hover:border-[#FFB700] hover:bg-[#F2F2F2]"
           >
             {<Icon />}
             <span className="px-2 text-xs font-semibold">{label}</span>
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0 w-full" side="bottom" align="start">
-        {
-          children
-        }
+        <PopoverContent className="w-full p-0" side="bottom" align="start">
+          {children}
         </PopoverContent>
       </Popover>
     </div>

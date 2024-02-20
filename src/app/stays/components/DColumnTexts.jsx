@@ -3,8 +3,10 @@ import Link from "next/link";
 
 const DColumnTexts = ({ label, description }) => {
   return (
-    <div className="group flexCol text-sm">
-      <Link href='/' className="group-hover:underline font-medium">{label}</Link>
+    <div className="flexCol group text-sm">
+      <Link href="/" className="font-medium group-hover:underline">
+        {label}
+      </Link>
       <p className="font-normal">{description}</p>
     </div>
   );

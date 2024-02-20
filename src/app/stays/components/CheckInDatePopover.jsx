@@ -15,7 +15,7 @@ import DPopover from "./DPopover";
 const CheckInDatePopover = () => {
   return (
     <DPopover
-      className="flex-1 h-full"
+      className="h-full flex-1"
       label="Check-in Date -- Check-out Date"
       Icon={CalendarDays}
     >
@@ -34,41 +34,50 @@ const CheckInDatePopover = () => {
               <Calendar
                 mode="single"
                 selected={new Date()}
-                className="rounded-md border w-full flexHCenter"
+                className="flexHCenter w-full rounded-md border"
               />
             </TabsContent>
             <TabsContent value="flexible">
-              <div className="p-4 flexCol gap-8">
+              <div className="flexCol gap-8 p-4">
                 <div className="flexCol gap-1">
-                  <h3 className="font-bold text-base">
+                  <h3 className="text-base font-bold">
                     How long do you want to stay?
                   </h3>
-                  <RadioGroup defaultValue="comfortable" className="flex gap-4 ">
+                  <RadioGroup
+                    defaultValue="comfortable"
+                    className="flex gap-4 "
+                  >
                     <div className="flexCenter space-x-2">
                       <RadioGroupItem value="default" id="r1" />
-                      <Label htmlFor="r1" className='text-sm font-normal'>Default</Label>
+                      <Label htmlFor="r1" className="text-sm font-normal">
+                        Default
+                      </Label>
                     </div>
                     <div className="flexCenter space-x-2">
                       <RadioGroupItem value="comfortable" id="r2" />
-                      <Label htmlFor="r2" className='text-sm font-normal'>Comfortable</Label>
+                      <Label htmlFor="r2" className="text-sm font-normal">
+                        Comfortable
+                      </Label>
                     </div>
                     <div className="flexCenter space-x-2">
                       <RadioGroupItem value="compact" id="r3" />
-                      <Label htmlFor="r3" className='text-sm font-normal'>Compact</Label>
+                      <Label htmlFor="r3" className="text-sm font-normal">
+                        Compact
+                      </Label>
                     </div>
                   </RadioGroup>
                 </div>
 
                 <div className="flexCol gap-1">
-                  <h3 className="font-bold text-base">
+                  <h3 className="text-base font-bold">
                     When do you want to go?
                   </h3>
-                  <p className='text-sm font-normal'>Select up to 3 months</p>
-                      <DCalendarCarousel />
+                  <p className="text-sm font-normal">Select up to 3 months</p>
+                  <DCalendarCarousel />
                 </div>
 
                 <Separator />
-                <div className="flexCenter gap-4 justify-end">
+                <div className="flexCenter justify-end gap-4">
                   <span className="text-sm">Warning</span>
                   <Button className="text-sm">Select Dates</Button>
                 </div>

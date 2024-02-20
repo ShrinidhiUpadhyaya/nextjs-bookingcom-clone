@@ -43,20 +43,20 @@ const DCalendarCarousel = () => {
   };
   return (
     <DCarousel>
-        {displayMonths.map((month, index) => (
-          <CarouselItem
-            key={month.name}
-            className="group lg:basis-1/6 justify-start flexCenter gap-0 cursor-pointer"
-          >
-            <DCalendarCarouselBox
-              month={month.name}
-              year={month.year}
-              selected={month.selected}
-              className="w-full aspect-square"
-              onClick={() => handleMonthSelection(index)}
-            />
-          </CarouselItem>
-        ))}
+      {displayMonths.map((month, index) => (
+        <CarouselItem
+          key={month.name}
+          className="flexCenter group cursor-pointer justify-start gap-0 lg:basis-1/6"
+        >
+          <DCalendarCarouselBox
+            month={month.name}
+            year={month.year}
+            selected={month.selected}
+            className="aspect-square w-full"
+            onClick={() => handleMonthSelection(index)}
+          />
+        </CarouselItem>
+      ))}
     </DCarousel>
   );
 };

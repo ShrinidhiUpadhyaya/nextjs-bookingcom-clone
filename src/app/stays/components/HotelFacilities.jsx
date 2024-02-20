@@ -8,16 +8,15 @@ const HotelFacilities = ({ label, Icon, facilities }) => {
         {label && <p>{label}</p>}
       </div>
       <div>
-      {facilities &&
-        facilities.map((facility) => (
-          <div className="flex gap-2 text-sm items-center my-1">
-            {" "}
-            <Check size={'16'}/>
-            <p>{facility.label}</p>{" "}
-          </div>
-        ))}
+        {facilities &&
+          facilities.map((facility) => (
+            <div className="my-1 flex items-center gap-2 text-sm">
+              {" "}
+              <Check size={"16"} />
+              <p>{facility.label}</p>{" "}
+            </div>
+          ))}
       </div>
-      
     </div>
   );
 };

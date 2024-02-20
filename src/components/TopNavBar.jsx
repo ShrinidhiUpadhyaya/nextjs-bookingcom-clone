@@ -28,7 +28,7 @@ const TopNavBar = () => {
 
   return (
     <>
-      <div className="flexVCenter justify-between gap-4 my-2 transition">
+      <div className="flexVCenter my-2 justify-between gap-4 transition">
         <DDialog
           open={currencyDialog}
           onOpenChange={(open) => !open && setCurrencyDialog(false)}
@@ -71,7 +71,7 @@ const TopNavBar = () => {
           </>
         </DDialog>
 
-        <h2 className="text-white text-2xl font-semibold">Booking.com</h2>
+        <h2 className="text-2xl font-semibold text-white">Booking.com</h2>
         <div className="hidden items-center lg:flex">
           <div className="flex gap-2">
             <DSquareButton
@@ -85,7 +85,7 @@ const TopNavBar = () => {
           <div className="flexVCenter gap-4 text-white ">
             <Link
               href="/"
-              className="hover:bg-[#1A4FA0] text-center py-4 px-4 rounded-md"
+              className="rounded-md px-4 py-4 text-center hover:bg-[#1A4FA0]"
             >
               Register your accomodation
             </Link>
@@ -93,8 +93,8 @@ const TopNavBar = () => {
             <Link
               href="/register"
               className={cn(
-                "bg-transparent border border-white rounded-lg hover:bg-white text-lg hover:text-[#006CE4] font-medium",
-                "py-2 px-4"
+                "rounded-lg border border-white bg-transparent text-lg font-medium hover:bg-white hover:text-[#006CE4]",
+                "px-4 py-2",
               )}
             >
               Log In
@@ -103,8 +103,8 @@ const TopNavBar = () => {
             <Link
               href="/register"
               className={cn(
-                "bg-white rounded-md primaryTextColor font-medium hover:bg-secondary/90 text-lg",
-                "py-2 px-4"
+                "primaryTextColor rounded-md bg-white text-lg font-medium hover:bg-secondary/90",
+                "px-4 py-2",
               )}
             >
               Sign In

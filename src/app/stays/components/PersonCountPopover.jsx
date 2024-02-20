@@ -13,11 +13,11 @@ const PersonCountPopover = () => {
       label="2 adults. 0 children 1 room"
       Icon={UserRound}
     >
-      <div className="p-8 flexCol gap-4">
-        <DRowSpinbox label='Adults'/>
-        <DRowSpinbox label='Children'/>
-        <DRowSpinbox label='Rooms'/>
-        <Button variant='outline'>Done</Button>
+      <div className="flexCol gap-4 p-8">
+        <DRowSpinbox label="Adults" />
+        <DRowSpinbox label="Children" />
+        <DRowSpinbox label="Rooms" />
+        <Button variant="outline">Done</Button>
       </div>
     </DPopover>
   );

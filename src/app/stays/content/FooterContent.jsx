@@ -8,8 +8,8 @@ import { Separator } from "@/components/ui/separator";
 const FooterContent = () => {
   return (
     <div>
-      <div className="bg-[#00224F] p-16 mt-16">
-        <div className="text-[white] flexCol gap-8 items-center justify-center">
+      <div className="mt-16 bg-[#00224F] p-16">
+        <div className="flexCol items-center justify-center gap-8 text-[white]">
           <div className="flexCol items-center gap-1">
             <p className="text-3xl font-light">Save time, save money</p>
             <p className="text-sm font-light">
@@ -17,7 +17,7 @@ const FooterContent = () => {
             </p>
           </div>
 
-          <div className="flex gap-2 w-full sm:w-[75%] md:w-[60%] lg:w-[50%] xl:w-[30%]">
+          <div className="flex w-full gap-2 sm:w-[75%] md:w-[60%] lg:w-[50%] xl:w-[30%]">
             <Input
               className="text-xl font-extralight text-black"
               placeholder="Your email address"
@@ -27,22 +27,22 @@ const FooterContent = () => {
         </div>
       </div>
 
-      <div className="bg-[#003B95] text-white flexHCenter p-4">
+      <div className="flexHCenter bg-[#003B95] p-4 text-white">
         <Link
           href="/"
-          className={"border border-white p-2 rounded-md font-light"}
+          className={"rounded-md border border-white p-2 font-light"}
         >
           List your property
         </Link>
       </div>
 
       <Separator />
-      <div className="bg-[#003B95] flexHVCenter">
-        <div className="contentWidth grid grid-cols-3 grid-rows-2 md:grid-cols-6 md:grid-rows-1 gap-4 justify-center text-white text-xs font-semibold underline">
+      <div className="flexHVCenter bg-[#003B95]">
+        <div className="contentWidth grid grid-cols-3 grid-rows-2 justify-center gap-4 text-xs font-semibold text-white underline md:grid-cols-6 md:grid-rows-1">
           {footerTopContent.map((content) => (
             <Link
               href={content.href}
-              className="p-4 hover:bg-[#00224F] flexHVCenter"
+              className="flexHVCenter p-4 hover:bg-[#00224F]"
             >
               {content.label}
             </Link>
@@ -50,7 +50,7 @@ const FooterContent = () => {
         </div>
       </div>
 
-      <div className="flex lg:justify-between px-16 py-4 text-xs lg:text-sm gap-4">
+      <div className="flex gap-4 px-16 py-4 text-xs lg:justify-between lg:text-sm">
         <div className="flexCol primaryTextColor">
           {footerBottomContent.data1.map((content) => (
             <Link href={content.href} className="hover:underline">
@@ -99,7 +99,7 @@ const FooterContent = () => {
         </div>
       </div>
 
-      <div className="flexHCenter p-16 primaryTextColor">
+      <div className="flexHCenter primaryTextColor p-16">
         <Link href="/" className="hover:underline">
           Extranet Log-in
         </Link>

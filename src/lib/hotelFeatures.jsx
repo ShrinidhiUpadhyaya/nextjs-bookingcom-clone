@@ -249,31 +249,31 @@ export const closestAirports = {
 
 export const reviewCategories = [
   {
-    label: 'Staff',
-    value: '7.1',
+    label: "Staff",
+    value: "7.1",
   },
   {
-    label: 'Facilities',
-    value: '7.8',
+    label: "Facilities",
+    value: "7.8",
   },
   {
-    label: 'Cleanliness',
-    value: '8.3',
+    label: "Cleanliness",
+    value: "8.3",
   },
   {
-    label: 'Comfort',
-    value: '8.2',
+    label: "Comfort",
+    value: "8.2",
   },
   {
-    label: 'Value for money',
-    value: '8.1',
+    label: "Value for money",
+    value: "8.1",
   },
   {
-    label: 'Location',
-    value: '8.1',
+    label: "Location",
+    value: "8.1",
   },
   {
-    label: 'Free WiFi',
-    value: '7.9',
+    label: "Free WiFi",
+    value: "7.9",
   },
-]
+];

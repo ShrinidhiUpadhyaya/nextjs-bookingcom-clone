@@ -43,15 +43,15 @@ const OffersCarousel = () => {
       {carouselData.map((data) => (
         <CarouselItem
           key={data.id}
-          className="lg:basis-1/2 h-44 justify-start flexCenter gap-0"
+          className="flexCenter h-44 justify-start gap-0 lg:basis-1/2"
         >
-          <div className="p-1 h-full flex-1">
+          <div className="h-full flex-1 p-1">
             <Card className="h-full">
               <CardContent className="h-full p-0">
                 <div className="flex h-full justify-between">
                   <div className="leftDiv flexCol justify-between p-4">
                     <div>
-                      <h3 className="font-bold text-base">{data.title}</h3>
+                      <h3 className="text-base font-bold">{data.title}</h3>
                       <p className="text-base font-normal">
                         {data.description}
                       </p>
@@ -66,7 +66,7 @@ const OffersCarousel = () => {
                       src={data.imgSource}
                       width={100}
                       height={100}
-                      className="h-full w-full aspect-square"
+                      className="aspect-square h-full w-full"
                     />
                   </div>
                 </div>

@@ -68,11 +68,12 @@ export default function DCombobox() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="justify-between text-base text-[#1a1a1a] border border-[#868686] rounded-3xl font-normal hover:primaryTextColor hover:bg-accent"
+          className="hover:primaryTextColor justify-between rounded-3xl border border-[#868686] text-base font-normal text-[#1a1a1a] hover:bg-accent"
         >
-          Sort by: {" "}
-          {value ?
-            sortByOptions.find((option) => option.value === value)?.label : ""}
+          Sort by:{" "}
+          {value
+            ? sortByOptions.find((option) => option.value === value)?.label
+            : ""}
           <ArrowUpDown className="ml-2 shrink-0 opacity-60" />
         </Button>
       </PopoverTrigger>
@@ -85,7 +86,7 @@ export default function DCombobox() {
                 value={option.value}
                 onSelect={(currentValue) => {
                   console.log(currentValue);
-                  console.log(sortByOptions.find((option) => option))
+                  console.log(sortByOptions.find((option) => option));
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
                 }}
@@ -94,7 +95,7 @@ export default function DCombobox() {
                 <Check
                   className={cn(
                     "ml-auto h-4 w-4",
-                    value === option.value ? "opacity-100" : "opacity-0"
+                    value === option.value ? "opacity-100" : "opacity-0",
                   )}
                 />
               </CommandItem>

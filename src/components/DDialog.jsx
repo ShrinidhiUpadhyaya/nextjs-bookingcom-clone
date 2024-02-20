@@ -16,7 +16,7 @@ const DDialog = ({ open, title, description, onOpenChange, children }) => {
       onOpenChange={onOpenChange}
       className="h-10 overflow-auto border border-red-500"
     >
-      <DialogContent className="h-[80%] max-h-[80%] max-w-[50%] overflow-auto border border-red p-4 pr-0 gap-0 flexCol justify-between">
+      <DialogContent className="border-red flexCol h-[80%] max-h-[80%] max-w-[50%] justify-between gap-0 overflow-auto border p-4 pr-0">
         <DialogHeader className="flex h-10 justify-between">
           <DialogTitle className="flexHCenter">{title}</DialogTitle>
           <Separator />

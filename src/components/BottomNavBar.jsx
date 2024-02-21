@@ -32,7 +32,7 @@ const bottomNavBarOptions = [
     label: "Attractions",
     Icon: TreeDeciduous,
     active: false,
-    href: "/",
+    href: "/attractions",
   },
   {
     id: "airportTaxis",

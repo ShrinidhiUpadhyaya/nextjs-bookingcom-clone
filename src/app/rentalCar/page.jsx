@@ -30,9 +30,9 @@ const page = () => {
 
   return (
     <div className="flexCol flex items-center">
-      <div className="flexHVCenter w-full flex-col border border-black bg-[#003B95] py-16 pb-4">
-        <div className="contentWidth border border-black">
-          <h1 className="my-2 text-3xl font-bold text-[white] transition xl:text-5xl">
+      <div className="flexHVCenter w-full flex-col bg-[#003B95] py-16 pb-4">
+        <div className="contentWidth">
+          <h1 className="my-2 text-3xl font-semibold text-[white] transition xl:text-5xl">
             Car hire for any kind of trip
           </h1>
           <h3 className="my-2 text-lg text-white md:text-2xl">

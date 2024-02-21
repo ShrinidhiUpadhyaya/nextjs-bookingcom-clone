@@ -25,7 +25,7 @@ const bottomNavBarOptions = [
     label: "Rental Car",
     Icon: CarTaxiFront,
     active: false,
-    href: "/",
+    href: "/rentalCar",
   },
   {
     id: "attractions",

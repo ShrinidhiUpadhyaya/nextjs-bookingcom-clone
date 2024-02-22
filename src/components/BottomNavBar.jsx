@@ -39,7 +39,7 @@ const bottomNavBarOptions = [
     label: "Airport Taxi",
     Icon: CarTaxiFront,
     active: false,
-    href: "/",
+    href: "/airportTaxi",
   },
 ];
 const BottomNavBar = () => {

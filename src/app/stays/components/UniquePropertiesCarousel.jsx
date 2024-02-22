@@ -30,14 +30,14 @@ const UniquePropertiesCarousel = () => {
                     </AspectRatio>
                   </div>
                   <div className="flexCol gap-1 p-2">
-                    <h3 className="text-base font-bold">{data.title}</h3>
-                    <p className="text-sm font-normal">{data.description}</p>
+                    <h3 className="labelText">{data.title}</h3>
+                    <p className="tertiaryText">{data.description}</p>
                     <div className="flexVCenter gap-1 text-xs">
                       <div className="rounded-sm bg-[#003B95] p-1 text-white">
                         8.7
                       </div>
-                      <span>Excellent .</span>
-                      <span>10000 reviews</span>
+                      <span className="tertiaryText">Excellent .</span>
+                      <span className="tertiaryText">10000 reviews</span>
                     </div>
                   </div>
                 </div>

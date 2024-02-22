@@ -11,15 +11,17 @@ const DCalendarCarouselBox = ({
   return (
     <div
       className={cn(
-        "flexCol items-center justify-center rounded-lg border border-[#e7e7e7] hover:bg-[#F2F2F2]",
+        "flexCol tertiaryText items-center justify-center space-y-2 rounded-lg border border-[#e7e7e7] hover:bg-[#F2F2F2]",
         className,
         { "primaryTextColor border-[#006CE4] bg-[#F0F6FD]": selected },
       )}
       onClick={onClick}
     >
-      <Calendar />
-      <p>{month}</p>
-      <p>{year}</p>
+      <Calendar className="size-5 opacity-90" />
+      <div className="flexCol items-center justify-center">
+        <p className="font-semibold">{month}</p>
+        <p>{year}</p>
+      </div>
     </div>
   );
 };

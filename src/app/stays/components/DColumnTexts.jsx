@@ -7,7 +7,7 @@ const DColumnTexts = ({ label, description }) => {
       <Link href="/" className="font-medium group-hover:underline">
         {label}
       </Link>
-      <p className="font-normal">{description}</p>
+      <p className="tertiaryText">{description}</p>
     </div>
   );
 };

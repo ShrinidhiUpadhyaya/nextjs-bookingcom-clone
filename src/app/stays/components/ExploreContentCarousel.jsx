@@ -35,8 +35,8 @@ const ExploreContentCarousel = ({ carouselData, onClick }) => {
                       />
                     </AspectRatio>
                   </div>
-                  <h3 className="text-base font-bold">{data.title}</h3>
-                  <p className="text-base font-normal">{data.description}</p>
+                  <h3 className="labelText">{data.title}</h3>
+                  <p className="tertiaryText">{data.description}</p>
                 </div>
               </CardContent>
             </Card>

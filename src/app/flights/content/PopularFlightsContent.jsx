@@ -19,7 +19,7 @@ export const PopularFlightsContent = () => {
     <div className="contentWidth flexCol ">
       <div className="my-8">
         <h3 className="secondaryTitle">Popular flights near you</h3>
-        <p className="assistTitle">
+        <p className="tertiaryText">
           Find deals on domestic and international flights
         </p>
         <PopularFlightsCarousel

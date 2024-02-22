@@ -79,16 +79,16 @@ const TopNavBar = () => {
               onClick={() => setCurrencyDialog(true)}
             />
             <DSquareButton Icon={<Globe />} />
-            <DSquareButton Icon={<HelpCircle />} />
+            {/* <DSquareButton Icon={<HelpCircle />} /> */}
           </div>
 
           <div className="flexVCenter gap-4 text-white ">
-            <Link
+            {/* <Link
               href="/"
               className="rounded-md px-4 py-4 text-center hover:bg-[#1A4FA0]"
             >
               Register your accomodation
-            </Link>
+            </Link> */}
 
             <Link
               href="/register"

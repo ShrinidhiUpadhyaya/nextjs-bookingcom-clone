@@ -28,7 +28,7 @@ const page = () => {
       <div className="flex w-full items-center justify-center bg-[#F5F5F5] pb-16 pt-8">
         <div className="contentWidth">
           <h2 className="text-3xl font-semibold">Book your airport taxi</h2>
-          <p className="assistTitle">
+          <p className="tertiaryText">
             Easy transfer to and from your accomodation{" "}
           </p>
           <div className="mt-2 flex gap-4">
@@ -61,8 +61,8 @@ const page = () => {
                 </div>
               </div>
               <div className="h-full">
-                <p className="font-semibold">{benefit.title}</p>
-                <p className="text-sm font-light">{benefit.description}</p>
+                <p className="primaryTitleText">{benefit.title}</p>
+                <p className="tertiaryText">{benefit.description}</p>
               </div>
             </div>
           ))}
@@ -80,8 +80,8 @@ const page = () => {
                 </div>
               </div>
               <div className="h-full">
-                <p className="font-semibold">{benefit.title}</p>
-                <p className="text-sm font-light">{benefit.description}</p>
+                <p className="primaryTitleText">{benefit.title}</p>
+                <p className="tertiaryText">{benefit.description}</p>
               </div>
             </div>
           ))}
@@ -107,8 +107,8 @@ const page = () => {
           <div className="my-4 flex gap-8">
             {taxiType[currentTaxiTypeIndex].data.map((data) => (
               <div className="flex-1 rounded-md border border-[#e7e7e7] bg-white p-4">
-                <p className="text-base font-semibold">{data.type}</p>
-                <p className="text-sm font-normal">{data.car}</p>
+                <p className="primaryTitleText">{data.type}</p>
+                <p className="tertiaryText">{data.car}</p>
 
                 <div className="mt-4 space-y-2 text-[#474747]">
                   <p className="flex items-center gap-2 text-sm font-normal">
@@ -149,7 +149,7 @@ const page = () => {
           >
             {faqList.map((faq) => (
               <AccordionItem key={faq.id} value={faq.id} className="p-2">
-                <AccordionTrigger className="text-sm font-bold">
+                <AccordionTrigger className="secondaryTitleText">
                   {faq.title}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm">

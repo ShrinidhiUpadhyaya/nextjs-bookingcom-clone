@@ -49,8 +49,8 @@ const FAQContent = () => {
       <div className="my-4 grid grid-cols-3 gap-4">
         {flightFAQ.map((faq) => (
           <div className="rounded-md border border-[#e7e7e7] p-4">
-            <p className="font-bold">{faq.title}</p>
-            <p className="mt-2 text-sm">{faq.description}</p>
+            <p className="labelText">{faq.title}</p>
+            <p className="tertiaryText mt-2">{faq.description}</p>
           </div>
         ))}
       </div>

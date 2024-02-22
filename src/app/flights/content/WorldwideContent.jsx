@@ -87,7 +87,7 @@ const WorldwideContent = () => {
   return (
     <div className="contentWidth flexCol my-8">
       <h3 className="secondaryTitle">Fly worldwide with Booking.com</h3>
-      <p className="assistTitle">
+      <p className="tertiaryText">
         Book flights to a destnation popular with travellers from Germany
       </p>
       <DTabBar model={continentsList} className="mt-4" />
@@ -106,10 +106,12 @@ const WorldwideContent = () => {
               </AspectRatio>
             </div>
             <div className="text-sm">
-              <p className="font-semibold">
+              <p className="labelText">
                 {flight.from} to {flight.to}
               </p>
-              <p>Shortest flight time: {flight.duration}</p>
+              <p className="tertiaryText">
+                Shortest flight time: {flight.duration}
+              </p>
             </div>
           </div>
         ))}

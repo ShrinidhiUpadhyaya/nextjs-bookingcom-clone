@@ -40,7 +40,7 @@ const CheckInDatePopover = () => {
             <TabsContent value="flexible">
               <div className="flexCol gap-8 p-4">
                 <div className="flexCol gap-1">
-                  <h3 className="text-base font-bold">
+                  <h3 className="text-sm font-semibold">
                     How long do you want to stay?
                   </h3>
                   <RadioGroup
@@ -49,19 +49,19 @@ const CheckInDatePopover = () => {
                   >
                     <div className="flexCenter space-x-2">
                       <RadioGroupItem value="default" id="r1" />
-                      <Label htmlFor="r1" className="text-sm font-normal">
+                      <Label htmlFor="r1" className="tertiaryText">
                         Default
                       </Label>
                     </div>
                     <div className="flexCenter space-x-2">
                       <RadioGroupItem value="comfortable" id="r2" />
-                      <Label htmlFor="r2" className="text-sm font-normal">
+                      <Label htmlFor="r2" className="tertiaryText">
                         Comfortable
                       </Label>
                     </div>
                     <div className="flexCenter space-x-2">
                       <RadioGroupItem value="compact" id="r3" />
-                      <Label htmlFor="r3" className="text-sm font-normal">
+                      <Label htmlFor="r3" className="tertiaryText">
                         Compact
                       </Label>
                     </div>
@@ -72,7 +72,7 @@ const CheckInDatePopover = () => {
                   <h3 className="text-base font-bold">
                     When do you want to go?
                   </h3>
-                  <p className="text-sm font-normal">Select up to 3 months</p>
+                  <p className="tertiaryText">Select up to 3 months</p>
                   <DCalendarCarousel />
                 </div>
 

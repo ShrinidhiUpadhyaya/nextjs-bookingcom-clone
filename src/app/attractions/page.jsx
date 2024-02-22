@@ -96,8 +96,8 @@ const page = () => {
               <div className="flex gap-2">
                 <div className="w-[20%] text-[#008234]">{data.icon}</div>
                 <div>
-                  <p className="font-bold">{data.title}</p>
-                  <p className="font-light">{data.description}</p>
+                  <p className="secondaryTitleText">{data.title}</p>
+                  <p className="tertiaryText">{data.description}</p>
                 </div>
               </div>
             ))}
@@ -109,7 +109,7 @@ const page = () => {
 
       <div className="contentWidth my-8">
         <h3 className="secondaryTitle">Explore more destinations</h3>
-        <p className="assistTitle">
+        <p className="tertiaryText">
           Find things to do in cities around the world
         </p>
 

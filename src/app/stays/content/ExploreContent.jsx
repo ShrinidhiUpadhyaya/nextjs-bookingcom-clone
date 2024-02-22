@@ -12,7 +12,7 @@ const ExploreContent = ({ title, data }) => {
   return (
     <div className="flexCol gap-1">
       <h2 className="text-xl font-bold">{title}</h2>
-      <p className="text-base">
+      <p className="tertiaryText">
         These popular destinations have a lot to offer
       </p>
       <ExploreContentCarousel carouselData={data} onClick={handleClick} />

@@ -34,7 +34,7 @@ const PropertyTypeCarousel = ({ carouselData }) => {
                       />
                     </AspectRatio>
                   </div>
-                  <h3 className="text-base font-bold">{data.title}</h3>
+                  <h3 className="labelText">{data.title}</h3>
                 </div>
               </CardContent>
             </Card>

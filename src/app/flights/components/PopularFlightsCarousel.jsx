@@ -68,10 +68,10 @@ const PopularFlightsCarousel = ({ carouselData, onClick, className }) => {
                       />
                     </AspectRatio>
                   </div>
-                  <h3 className="text-base font-bold">
+                  <h3 className="labelText">
                     {data?.from + " to " + data?.to}
                   </h3>
-                  <p className="text-sm font-normal">
+                  <p className="tertiaryText">
                     {flightOnDate + " - " + flightReturnDate + " - Round Trip"}
                   </p>
                 </div>

@@ -121,7 +121,7 @@ const SearchContent = () => {
                 id="r1"
                 className="h-5 w-5 border-2"
               />
-              <Label htmlFor="r1" className="text-base font-normal">
+              <Label htmlFor="r1" className="tertiaryText">
                 {filter.label}
               </Label>
             </div>
@@ -134,7 +134,7 @@ const SearchContent = () => {
               variant="outline"
               role="combobox"
               // aria-expanded={open}
-              className="w-[200px] justify-between text-base font-normal"
+              className="tertiaryText w-[200px] justify-between"
             >
               {currentFlightClassId &&
                 flightClasses.find(
@@ -176,7 +176,7 @@ const SearchContent = () => {
           <DropdownMenuTrigger asChild>
             <Button
               variant="outline"
-              className="w-[200px] justify-between text-base font-normal"
+              className="tertiaryText w-[200px] justify-between"
             >
               {flightFilterValues.numberOfTravellers?.adults +
                 flightFilterValues.numberOfTravellers?.children}{" "}
@@ -188,8 +188,8 @@ const SearchContent = () => {
             <div className="w-full">
               <DRowSpinbox
                 label={
-                  <p className="font-medium">
-                    Adults <p className="text-sm font-normal">Age 18+</p>
+                  <p className="labelText">
+                    Adults <p className="tertiaryText">Age 18+</p>
                   </p>
                 }
                 className="m-4"
@@ -198,8 +198,8 @@ const SearchContent = () => {
               />
               <DRowSpinbox
                 label={
-                  <p className="font-medium">
-                    Children <p className="text-sm font-normal">0 - 17</p>
+                  <p className="labelText">
+                    Children <p className="tertiaryText">0 - 17</p>
                   </p>
                 }
                 className="m-4"
@@ -211,7 +211,7 @@ const SearchContent = () => {
             <DropdownMenuSeparator />
 
             <div className="m-4 flex items-center justify-between font-light">
-              <Label className="font-normal">
+              <Label className="tertiaryText">
                 {flightFilterValues.numberOfTravellers.adults} Adults -{" "}
                 {flightFilterValues.numberOfTravellers.children} Childrens
               </Label>
@@ -220,7 +220,7 @@ const SearchContent = () => {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <DCheckbox label="Direct flights only" className="text-lg font-bold" />
+        <DCheckbox label="Direct flights only" className="tertiaryText" />
       </div>
     </div>
   );

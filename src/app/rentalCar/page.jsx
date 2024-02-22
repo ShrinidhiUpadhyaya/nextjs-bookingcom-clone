@@ -56,7 +56,7 @@ const page = () => {
         <div className="contentWidth flex justify-between p-8">
           <div>
             <p className="text-3xl font-semibold">Sign in to save 10%</p>
-            <p className="assistTitle mb-4 mt-2">
+            <p className="tertiaryText mb-4 mt-2">
               You're eligible for discounts on select car rentals
             </p>
 
@@ -82,7 +82,7 @@ const page = () => {
 
       <div className="contentWidth my-8">
         <h3 className="secondaryTitle">Popular car hire destintion</h3>
-        <p className="assistTitle">
+        <p className="tertiaryText">
           Explore more options to hire car for cheap
         </p>
         <div className="mt-4">
@@ -110,11 +110,11 @@ const page = () => {
                     </AspectRatio>
                   </div>
                   <div className="text-sm">
-                    <p className="font-semibold">{city.name}</p>
-                    <p className="font-light">
+                    <p className="labelText">{city.name}</p>
+                    <p className="tertiaryText">
                       {city.numberOfCars} car hire locations
                     </p>
-                    <p className="font-light">
+                    <p className="tertiaryText">
                       Average price of{" "}
                       <span className="font-semibold">
                         € {city.averagePrice}
@@ -139,7 +139,7 @@ const page = () => {
           >
             {faq1.map((faq) => (
               <AccordionItem key={faq.id} value={faq.id} className="p-2">
-                <AccordionTrigger className="text-sm font-bold">
+                <AccordionTrigger className="secondaryTitleText">
                   {faq.title}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm">
@@ -157,7 +157,7 @@ const page = () => {
             >
               {faq2.map((faq) => (
                 <AccordionItem key={faq.id} value={faq.id} className="p-2">
-                  <AccordionTrigger className="text-sm font-bold">
+                  <AccordionTrigger className="secondaryTitleText">
                     {faq.title}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm">

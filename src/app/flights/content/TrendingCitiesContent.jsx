@@ -21,7 +21,7 @@ const TrendingCitiesContent = ({ className }) => {
     <div className={cn("contentWidth flexCol ", className)}>
       <div className="my-8">
         <h3 className="secondaryTitle">Trending Cities</h3>
-        <p className="assistTitle">
+        <p className="tertiaryText">
           Book flights to a destination popular with travellers from Gerany{" "}
         </p>
         <PopularFlightsCarousel

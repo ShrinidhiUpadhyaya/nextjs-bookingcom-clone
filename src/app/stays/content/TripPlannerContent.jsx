@@ -18,7 +18,7 @@ const TripPlannerContent = () => {
   return (
     <div className="flexCol gap-1">
       <h2 className="text-xl font-bold">Quick and easy planner</h2>
-      <p className="text-base">
+      <p className="tertiaryText">
         Pick a vibe and explore the top destinations in Germany
       </p>
 

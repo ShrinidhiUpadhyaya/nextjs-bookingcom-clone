@@ -12,7 +12,7 @@ const page = () => {
   return (
     <>
       <div className="flexCol items-center justify-center">
-        <div className="flexCol w-full items-center bg-[#F5F5F5] pb-16 pt-8">
+        <div className="flexCol w-full items-center bg-[#F5F5F5] pb-14 pt-16">
           <SearchContent />
         </div>
         <div className="flexCol items-center justify-center gap-4">
@@ -22,7 +22,7 @@ const page = () => {
           <FAQContent />
         </div>
 
-        <div className="flexCol w-full items-center bg-[#F5F5F5] pb-16 pt-8">
+        <div className="flexCol mt-2 w-full items-center bg-[#F5F5F5] pb-20 pt-4">
           <FooterContent />
         </div>
       </div>

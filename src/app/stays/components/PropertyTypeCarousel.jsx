@@ -18,10 +18,10 @@ const PropertyTypeCarousel = ({ carouselData }) => {
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}
-          className="flexCenter group basis-1/2 cursor-pointer justify-start gap-0 md:basis-1/4"
+          className="flexCenter group h-56 basis-1/2 cursor-pointer justify-start  gap-0 md:basis-1/4"
         >
-          <div className="flex-1 p-1">
-            <Card className="border-none">
+          <div className="h-full flex-1">
+            <Card className="h-full border-none">
               <CardContent className="p-0">
                 <div className="flexCol">
                   <div className="relative flex-1 group-hover:opacity-90">
@@ -34,7 +34,7 @@ const PropertyTypeCarousel = ({ carouselData }) => {
                       />
                     </AspectRatio>
                   </div>
-                  <h3 className="labelText">{data.title}</h3>
+                  <h3 className="labelText mt-2">{data.title}</h3>
                 </div>
               </CardContent>
             </Card>

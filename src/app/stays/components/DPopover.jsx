@@ -13,14 +13,18 @@ import {
 const DPopover = ({ label, Icon, children, className }) => {
   return (
     <div className={className}>
-      <Popover>
+      <Popover className="h-full p-0">
         <PopoverTrigger asChild>
           <Button
             role="combobox"
-            className="w-full justify-start border border-[white] bg-[white] px-4 py-6 text-[#1a1a1a] hover:border-[#FFB700] hover:bg-[#F2F2F2]"
+            className="h-full w-full border bg-[white] p-2 text-[#1a1a1a] hover:border-[#FFB700] hover:bg-[#F2F2F2]"
           >
-            {<Icon />}
-            <span className="px-2 text-xs font-semibold">{label}</span>
+            <div className="flex h-full w-full">
+              {<Icon className="h-full min-h-5 min-w-5" />}
+              <span className=" ml-2 flex h-full items-center text-sm font-medium">
+                {label}
+              </span>
+            </div>
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-full p-0" side="bottom" align="start">

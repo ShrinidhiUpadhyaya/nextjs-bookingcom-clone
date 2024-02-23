@@ -16,12 +16,12 @@ const DOutlineButton = ({
     <Button
       variant={selected ? "outline" : "ghost"}
       className={cn(
+        "gap-2 rounded-3xl border border-transparent p-4 text-sm font-normal",
         {
-          "primaryTextColor border-[#006CE4] hover:bg-transparent hover:text-[#006CE4]":
+          "primaryTextColor border-[#006CE4] text-[red] hover:bg-transparent":
             selected,
         },
         { "hover:bg-[#F2F2F2]": !selected },
-        "gap-2 rounded-3xl p-4 font-normal",
         className,
       )}
       onClick={onClick}

@@ -3,7 +3,7 @@ import PropertyTypeCarousel from "../components/PropertyTypeCarousel";
 
 const PropertyTypeContent = ({ data }) => {
   return (
-    <div className="flexCol gap-1">
+    <div className="flexCol sectionSpacing gap-1">
       <h2 className="text-xl font-bold">Browse by property type</h2>
       <PropertyTypeCarousel carouselData={data} />
     </div>

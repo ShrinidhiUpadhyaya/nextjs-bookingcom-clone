@@ -24,36 +24,39 @@ import TripPlannerContent from "./content/TripPlannerContent";
 import UniquePropertiesContent from "./content/UniquePropertiesContent";
 import DestinationsContent from "./content/DestinationsContent";
 import FooterContent from "./content/FooterContent";
+import DCalendarPopover from "@/components/DCalendarPopover";
 
 const page = () => {
   return (
     <>
-      <div className="flexHVCenter flex-col bg-[#003B95] py-16 pb-4">
-        <div className="contentWidth flexCol">
-          <h1 className="my-2 text-3xl font-semibold text-[white] transition xl:text-5xl">
+      <div className="flexHVCenter w-full bg-[#003B95] pb-20 pt-16">
+        <div className="contentWidth">
+          <h1 className="text-3xl font-semibold text-[white] transition xl:text-5xl">
             Find your next accomodation
           </h1>
-          <h3 className="my-2 text-lg text-white md:text-2xl">
+          <h3 className="mt-2 text-lg text-white md:text-2xl">
             Find deals on hotels, vacation rentals and more...
           </h3>
         </div>
+      </div>
 
-        <div className="contentWidth relative top-12 grid grid-rows-4 items-center gap-1 rounded-md bg-[#FFB700] p-1 md:grid md:grid-cols-4 md:grid-rows-1">
+      <div className="-mt-8 mb-10 flex flex-col items-center justify-center">
+        <div className="contentWidth items-center gap-1 space-y-1 rounded-md bg-[#FFB700] p-1 md:flex md:h-14 md:space-y-0">
           <LocationPopover />
-          <CheckInDatePopover />
+          <DCalendarPopover />
           <PersonCountPopover />
-          <Button className="px-8 py-6 text-lg">Search</Button>
+          <Button className="w-full py-6 text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
+            Search
+          </Button>
+        </div>
+        <div className="contentWidth mt-4 flex gap-2">
+          <Checkbox className="h-5 w-5" />
+          <Label className="text-sm font-normal">I'm looking for flights</Label>
         </div>
       </div>
-      <div className="flexHCenter">
-        <div className="flexCol contentWidth mt-12 gap-4">
-          <div className="flex gap-2">
-            <Checkbox className="h-5 w-5" />
-            <Label className="text-sm font-normal">
-              I'm looking for flights
-            </Label>
-          </div>
 
+      <div className="flexHCenter">
+        <div className="flexCol contentWidth gap-4">
           <OffersContent />
           <ExploreContent title={exploreData.title} data={exploreData.data} />
           <PropertyTypeContent data={propertyTypeData.data} />

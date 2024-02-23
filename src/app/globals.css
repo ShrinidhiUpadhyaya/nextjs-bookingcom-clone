@@ -123,5 +123,10 @@
 }
 
 .secondaryTitleText {
-  @apply text-sm font-bold;
+  @apply text-sm font-semibold;
 }
+
+.sectionSpacing {
+  @apply mb-10;
+}
+

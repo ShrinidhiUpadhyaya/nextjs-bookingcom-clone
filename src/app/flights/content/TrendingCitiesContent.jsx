@@ -18,17 +18,15 @@ const TrendingCitiesContent = ({ className }) => {
   }, []);
 
   return (
-    <div className={cn("contentWidth flexCol ", className)}>
-      <div className="my-8">
-        <h3 className="secondaryTitle">Trending Cities</h3>
-        <p className="tertiaryText">
-          Book flights to a destination popular with travellers from Gerany{" "}
-        </p>
-        <PopularFlightsCarousel
-          carouselData={trendingCityFlights}
-          className={"mt-4"}
-        />
-      </div>
+    <div className={cn("contentWidth flexCol sectionSpacing", className)}>
+      <h3 className="secondaryTitle">Trending Cities</h3>
+      <p className="tertiaryText">
+        Book flights to a destination popular with travellers from Gerany{" "}
+      </p>
+      <PopularFlightsCarousel
+        carouselData={trendingCityFlights}
+        className={"mt-4"}
+      />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const ExploreContent = ({ title, data }) => {
     router.push("/cities");
   };
   return (
-    <div className="flexCol gap-1">
+    <div className="flexCol sectionSpacing gap-1">
       <h2 className="text-xl font-bold">{title}</h2>
       <p className="tertiaryText">
         These popular destinations have a lot to offer

@@ -30,9 +30,9 @@ const DRowSpinbox = ({
   //   // onValueChange();
   // }, [value]);
   return (
-    <div className={cn("flex items-center justify-center gap-4", className)}>
-      <p className="max-w-[40%] flex-1">{label && label}</p>
-      <div className="flex w-full max-w-[60%] items-center justify-between rounded-md border border-black">
+    <div className={cn("flex items-center justify-center gap-32", className)}>
+      <p className="secondaryTitleText min-w-20 max-w-20">{label && label}</p>
+      <div className="flex min-w-40 flex-1 items-center justify-between rounded-md border border-black">
         <Button variant="ghost" className="text-lg" onClick={decrement}>
           -
         </Button>

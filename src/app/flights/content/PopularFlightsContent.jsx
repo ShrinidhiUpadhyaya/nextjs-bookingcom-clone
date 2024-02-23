@@ -16,17 +16,15 @@ export const PopularFlightsContent = () => {
   }, []);
 
   return (
-    <div className="contentWidth flexCol ">
-      <div className="my-8">
-        <h3 className="secondaryTitle">Popular flights near you</h3>
-        <p className="tertiaryText">
-          Find deals on domestic and international flights
-        </p>
-        <PopularFlightsCarousel
-          carouselData={popularFlights}
-          className={"mt-4"}
-        />
-      </div>
+    <div className="contentWidth flexCol sectionSpacing mt-10">
+      <h3 className="secondaryTitle">Popular flights near you</h3>
+      <p className="tertiaryText">
+        Find deals on domestic and international flights
+      </p>
+      <PopularFlightsCarousel
+        carouselData={popularFlights}
+        className={"mt-4"}
+      />
     </div>
   );
 };

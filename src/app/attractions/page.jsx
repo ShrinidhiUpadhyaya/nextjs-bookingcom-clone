@@ -113,12 +113,13 @@ const page = () => {
           Find things to do in cities around the world
         </p>
 
-        <div className="mt-4 flex">
+        <div className="mt-4 flex gap-2">
           {destinationsContinent.map((destination, index) => (
             <DOutlineButton
               label={destination.name}
               selected={index === currentDestinationContinent}
               onClick={() => setCurrentDestinationContinent(index)}
+              className="text-xs font-medium"
             />
           ))}
         </div>

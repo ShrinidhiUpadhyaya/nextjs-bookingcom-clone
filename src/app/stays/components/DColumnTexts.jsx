@@ -4,7 +4,7 @@ import Link from "next/link";
 const DColumnTexts = ({ label, description }) => {
   return (
     <div className="flexCol group text-sm">
-      <Link href="/" className="font-medium group-hover:underline">
+      <Link href="/" className="secondaryTitleText group-hover:underline">
         {label}
       </Link>
       <p className="tertiaryText">{description}</p>

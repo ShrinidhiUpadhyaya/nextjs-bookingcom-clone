@@ -19,7 +19,7 @@ const DestinationsContent = () => {
     setDestinationsFilter(temp);
   };
   return (
-    <div>
+    <div className="sectionSpacing">
       <h2 className="text-xl font-bold">Destinations we love</h2>
       <div className="mt-4 flex gap-2">
         {destinationsFilter.map((option, index) => (

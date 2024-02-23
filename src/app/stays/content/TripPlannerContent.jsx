@@ -16,7 +16,7 @@ const TripPlannerContent = () => {
     setOptionsButtonState(temp);
   };
   return (
-    <div className="flexCol gap-1">
+    <div className="flexCol sectionSpacing gap-1">
       <h2 className="text-xl font-bold">Quick and easy planner</h2>
       <p className="tertiaryText">
         Pick a vibe and explore the top destinations in Germany

@@ -12,11 +12,13 @@ import { CalendarDays, UserrRound } from "lucide-react";
 
 import DCalendarCarousel from "./DCalendarCarousel";
 import DPopover from "./DPopover";
-const CheckInDatePopover = () => {
+import { cn } from "@/lib/utils";
+
+const CheckInDatePopover = ({ className }) => {
   return (
     <DPopover
-      className="h-full flex-1"
-      label="Check-in Date -- Check-out Date"
+      className={cn("flex-1", className)}
+      label="Check-in Date - Check-out Date"
       Icon={CalendarDays}
     >
       <Command>
@@ -40,7 +42,7 @@ const CheckInDatePopover = () => {
             <TabsContent value="flexible">
               <div className="flexCol gap-8 p-4">
                 <div className="flexCol gap-1">
-                  <h3 className="text-sm font-semibold">
+                  <h3 className="secondaryTitleText">
                     How long do you want to stay?
                   </h3>
                   <RadioGroup
@@ -69,7 +71,7 @@ const CheckInDatePopover = () => {
                 </div>
 
                 <div className="flexCol gap-1">
-                  <h3 className="text-base font-bold">
+                  <h3 className="secondaryTitleText">
                     When do you want to go?
                   </h3>
                   <p className="tertiaryText">Select up to 3 months</p>
@@ -77,7 +79,7 @@ const CheckInDatePopover = () => {
                 </div>
 
                 <Separator />
-                <div className="flexCenter justify-end gap-4">
+                <div className="flexVCenter justify-end gap-4">
                   <span className="text-sm">Warning</span>
                   <Button className="text-sm">Select Dates</Button>
                 </div>

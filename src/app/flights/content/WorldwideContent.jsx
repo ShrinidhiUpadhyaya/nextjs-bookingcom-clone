@@ -85,7 +85,7 @@ const worldWideFlights = [
 ];
 const WorldwideContent = () => {
   return (
-    <div className="contentWidth flexCol my-8">
+    <div className="contentWidth flexCol sectionSpacing">
       <h3 className="secondaryTitle">Fly worldwide with Booking.com</h3>
       <p className="tertiaryText">
         Book flights to a destnation popular with travellers from Germany

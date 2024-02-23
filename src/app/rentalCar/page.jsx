@@ -19,6 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SearchContent from "./content/SearchContent";
 
 const page = () => {
   const [popularDestinationCurrentIndex, setPopularDestinationCurrentIndex] =
@@ -29,21 +30,25 @@ const page = () => {
   };
 
   return (
-    <div className="flexCol flex items-center">
-      <div className="flexHVCenter w-full flex-col bg-[#003B95] py-16 pb-4">
+    <div className="flexCol items-center">
+      <div className="flexHVCenter w-full border border-black bg-[#003B95] pb-20 pt-16">
         <div className="contentWidth">
-          <h1 className="my-2 text-3xl font-semibold text-[white] transition xl:text-5xl">
+          <h1 className="text-3xl font-semibold text-[white] transition xl:text-5xl">
             Car hire for any kind of trip
           </h1>
-          <h3 className="my-2 text-lg text-white md:text-2xl">
+          <h3 className="mt-2 text-lg text-white md:text-2xl">
             Great deals at great prices, from the biggest car hire companies
           </h3>
         </div>
       </div>
 
-      <div className="contentWidth my-8">
+      <div className="contentWidth -mt-8 mb-10">
+        <SearchContent className="w-full" />
+      </div>
+
+      <div className="contentWidth mb-10">
         <h3 className="secondaryTitle">Popular car hire brands</h3>
-        <div className="my-4 flex justify-between gap-4">
+        <div className="my-4 flex justify-between gap-2">
           {popularCarHireBrands.map((brand) => (
             <div className={cn("p-4", `${brand.color}`)}>
               <p className="text-white">{brand.name}</p>
@@ -52,7 +57,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="my-8 flex w-full justify-center bg-[#F5F5F5]">
+      <div className="mb-10 flex w-full justify-center bg-[#F5F5F5]">
         <div className="contentWidth flex justify-between p-8">
           <div>
             <p className="text-3xl font-semibold">Sign in to save 10%</p>
@@ -80,7 +85,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="contentWidth my-8">
+      <div className="contentWidth mb-10">
         <h3 className="secondaryTitle">Popular car hire destintion</h3>
         <p className="tertiaryText">
           Explore more options to hire car for cheap

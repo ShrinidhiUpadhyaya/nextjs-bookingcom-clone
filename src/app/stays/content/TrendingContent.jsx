@@ -4,7 +4,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const TrendingContent = ({ topData, bottomData }) => {
   return (
-    <div className="flexCol gap-1">
+    <div className="flexCol sectionSpacing gap-1">
       <h2 className="text-xl font-bold">Trending Choices</h2>
       <p className="text-base">
         Most popular choices for travelers from Germany

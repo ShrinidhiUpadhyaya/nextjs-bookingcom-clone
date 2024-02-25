@@ -19,7 +19,7 @@ const DPopover = ({ label, Icon, children, className }) => {
             role="combobox"
             className="h-full w-full border bg-[white] p-2 text-[#1a1a1a] hover:border-[#FFB700] hover:bg-[#F2F2F2]"
           >
-            <div className="flex h-full w-full">
+            <div className="flex h-full w-full items-center">
               {<Icon className="h-full min-h-5 min-w-5" />}
               <span className=" ml-2 flex h-full items-center text-sm font-medium">
                 {label}

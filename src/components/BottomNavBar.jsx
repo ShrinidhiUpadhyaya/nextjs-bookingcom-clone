@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { BedDouble, Plane, TreeDeciduous, CarTaxiFront } from "lucide-react";
 import DOutlineLink from "./DOutlineLink";
-
+import { useRouter, usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 const bottomNavBarOptions = [
   {
     id: "stays",
@@ -44,6 +45,14 @@ const bottomNavBarOptions = [
 ];
 const BottomNavBar = () => {
   const [navBarOptions, setNavBarOptions] = useState(bottomNavBarOptions);
+  const router = usePathname();
+  const isLogin = router === "/register";
+
+  useEffect(() => {
+    console.log("##############");
+    console.log(isLogin);
+  }, []);
+
   function setActive(index) {
     setNavBarOptions((prevState) =>
       prevState.map((item, tempIndex) => ({
@@ -53,7 +62,14 @@ const BottomNavBar = () => {
     );
   }
   return (
-    <div className="flexVCenter my-2 gap-4">
+    <div
+      className={cn(
+        { "flexVCenter my-2 hidden gap-4": !isLogin },
+        {
+          hidden: isLogin,
+        },
+      )}
+    >
       {navBarOptions.map((option, index) => (
         <DOutlineLink
           key={option.id}

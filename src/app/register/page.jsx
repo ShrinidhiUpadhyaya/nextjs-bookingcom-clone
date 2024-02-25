@@ -11,15 +11,15 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="flexHCenter">
-      <div className="flexCol w-[25%] items-center justify-center p-10">
+    <div className="flexHCenter w-full">
+      <div className="flexCol w-96 items-center justify-center pt-16 ">
         <h3 className="w-full text-xl font-bold">
           Sign in or create an account
         </h3>
         <div className="text-md mt-8 w-full">
           <p>Email address</p>
           <Input
-            className="font-medium"
+            className="mt-2 font-medium"
             placeholder="Enter your email address"
           />
         </div>
@@ -35,14 +35,16 @@ const page = () => {
           </span>
         </div>
 
-        <div className="mt-4 flex p-4">
+        <div className="mt-8 flex gap-4 p-4">
           {registerOptions.map((option) => (
             <DOutlineButton
               key={option.tooltip}
-              className="rounded-md border border-transparent p-12 hover:border hover:border-[#006CE4] hover:bg-transparent"
+              className="rounded-md border border-[#e7e7e7] p-10 hover:border hover:border-[#006CE4] hover:bg-transparent"
             >
               <Link href="/api/auth/signin">
-                <Image height={100} width={100} src={option.imgSource} />
+                <div className="relative h-6 w-6">
+                  <Image fill={true} src={option.imgSource} />
+                </div>
               </Link>
             </DOutlineButton>
           ))}

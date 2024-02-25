@@ -7,6 +7,7 @@ import WorldwideContent from "./content/WorldwideContent";
 import FooterContent from "./content/FooterContent";
 import FAQContent from "./content/FAQContent";
 import SearchContent from "./content/SearchContent";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const page = () => {
   return (
@@ -22,7 +23,7 @@ const page = () => {
           <FAQContent />
         </div>
 
-        <div className="flexCol mt-2 w-full items-center bg-[#F5F5F5] pb-20 pt-4">
+        <div className="flexCol mt-2 w-full items-center bg-[#F5F5F5] pb-20">
           <FooterContent />
         </div>
       </div>

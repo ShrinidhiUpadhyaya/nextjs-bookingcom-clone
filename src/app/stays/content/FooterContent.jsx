@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 
 const FooterContent = () => {
   return (
-    <div className="mt-2">
+    <div className="mt-2 w-full">
       <div className="bg-[#00224F] p-16">
         <div className="flexCol items-center justify-center gap-8 text-[white]">
           <div className="flexCol items-center gap-1">

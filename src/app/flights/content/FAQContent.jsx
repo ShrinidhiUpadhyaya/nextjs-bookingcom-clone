@@ -46,7 +46,7 @@ const FAQContent = () => {
   return (
     <div className="contentWidth  sectionSpacing">
       <h3 className="secondaryTitle">Frequently asked questions</h3>
-      <div className="my-4 grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {flightFAQ.map((faq) => (
           <div className="rounded-md border border-[#e7e7e7] p-4">
             <p className="primaryTitleText">{faq.title}</p>

@@ -2,14 +2,14 @@ import React from "react";
 
 import { UserRound } from "lucide-react";
 
-import DPopover from "./DPopover";
-import DRowSpinbox from "./DRowSpinbox";
+import DPopover from "@/app/stays/components/DPopover";
+import DRowSpinbox from "@/app/stays/components/DRowSpinbox";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 
-const PersonCountPopover = ({
+const PassengersCountPopover = ({
   label = "Label",
   Icon = UserRound,
   className,
@@ -21,15 +21,12 @@ const PersonCountPopover = ({
       Icon={Icon}
     >
       <div className="flexCol gap-2 p-4">
-        <DRowSpinbox label="Adults" />
-        <DRowSpinbox label="Children" />
-        <DRowSpinbox label="Rooms" />
-
+        <DRowSpinbox label="Passengers" />
         <Separator className="mt-4" />
-        <Button className="mt-4">Done</Button>
+        <Button className="mt-4 ">Done</Button>
       </div>
     </DPopover>
   );
 };
 
-export default PersonCountPopover;
+export default PassengersCountPopover;

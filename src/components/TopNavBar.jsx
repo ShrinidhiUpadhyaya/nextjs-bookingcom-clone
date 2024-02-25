@@ -13,10 +13,13 @@ import { CircleUser } from "lucide-react";
 import DHoverBox from "./DHoverBox";
 import { suggestedCurrencies, currencyDialogStrings } from "@/lib/constants";
 import DDialog from "./DDialog";
+import { useRouter } from "next/navigation";
 
 const TopNavBar = () => {
   const [currencyDialog, setCurrencyDialog] = useState(false);
-  const [currentCurrency, setCurrentCurrency] = useState(suggestedCurrencies);
+  const [currentCurrency, setCurrentCurrency] = useState(0);
+
+  const router = useRouter();
 
   const handleCurrencyChange = (index) => {
     const temp = currentCurrency.map((data, tempIndex) => ({
@@ -35,43 +38,33 @@ const TopNavBar = () => {
           title={currencyDialogStrings.title}
           description={currencyDialogStrings.description}
         >
-          <>
-            <div className="flexCol gap-2">
-              <h3 className="text-sm font-bold text-black">
-                Suggested for you
-              </h3>
-
-              <div className="grid grid-cols-4 gap-4">
-                {currentCurrency.map((currency, index) => (
-                  <DHoverBox
-                    key={currency.name}
-                    label={currency.name}
-                    value={currency.currencyCode}
-                    selected={currency.selected}
-                    onClick={() => handleCurrencyChange(index)}
-                  />
-                ))}
-              </div>
+          <div className="h-full space-y-4">
+            <p className="tertiaryText mt-8">
+              {currencyDialogStrings.description}
+            </p>
+            <h3 className="pt-4 text-sm font-bold text-black">
+              All currencies
+            </h3>
+            <div className="grid grid-cols-4 gap-4">
+              {suggestedCurrencies.map((currency, index) => (
+                <DHoverBox
+                  key={currency.name}
+                  label={currency.name}
+                  value={currency.currencyCode}
+                  selected={index == currentCurrency}
+                  onClick={() => setCurrentCurrency(index)}
+                />
+              ))}
             </div>
-
-            <div className="flexCol gap-2">
-              <h3 className="text-sm font-bold text-black">All currencies</h3>
-
-              <div className="grid grid-cols-4 gap-4">
-                {currentCurrency.map((currency, index) => (
-                  <DHoverBox
-                    key={currency.name}
-                    label={currency.name}
-                    value={currency.currencyCode}
-                    selected={currency.selected}
-                  />
-                ))}
-              </div>
-            </div>
-          </>
+          </div>
         </DDialog>
 
-        <h2 className="text-2xl font-semibold text-white">Booking.com</h2>
+        <h2
+          className="cursor-pointer text-2xl font-semibold text-white"
+          onClick={() => router.push("/stays")}
+        >
+          Booking.com
+        </h2>
         <div className="hidden items-center lg:flex">
           <div className="flex gap-2">
             <DSquareButton

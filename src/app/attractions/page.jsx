@@ -1,93 +1,49 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import FooterContent from "../flights/content/FooterContent";
-import {
-  coveredData,
-  destinationsContinent,
-  moreDestinations,
-  nearbyDestinations,
-} from "./constants";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Image from "next/image";
-import Link from "next/link";
+import { coveredData } from "./constants";
 import { Separator } from "@/components/ui/separator";
-import DOutlineButton from "@/components/DOutlineButton";
+import NearbyDestinationContent from "./NearbyDestinationContent";
+import OffersContent from "../rentalCar/content/OffersContent";
+import MoreDestinationsContent from "./MoreDestinationsContent";
+import LocationPopover from "@/app/stays/components/LocationPopover";
+import PickUpPopover from "../airportTaxi/components/PickUpPopover";
+import { Button } from "@/components/ui/button";
+import DatesPopover from "./DatesPopover";
 
 const page = () => {
-  const [currentDestinationContinent, setCurrentDestinationContinent] =
-    useState(0);
   return (
     <div className="flexCol items-center justify-center">
-      <div className="flexHVCenter w-full flex-col bg-[#003B95] py-16 pb-4">
-        <div className="contentWidth flexCol">
-          <div className="w-[75%]">
-            <h1 className="my-2 text-3xl font-semibold text-[white] transition xl:text-5xl">
-              Attractions, activities and experiences
-            </h1>
-            <h3 className="my-2 text-lg text-white md:text-2xl">
-              Discover new attractions and experiences to match your interests
-              and travel style
-            </h3>
-          </div>
+      <div className="flexHVCenter w-full flex-col bg-[#003B95] pb-20 pt-16">
+        <div className="contentWidth relative">
+          {/* <div className="w-[75%]"> */}
+          <h1 className="text-3xl font-semibold text-[white] transition xl:text-5xl">
+            Attractions, activities and experiences
+          </h1>
+          <h3 className="mt-2 text-lg text-white md:text-2xl">
+            Discover new attractions and experiences to match your interests and
+            travel style
+          </h3>
+
+          {/* </div> */}
         </div>
       </div>
 
-      <div className="contentWidth my-8">
-        <h3 className="secondaryTitle">Nearby destinations</h3>
-        <div className="mt-4 grid grid-cols-3 gap-4">
-          {nearbyDestinations.map((destination) => (
-            <div className="group relative cursor-pointer">
-              <AspectRatio ratio={4 / 3}>
-                <Image
-                  src={destination.imgSource}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md group-hover:opacity-90"
-                />
-              </AspectRatio>
-
-              <p className="absolute bottom-8 left-4 text-xl text-white">
-                {destination.name}
-              </p>
-              <p className="absolute bottom-2 left-4 text-white">
-                {destination.noOfThings}{" "}
-                <span className="text-sm font-light">things to do</span>
-              </p>
-            </div>
-          ))}
+      <div className="contentWidth -mt-8 mb-10 flex flex-col items-center justify-center">
+        <div className="w-full items-center gap-1 space-y-1 rounded-md bg-[#FFB700] p-1 md:flex md:h-14 md:space-y-0">
+          <LocationPopover />
+          <DatesPopover />
+          <Button className="w-full py-6 text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
+            Search
+          </Button>
         </div>
       </div>
 
-      <div className="my-8 flex w-full justify-center bg-[#F5F5F5]">
-        <div className="contentWidth flex justify-between p-8">
-          <div>
-            <p className="text-3xl font-semibold">Sign in to save 10%</p>
-            <p className="assistTitle mb-4 mt-2">
-              You're eligible for discounts on select car rentals
-            </p>
+      <NearbyDestinationContent />
+      <OffersContent />
 
-            <Link
-              href="/register"
-              className="primaryTextColor mt-8 text-xl hover:underline"
-            >
-              Sign in now
-            </Link>
-          </div>
-          <div className="w-[20%]">
-            <AspectRatio ratio={4 / 3}>
-              <Image
-                src={"/flights/globe.png"}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-md group-hover:opacity-90"
-              />
-            </AspectRatio>
-          </div>
-        </div>
-      </div>
-
-      <div className="contentWidth">
+      <div className="contentWidth sectionSpacing">
         <Separator />
         <div className="my-8">
           <h3 className="secondaryTitle">We've got you covered</h3>
@@ -107,45 +63,7 @@ const page = () => {
         <Separator />
       </div>
 
-      <div className="contentWidth my-8">
-        <h3 className="secondaryTitle">Explore more destinations</h3>
-        <p className="tertiaryText">
-          Find things to do in cities around the world
-        </p>
-
-        <div className="mt-4 flex gap-2">
-          {destinationsContinent.map((destination, index) => (
-            <DOutlineButton
-              label={destination.name}
-              selected={index === currentDestinationContinent}
-              onClick={() => setCurrentDestinationContinent(index)}
-              className="text-xs font-medium"
-            />
-          ))}
-        </div>
-        <div className="mt-4 grid grid-cols-4 gap-4">
-          {moreDestinations.map((destination) => (
-            <div className="group relative cursor-pointer">
-              <AspectRatio ratio={4 / 3}>
-                <Image
-                  src={destination.imgSource}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md group-hover:opacity-90"
-                />
-              </AspectRatio>
-
-              <p className="absolute bottom-8 left-4 text-xl text-white">
-                {destination.name}
-              </p>
-              <p className="absolute bottom-2 left-4 text-white">
-                {destination.noOfThings}{" "}
-                <span className="text-sm font-light">things to do</span>
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <MoreDestinationsContent />
 
       <div className="flex w-full justify-center bg-[#F5F5F5] pb-16">
         <FooterContent />

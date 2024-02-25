@@ -3,37 +3,121 @@ export const suggestedCurrencies = [
     id: "usdDollar",
     name: "U.S. Dollar",
     currencyCode: "USD",
-    selected: false,
   },
   {
     id: "swissFranc",
     name: "Swiss Franc",
     currencyCode: "CHF",
-    selected: false,
   },
   {
     id: "mexicanPeso",
     name: "Mecian Peso",
     currencyCode: "MXN",
-    selected: false,
   },
   {
     id: "poundSterling",
     name: "Pound Sterling",
     currencyCode: "GBP",
-    selected: false,
   },
   {
     id: "brazilianReal",
     name: "Brazilian Real",
     currencyCode: "BRL",
-    selected: false,
   },
   {
-    id: "indianRupee",
-    name: "Indian Rupee",
-    currencyCode: "INR",
-    selected: true,
+    id: "australianDollar",
+    name: "Australian Dollar",
+    currencyCode: "AUD",
+  },
+  {
+    id: "arabDirham",
+    name: "United Arab Emirates Dirham",
+    currencyCode: "AED",
+  },
+  {
+    id: "arabianRiyal",
+    name: "Saudi Arabian Riyal",
+    currencyCode: "SAR",
+  },
+  {
+    id: "argentinePeso",
+    name: "Argentine Peso",
+    currencyCode: "ARS",
+  },
+  {
+    id: "bahrainiDinar",
+    name: "Bahraini Dinar",
+    currencyCode: "BHD",
+  },
+  {
+    id: "canadianDollar",
+    name: "Canadian Dollar",
+    currencyCode: "CAD",
+  },
+  {
+    id: "chileanPeso",
+    name: "Chilean Peso",
+    currencyCode: "CLP",
+  },
+  {
+    id: "chineseYuan",
+    name: "Chinese Yuan",
+    currencyCode: "CNY",
+  },
+  {
+    id: "colombianPeso",
+    name: "Colombian Peso",
+    currencyCode: "COP",
+  },
+  {
+    id: "danishKrone",
+    name: "Danish Krone",
+    currencyCode: "DKK",
+  },
+  {
+    id: "egyptianPound",
+    name: "Egyptian Pound",
+    currencyCode: "EGP",
+  },
+  {
+    id: "euro",
+    name: "EURO",
+    currencyCode: "EUR",
+  },
+  {
+    id: "hugarianForint",
+    name: "Hugarian Forint",
+    currencyCode: "HUF",
+  },
+  {
+    id: "japaneseYen",
+    name: "Japanese Yen",
+    currencyCode: "JPY",
+  },
+  {
+    id: "indonesianRupiah",
+    name: "Indonesian Rupiah",
+    currencyCode: "IDR",
+  },
+  {
+    id: "kwaitiDinar",
+    name: "Kuwaiti Dinar",
+    currencyCode: "KWD",
+  },
+  {
+    id: "namibianDollar",
+    name: "Namibian Dollar",
+    currencyCode: "NAD",
+  },
+  {
+    id: "taiwanDollar",
+    name: "New Taiwan Dollar",
+    currencyCode: "TWD",
+  },
+  {
+    id: "icelandicKrona",
+    name: "Icelandic Krona",
+    currencyCode: "ISK",
   },
 ];
 

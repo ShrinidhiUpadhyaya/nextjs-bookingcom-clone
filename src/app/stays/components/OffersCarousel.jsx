@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DCarousel from "./DCarousel";
+import { useRouter } from "next/navigation";
 
 const carouselData = [
   {
@@ -19,6 +20,7 @@ const carouselData = [
     description: "Get inspired - compare and book flights with flexibility",
     buttonText: "Search for flights",
     imgSource: "/plane.png",
+    link: "/flights",
   },
   {
     id: "properties",
@@ -27,6 +29,7 @@ const carouselData = [
       "Browse properties offering long term stays, many at reduced monthly rates.",
     buttonText: "Find a stay",
     imgSource: "/hotel.png",
+    link: "/cities",
   },
   {
     id: "adventure",
@@ -34,10 +37,13 @@ const carouselData = [
     description: "Save 15% or more when you book and stay before April 1,2024",
     buttonText: "Find Early 2024 Deals",
     imgSource: "/surfing.png",
+    link: "/flights",
   },
 ];
 
 const OffersCarousel = () => {
+  const router = useRouter();
+
   return (
     <DCarousel>
       {carouselData.map((data) => (
@@ -56,7 +62,9 @@ const OffersCarousel = () => {
                     </div>
 
                     <div>
-                      <Button>{data.buttonText}</Button>
+                      <Button onClick={() => router.push(data.link)}>
+                        {data.buttonText}
+                      </Button>
                     </div>
                   </div>
                   <div className="rightDiv h-full">

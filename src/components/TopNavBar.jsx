@@ -65,7 +65,7 @@ const TopNavBar = () => {
         >
           Booking.com
         </h2>
-        <div className="hidden items-center lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <div className="flex gap-2">
             <DSquareButton
               label="EUR"

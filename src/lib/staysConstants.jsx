@@ -4,7 +4,7 @@ export const offersData = {
   data: [
     {
       id: "flight",
-      title: "Fly away to your dream vacation",
+      title: "Fly to your dream vacation",
       description: "Get inspired - compare and book flights with flexibility",
       buttonText: "Search for flights",
       imgSource: "/plane.png",
@@ -260,11 +260,7 @@ export const tripPlannerRomanceData = [
     description: "47 km away",
     imgSource: "/cities/munich.png",
   },
-  {
-    title: "Wolframs-Eschenbach",
-    description: "47 km away",
-    imgSource: "/cities/munich.png",
-  },
+
   {
     title: "WeiBenstadt",
     description: "47 km away",
@@ -302,6 +298,11 @@ export const tripPlannerRomanceData = [
   },
   {
     title: "Tambach-Dietharz",
+    description: "47 km away",
+    imgSource: "/cities/munich.png",
+  },
+  {
+    title: "Wolframs-Eschenbach",
     description: "47 km away",
     imgSource: "/cities/munich.png",
   },

@@ -114,10 +114,6 @@
   @apply text-sm font-normal text-[#474747];
 }
 
-.labelText {
-  @apply text-base font-semibold;
-}
-
 .primaryTitleText {
   @apply text-base font-semibold;
 }

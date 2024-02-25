@@ -8,16 +8,16 @@ import { Separator } from "@/components/ui/separator";
 const FooterContent = () => {
   return (
     <div className="mt-2 w-full">
-      <div className="bg-[#00224F] p-16">
-        <div className="flexCol items-center justify-center gap-8 text-[white]">
-          <div className="flexCol items-center gap-1">
+      <div className="flexHCenter bg-[#00224F]">
+        <div className="contentWidth flexCol items-center gap-4 py-12 text-white">
+          <div className="flexCol items-center">
             <p className="text-3xl font-light">Save time, save money</p>
-            <p className="text-sm font-light">
+            <p className="mt-1 text-sm font-light">
               Sign up and we'll send the best deals to you
             </p>
           </div>
 
-          <div className="flex w-full gap-2 sm:w-[75%] md:w-[60%] lg:w-[50%] xl:w-[30%]">
+          <div className="flex w-full gap-2 sm:w-[75%] md:w-[60%]">
             <Input
               className="text-xl font-extralight text-black"
               placeholder="Your email address"

@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 
 import { BedDouble, Plane, TreeDeciduous, CarTaxiFront } from "lucide-react";
 import DOutlineLink from "./DOutlineLink";
-import { useRouter, usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+import { router, useRouter, usePathname } from "next/navigation";
+import { cn, getCurrentPath } from "@/lib/utils";
 const bottomNavBarOptions = [
   {
     id: "stays",
@@ -45,13 +45,13 @@ const bottomNavBarOptions = [
 ];
 const BottomNavBar = () => {
   const [navBarOptions, setNavBarOptions] = useState(bottomNavBarOptions);
-  const router = usePathname();
+  const [currentPageIndex, setCurrentPageIndex] = useState();
+  const currentPath = usePathname();
   const isLogin = router === "/register";
 
   useEffect(() => {
-    console.log("##############");
-    console.log(isLogin);
-  }, []);
+    setCurrentPageIndex(getCurrentPath(currentPath));
+  }, [currentPath]);
 
   function setActive(index) {
     setNavBarOptions((prevState) =>
@@ -75,9 +75,9 @@ const BottomNavBar = () => {
           key={option.id}
           label={option.label}
           Icon={option.Icon}
-          active={option.active}
+          active={index === currentPageIndex}
           href={option.href}
-          onClick={() => setActive(index)}
+          onClick={() => setCurrentPageIndex(index)}
           className="mx-2"
         />
       ))}

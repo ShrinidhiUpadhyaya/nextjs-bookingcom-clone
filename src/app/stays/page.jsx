@@ -40,7 +40,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="-mt-8 mb-10 flex flex-col items-center justify-center">
+      <div className="flexCol -mt-8 mb-10 items-center justify-center">
         <div className="contentWidth items-center gap-1 space-y-1 rounded-md bg-[#FFB700] p-1 md:flex md:h-14 md:space-y-0">
           <LocationPopover />
           <DCalendarPopover />
@@ -51,12 +51,12 @@ const page = () => {
         </div>
         <div className="contentWidth mt-4 flex gap-2">
           <Checkbox className="h-5 w-5" />
-          <Label className="text-sm font-normal">I'm looking for flights</Label>
+          <Label className="tertiaryText">I'm looking for flights</Label>
         </div>
       </div>
 
       <div className="flexHCenter">
-        <div className="flexCol contentWidth gap-4">
+        <div className="contentWidth">
           <OffersContent />
           <ExploreContent title={exploreData.title} data={exploreData.data} />
           <PropertyTypeContent data={propertyTypeData.data} />

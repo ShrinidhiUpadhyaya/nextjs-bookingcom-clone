@@ -20,8 +20,8 @@ const DestinationsContent = () => {
   };
   return (
     <div className="sectionSpacing">
-      <h2 className="text-xl font-bold">Destinations we love</h2>
-      <div className="mt-4 flex gap-2">
+      <h2 className="primaryTitle">Destinations we love</h2>
+      <div className="mt-1 flex gap-2">
         {destinationsFilter.map((option, index) => (
           <DOutlineButton
             label={option.label}
@@ -31,7 +31,7 @@ const DestinationsContent = () => {
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-2 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="mt-4 grid grid-cols-2 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {destinationsData.map((data) => (
           <DColumnTexts
             label={data.label}

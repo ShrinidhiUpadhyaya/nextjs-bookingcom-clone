@@ -11,21 +11,22 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import DCarousel from "./DCarousel";
+import { cn } from "@/lib/utils";
 
-const ExploreContentCarousel = ({ carouselData, onClick }) => {
+const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
   return (
-    <DCarousel prevButtonStyle="-mt-8" nextButtonStyle="-mt-8">
+    <DCarousel className={cn(className)}>
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}
-          className="flexCenter group basis-1/3 cursor-pointer justify-start gap-0 md:basis-1/6"
+          className="group basis-1/3 cursor-pointer gap-0 md:basis-1/6"
           onClick={onClick}
         >
-          <div className="flex-1 p-1">
-            <Card className="border-none">
-              <CardContent className="p-0">
-                <div className="flexCol">
-                  <div className="relative flex-1 group-hover:opacity-90">
+          <div>
+            <Card>
+              <CardContent className="p-0 pb-2">
+                <>
+                  <div className="flex-1 group-hover:opacity-90">
                     <AspectRatio ratio={4 / 3}>
                       <Image
                         src={data.imgSource}
@@ -35,9 +36,9 @@ const ExploreContentCarousel = ({ carouselData, onClick }) => {
                       />
                     </AspectRatio>
                   </div>
-                  <h3 className="labelText">{data.title}</h3>
-                  <p className="tertiaryText">{data.description}</p>
-                </div>
+                  <h3 className="primaryTitleText px-1 pt-2">{data.title}</h3>
+                  <p className="tertiaryText px-1">{data.description}</p>
+                </>
               </CardContent>
             </Card>
           </div>

@@ -12,11 +12,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DCarousel from "./DCarousel";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const carouselData = [
   {
     id: "flight",
-    title: "Fly away to your dream vacation",
+    title: "Fly to your dream vacation",
     description: "Get inspired - compare and book flights with flexibility",
     buttonText: "Search for flights",
     imgSource: "/plane.png",
@@ -41,44 +42,38 @@ const carouselData = [
   },
 ];
 
-const OffersCarousel = () => {
+const OffersCarousel = ({ className }) => {
   const router = useRouter();
 
   return (
-    <DCarousel>
+    <DCarousel className={cn(className)}>
       {carouselData.map((data) => (
-        <CarouselItem
-          key={data.id}
-          className="flexCenter h-44 justify-start gap-0 lg:basis-1/2"
-        >
-          <div className="h-full flex-1 p-1">
-            <Card className="h-full">
-              <CardContent className="h-full p-0">
-                <div className="flex h-full justify-between">
-                  <div className="leftDiv flexCol justify-between p-4">
-                    <div>
-                      <h3 className="labelText">{data.title}</h3>
-                      <p className="tertiaryText">{data.description}</p>
-                    </div>
-
-                    <div>
-                      <Button onClick={() => router.push(data.link)}>
-                        {data.buttonText}
-                      </Button>
-                    </div>
+        <CarouselItem key={data.id} className="h-40 lg:basis-1/2">
+          <Card className="h-full">
+            <CardContent className="h-full p-0">
+              <div className="flex h-full justify-between">
+                <div className="p-4">
+                  <div>
+                    <h3 className="primaryTitleText">{data.title}</h3>
+                    <p className="tertiaryText">{data.description}</p>
                   </div>
-                  <div className="rightDiv h-full">
-                    <Image
-                      src={data.imgSource}
-                      width={100}
-                      height={100}
-                      className="aspect-square h-full w-full"
-                    />
+
+                  <Button
+                    onClick={() => router.push(data.link)}
+                    className="mt-4 px-4 py-2"
+                  >
+                    {data.buttonText}
+                  </Button>
+                </div>
+
+                <div className="w-[45%]">
+                  <div className="relative h-full w-full">
+                    <Image src={data.imgSource} fill={true} />
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         </CarouselItem>
       ))}
     </DCarousel>

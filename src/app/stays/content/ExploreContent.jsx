@@ -10,12 +10,16 @@ const ExploreContent = ({ title, data }) => {
     router.push("/cities");
   };
   return (
-    <div className="flexCol sectionSpacing gap-1">
-      <h2 className="text-xl font-bold">{title}</h2>
+    <div className="sectionSpacing">
+      <h2 className="primaryTitle">{title}</h2>
       <p className="tertiaryText">
         These popular destinations have a lot to offer
       </p>
-      <ExploreContentCarousel carouselData={data} onClick={handleClick} />
+      <ExploreContentCarousel
+        className="mt-2"
+        carouselData={data}
+        onClick={handleClick}
+      />
     </div>
   );
 };

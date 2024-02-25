@@ -7,9 +7,9 @@ import { tripPlannerRomanceData } from "@/lib/staysConstants";
 import { CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
-const UniquePropertiesCarousel = () => {
+const UniquePropertiesCarousel = ({ className }) => {
   return (
-    <div className="mb-10">
+    <div className={cn(className)}>
       <DCarousel prevButtonStyle="-mt-8" nextButtonStyle="-mt-8">
         {tripPlannerRomanceData.map((data) => (
           <CarouselItem
@@ -17,28 +17,26 @@ const UniquePropertiesCarousel = () => {
             className="basis-1/2 sm:basis-1/3 md:basis-1/4 "
           >
             <Card>
-              <CardContent className="border-none p-0 pb-8">
-                <div className="flexCol">
-                  <div className="relative flex-1 group-hover:opacity-90">
-                    <AspectRatio ratio={4 / 3}>
-                      <Image
-                        src="/cities/hamburg.png"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-md"
-                      />
-                    </AspectRatio>
-                  </div>
-                  <div className="flexCol gap-1 p-2">
-                    <h3 className="labelText">{data.title}</h3>
-                    <p className="tertiaryText">{data.description}</p>
-                    <div className="flexVCenter gap-1 text-xs">
-                      <div className="rounded-sm bg-[#003B95] p-1 text-white">
-                        8.7
-                      </div>
-                      <span className="tertiaryText">Excellent .</span>
-                      <span className="tertiaryText">10000 reviews</span>
-                    </div>
+              <CardContent className="p-0 pb-2">
+                <div className="flex-1 group-hover:opacity-90">
+                  <AspectRatio ratio={4 / 3}>
+                    <Image
+                      src="/cities/hamburg.png"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-md"
+                    />
+                  </AspectRatio>
+                </div>
+                <div className="p-1 py-2">
+                  <h3 className="secondaryTitleText">{data.title}</h3>
+                  <p className="tertiaryText">{data.description}</p>
+                  <div className="flexVCenter mt-2 gap-1 text-xs">
+                    <p className="rounded-sm bg-[#003B95] p-1 text-white">
+                      8.7
+                    </p>
+                    <span className="tertiaryText">Excellent .</span>
+                    <span className="tertiaryText">10000 reviews</span>
                   </div>
                 </div>
               </CardContent>

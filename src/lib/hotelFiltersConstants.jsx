@@ -113,15 +113,18 @@ export const hotelOverviewOptions = [
     label: "Overview",
   },
   {
-    label: "Info & rules",
+    label: "Info & prices",
   },
   {
     label: "Facilities",
   },
   {
+    label: "Guest reviews(915)",
+  },
+  {
     label: "House rules",
   },
   {
-    label: "Guest reviews(915)",
+    label: "FAQ",
   },
 ];

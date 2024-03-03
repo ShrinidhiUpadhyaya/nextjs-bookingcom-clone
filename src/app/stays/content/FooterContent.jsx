@@ -99,7 +99,7 @@ const FooterContent = () => {
         </div>
       </div>
 
-      <div className="flexHCenter primaryTextColor p-16">
+      <div className="primaryTextColor flexHCenter p-16">
         <Link href="/" className="hover:underline">
           Extranet Log-in
         </Link>

@@ -42,9 +42,10 @@ const page = () => {
               className="rounded-md border border-[#e7e7e7] p-10 hover:border hover:border-[#006CE4] hover:bg-transparent"
             >
               <Link href="/api/auth/signin">
-                <div className="relative h-6 w-6">
+                Login
+                {/* <div className="relative h-6 w-6">
                   <Image fill={true} src={option.imgSource} />
-                </div>
+                </div> */}
               </Link>
             </DOutlineButton>
           ))}

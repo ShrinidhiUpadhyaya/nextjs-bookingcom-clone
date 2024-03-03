@@ -2,10 +2,10 @@ import React from "react";
 import { Check } from "lucide-react";
 const HotelFacilities = ({ label, Icon, facilities }) => {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="mt-4 gap-4">
       <div className="flex gap-2">
         <Icon />
-        {label && <p>{label}</p>}
+        {label && <p className="text-base font-semibold">{label}</p>}
       </div>
       <div>
         {facilities &&

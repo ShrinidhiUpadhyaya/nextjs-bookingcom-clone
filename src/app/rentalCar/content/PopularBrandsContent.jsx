@@ -6,9 +6,9 @@ const PopularBrandsContent = () => {
   return (
     <div className="contentWidth sectionSpacing">
       <h3 className="secondaryTitle">Popular car hire brands</h3>
-      <div className="my-4 flex justify-between gap-2">
+      <div className="mt-4 flex justify-between gap-2">
         {popularCarHireBrands.map((brand) => (
-          <div className={cn("p-4", `${brand.color}`)}>
+          <div className={cn("rounded-md p-4", `${brand.color}`)}>
             <p className="text-white">{brand.name}</p>
           </div>
         ))}

@@ -30,6 +30,9 @@ const popularNearbyDestinations = [
 
 async function getPlace(value) {
   console.log("Place search", value);
+  fetch(
+    "https://maps.googleapis.com/maps/api/place/textsearch/json?query",
+  ).then((response) => console.log(response.json()));
 }
 
 const LocationPopover = ({ className }) => {
@@ -40,7 +43,7 @@ const LocationPopover = ({ className }) => {
       Icon={BedDouble}
       onInputChange={(e) => getPlace(e.target.value)}
     >
-      {/* <div className="w-96 space-y-4">
+      <div className="w-96 space-y-4">
         <p className="secondaryTitleText pl-4 pt-4">
           Popular neaby destinations
         </p>
@@ -63,7 +66,7 @@ const LocationPopover = ({ className }) => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
     </DPopoverInput>
   );
 };

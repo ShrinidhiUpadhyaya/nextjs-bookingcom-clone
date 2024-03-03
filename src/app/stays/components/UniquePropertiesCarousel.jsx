@@ -16,7 +16,7 @@ const UniquePropertiesCarousel = ({ className }) => {
             key={data.title}
             className="basis-1/2 sm:basis-1/3 md:basis-1/4 "
           >
-            <Card>
+            <Card className="border-none shadow-none">
               <CardContent className="p-0 pb-2">
                 <div className="flex-1 group-hover:opacity-90">
                   <AspectRatio ratio={4 / 3}>
@@ -28,11 +28,11 @@ const UniquePropertiesCarousel = ({ className }) => {
                     />
                   </AspectRatio>
                 </div>
-                <div className="p-1 py-2">
+                <div className="py-2">
                   <h3 className="secondaryTitleText">{data.title}</h3>
                   <p className="tertiaryText">{data.description}</p>
                   <div className="flexVCenter mt-2 gap-1 text-xs">
-                    <p className="rounded-sm bg-[#003B95] p-1 text-white">
+                    <p className="rounded-md bg-[#003B95] p-1 text-white">
                       8.7
                     </p>
                     <span className="tertiaryText">Excellent .</span>

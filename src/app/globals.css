@@ -126,3 +126,7 @@
   @apply mb-10;
 }
 
+.applyHover {
+  @apply hover:bg-[#F2F2F2]
+}
+

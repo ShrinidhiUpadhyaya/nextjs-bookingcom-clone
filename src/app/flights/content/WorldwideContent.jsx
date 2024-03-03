@@ -85,17 +85,17 @@ const worldWideFlights = [
 ];
 const WorldwideContent = () => {
   return (
-    <div className="contentWidth flexCol sectionSpacing">
+    <div className="contentWidth sectionSpacing">
       <h3 className="secondaryTitle">Fly worldwide with Booking.com</h3>
       <p className="tertiaryText">
         Book flights to a destnation popular with travellers from Germany
       </p>
-      <DTabBar model={continentsList} className="mt-4" />
+      <DTabBar model={continentsList} />
       <Separator />
-      <div className="my-4 grid grid-cols-3 gap-4">
+      <div className="my-2 grid grid-cols-3 gap-4">
         {worldWideFlights.map((flight) => (
           <div className="flex cursor-pointer items-center gap-2">
-            <div className="relative min-w-[20%] max-w-[20%]">
+            <div className="min-w-[20%] max-w-[20%]">
               <AspectRatio ratio={4 / 3}>
                 <Image
                   src={"/flights/barcelona.png"}
@@ -106,11 +106,12 @@ const WorldwideContent = () => {
               </AspectRatio>
             </div>
             <div className="text-sm">
-              <p className="labelText">
+              <p className="secondaryTitleText">
                 {flight.from} to {flight.to}
               </p>
               <p className="tertiaryText">
-                Shortest flight time: {flight.duration}
+                Shortest flight time:{" "}
+                <span className="secondaryTitleText">{flight.duration}</span>
               </p>
             </div>
           </div>

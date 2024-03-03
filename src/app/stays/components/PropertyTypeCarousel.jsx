@@ -25,9 +25,9 @@ const PropertyTypeCarousel = ({ carouselData, className }) => {
           key={data.title}
           className="group h-56 basis-1/2 cursor-pointer md:basis-1/4"
         >
-          <div className="h-full">
-            <Card className="h-full border-none">
-              <CardContent className="p-0">
+          <div>
+            <Card className="h-full border-none shadow-none">
+              <CardContent className="p-0 pb-2">
                 <div className="group-hover:opacity-90">
                   <AspectRatio ratio={4 / 3}>
                     <Image

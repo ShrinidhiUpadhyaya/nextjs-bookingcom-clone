@@ -10,10 +10,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-const DPopover = ({ label, Icon, children, className }) => {
+const DPopover = ({ label, Icon, open, onOpenChange, children, className }) => {
   return (
     <div className={className}>
-      <Popover className="h-full p-0">
+      <Popover className="h-full p-0" open={open} onOpenChange={onOpenChange}>
         <PopoverTrigger asChild>
           <Button
             role="combobox"
@@ -21,7 +21,7 @@ const DPopover = ({ label, Icon, children, className }) => {
           >
             <div className="flex h-full w-full items-center">
               {<Icon className="h-full min-h-5 min-w-5" />}
-              <span className=" ml-2 flex h-full items-center text-sm font-medium">
+              <span className=" ml-2 flex h-full items-center pt-[1px] text-sm font-medium">
                 {label}
               </span>
             </div>

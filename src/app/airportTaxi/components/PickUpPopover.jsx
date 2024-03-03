@@ -32,21 +32,31 @@ const generateTimeStamps = () => {
   return timestamps;
 };
 
-const PickUpPopover = ({ label, Icon = CalendarDays, className }) => {
-  const [date, setDate] = useState({
-    from: new Date(),
-    to: addDays(new Date(), 10),
+function convertDate(date) {
+  return date?.toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
   });
+}
+
+const PickUpPopover = ({ label, Icon = CalendarDays, className }) => {
+  const [date, setDate] = useState(new Date());
 
   const timeStamps = generateTimeStamps();
   const [startTime, setStartTime] = useState("08:00");
 
   return (
-    <DPopover className={cn("flex-1", className)} label={label} Icon={Icon}>
+    <DPopover
+      className={cn("flex-1", className)}
+      label={`${convertDate(date)} - ${startTime}`}
+      Icon={Icon}
+    >
       <div className="px-2 py-2 pb-4">
         <Calendar
           mode="single"
-          selected={new Date()}
+          selected={date}
+          onSelect={setDate}
           className="flexHCenter w-full rounded-md border"
         />
         <div className="mt-2 flex items-center gap-2 px-1">

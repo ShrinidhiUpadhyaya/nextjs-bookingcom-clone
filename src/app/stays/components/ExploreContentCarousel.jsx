@@ -23,7 +23,7 @@ const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
           onClick={onClick}
         >
           <div>
-            <Card>
+            <Card className="border-none">
               <CardContent className="p-0 pb-2">
                 <>
                   <div className="flex-1 group-hover:opacity-90">
@@ -36,8 +36,8 @@ const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
                       />
                     </AspectRatio>
                   </div>
-                  <h3 className="primaryTitleText px-1 pt-2">{data.title}</h3>
-                  <p className="tertiaryText px-1">{data.description}</p>
+                  <h3 className="primaryTitleText pt-2">{data.title}</h3>
+                  <p className="tertiaryText">{data.description}</p>
                 </>
               </CardContent>
             </Card>

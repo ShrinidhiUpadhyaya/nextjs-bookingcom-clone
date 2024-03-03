@@ -30,10 +30,19 @@ const DatesPopover = ({ className }) => {
 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+
+  function convertDate(date) {
+    return date?.toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  }
+
   return (
     <DPopover
       className={cn("h-full flex-1", className)}
-      label="Pick-up Date - Drop-off Date"
+      label={`${convertDate(date?.from)} - ${convertDate(date?.to)}`}
       Icon={CalendarDays}
     >
       <div className="px-2 py-2 pb-4">
@@ -55,11 +64,7 @@ const DatesPopover = ({ className }) => {
               <span className="min-w-10 text-right">From: </span>
               <span className="flex-1">
                 <span className="secondaryTitleText px-2">
-                  {date?.from?.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}
+                  {convertDate(date?.from)}
                 </span>
               </span>
             </p>
@@ -67,11 +72,7 @@ const DatesPopover = ({ className }) => {
               <span className="min-w-10 text-right">To: </span>
               <span className="flex-1">
                 <span className="secondaryTitleText px-2">
-                  {date?.to?.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}
+                  {convertDate(date?.to)}
                 </span>
               </span>
             </p>

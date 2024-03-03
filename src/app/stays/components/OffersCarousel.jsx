@@ -13,6 +13,7 @@ import Image from "next/image";
 import DCarousel from "./DCarousel";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const carouselData = [
   {
@@ -60,15 +61,20 @@ const OffersCarousel = ({ className }) => {
 
                   <Button
                     onClick={() => router.push(data.link)}
-                    className="mt-4 px-4 py-2"
+                    className="mt-4 px-4 py-2 hover:bg-[#006CE4]/95 hover:shadow-sm"
                   >
                     {data.buttonText}
                   </Button>
                 </div>
 
-                <div className="w-[45%]">
+                <div className="flex-0 w-40 min-w-40 max-w-40">
                   <div className="relative h-full w-full">
-                    <Image src={data.imgSource} fill={true} />
+                    <Image
+                      src={data.imgSource}
+                      fill
+                      objectFit="cover"
+                      className="rounded-md rounded-l-none"
+                    />
                   </div>
                 </div>
               </div>

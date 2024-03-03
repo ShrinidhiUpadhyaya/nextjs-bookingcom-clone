@@ -15,7 +15,7 @@ const OffersContent = () => {
 
           <Link
             href="/register"
-            className="primaryTextColor mt-8 text-xl hover:underline"
+            className="primaryTextColor text-xl hover:underline"
           >
             Sign in now
           </Link>

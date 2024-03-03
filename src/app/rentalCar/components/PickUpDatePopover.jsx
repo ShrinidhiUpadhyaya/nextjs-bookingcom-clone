@@ -48,10 +48,19 @@ const PickUpDatePopover = ({ className }) => {
 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+
+  function convertDate(date) {
+    return date?.toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  }
+
   return (
     <DPopover
       className={cn("flex-1", className)}
-      label="Pick-up Date - Drop-off Date"
+      label={`${convertDate(date?.from)}, ${startTime} - ${convertDate(date?.to)}, ${endTime}`}
       Icon={CalendarDays}
     >
       <div className="px-2 py-2 pb-4">

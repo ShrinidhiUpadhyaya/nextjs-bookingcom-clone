@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Command, CommandGroup } from "@/components/ui/command";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -13,12 +13,26 @@ import { CalendarDays, UserrRound } from "lucide-react";
 import DCalendarCarousel from "./DCalendarCarousel";
 import DPopover from "./DPopover";
 import { cn } from "@/lib/utils";
+import { addDays, format } from "date-fns";
+
+function convertDate(date) {
+  return date?.toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
 
 const CheckInDatePopover = ({ className }) => {
+  const [date, setDate] = useState({
+    from: new Date(),
+    to: addDays(new Date(), 10),
+  });
+
   return (
     <DPopover
       className={cn("flex-1", className)}
-      label="Check-in Date - Check-out Date"
+      label={`${convertDate(date?.from)} - ${convertDate(date?.to)}`}
       Icon={CalendarDays}
     >
       <Command>
@@ -34,9 +48,13 @@ const CheckInDatePopover = ({ className }) => {
             </TabsList>
             <TabsContent value="calendar">
               <Calendar
-                mode="single"
-                selected={new Date()}
-                className="flexHCenter w-full rounded-md border"
+                initialFocus
+                mode="range"
+                defaultMonth={date?.from}
+                selected={date}
+                onSelect={setDate}
+                numberOfMonths={2}
+                // className="border border-black"
               />
             </TabsContent>
             <TabsContent value="flexible">

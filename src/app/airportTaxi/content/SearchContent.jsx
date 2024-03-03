@@ -41,7 +41,7 @@ const SearchContent = () => {
         <div className="mt-4 w-full items-center gap-1 space-y-1 rounded-md bg-[#FFB700] p-1 md:flex md:h-14 md:space-y-0">
           <LocationPopover />
           <LocationPopover />
-          <PickUpPopover className="h-full max-w-36" label={"Date"} />
+          <PickUpPopover className="h-full max-w-52" label={"Date"} />
           <PassengersCountPopover className="max-w-20" label="1" />
           <Button className="w-full py-6 text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
             Search

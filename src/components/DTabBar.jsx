@@ -10,7 +10,7 @@ const DTabBar = ({ model, className }) => {
       {model?.map((data, index) => (
         <motion.div
           className={cn(
-            "relative cursor-pointer p-4 hover:bg-accent hover:text-[#006CE4]",
+            "relative cursor-pointer px-2 py-2 hover:bg-accent hover:text-[#006CE4]",
             index === currentTab && "primaryTextColor",
           )}
           onClick={() => setCurrentTab(index)}

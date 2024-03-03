@@ -21,11 +21,16 @@ const DPopoverInput = ({ label, Icon, onInputChange, children, className }) => {
             <Input
               placeholder={label}
               className="h-full border-transparent text-sm font-medium outline-none focus-visible:ring-0"
-              //   onChange={}
+              onChange={onInputChange}
             ></Input>
           </div>
         </PopoverTrigger>
-        <PopoverContent className="w-full p-0" side="bottom" align="start">
+        <PopoverContent
+          className="w-full p-0"
+          side="bottom"
+          align="start"
+          onOpenAutoFocus={(event) => event.preventDefault()}
+        >
           {children}
         </PopoverContent>
       </Popover>

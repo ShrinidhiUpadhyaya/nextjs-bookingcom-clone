@@ -9,32 +9,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { addDays, format } from "date-fns";
-import { DateRange } from "react-day-picker";
-
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from "@/components/ui/command";
+import { addDays } from "date-fns";
 import { Separator } from "@/components/ui/separator";
 import DPopover from "@/app/stays/components/DPopover";
-
-const generateTimeStamps = () => {
-  const timestamps = [];
-
-  for (let i = 0; i <= 24; i++) {
-    const timestamp = `${i < 10 ? "0" : ""}${i}:00`; // Format hours with leading zero if necessary
-    timestamps.push({ value: timestamp });
-  }
-
-  console.log("##");
-  console.log(timestamps);
-
-  return timestamps;
-};
 
 const DCalendarPopover = ({ className }) => {
   const [date, setDate] = useState({
@@ -42,17 +19,29 @@ const DCalendarPopover = ({ className }) => {
     to: addDays(new Date(), 10),
   });
 
-  const timeStamps = generateTimeStamps();
-  const [startTime, setStartTime] = useState("08:00");
-  const [endTime, setEndTime] = useState("08:00");
-
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   return (
     <DPopover
       className={cn("h-full flex-1", className)}
-      label="Pick-up Date - Drop-off Date"
+      label={
+        date?.from?.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "2-digit",
+        }) +
+        ", " +
+        " -- " +
+        date?.to?.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "2-digit",
+        }) +
+        ", "
+      }
       Icon={CalendarDays}
+      open={open}
+      onOpenChange={setOpen}
     >
       <div className="px-2 py-2 pb-4">
         <Calendar
@@ -62,95 +51,8 @@ const DCalendarPopover = ({ className }) => {
           selected={date}
           onSelect={setDate}
           numberOfMonths={2}
-          // className="border border-black"
         />
-        <div className="w-full gap-8 space-y-4  px-4">
-          <div className="flex flex-1 items-center gap-2">
-            <span className="secondaryTitleText flex-1">Start Time</span>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  id="date"
-                  variant={"outline"}
-                  className={cn(
-                    "w-[35%] justify-start border-2 border-[##f5f5f5] px-4 py-2 text-left font-normal",
-                    !date && "text-muted-foreground",
-                  )}
-                >
-                  <span className="primaryTitleText">{startTime}</span>
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent>
-                <Command>
-                  <CommandGroup className="h-56 overflow-auto">
-                    {timeStamps.map((time) => (
-                      <CommandItem
-                        key={time.value}
-                        value={time.value}
-                        onSelect={(currentValue) => {
-                          setValue(currentValue === value ? "" : currentValue);
-                          setOpen(false);
-                        }}
-                        className={cn({
-                          primaryTextColor: time.value === startTime,
-                        })}
-                        onClick={() => setStartTime(time.value)}
-                      >
-                        {time.value}
-                        {time.value === startTime && (
-                          <Check className={cn("ml-auto h-4 w-4")} />
-                        )}
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                </Command>
-              </PopoverContent>
-            </Popover>
-          </div>
 
-          <div className="flex flex-1 items-center gap-2">
-            <span className="secondaryTitleText flex-1">End Time</span>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  id="date"
-                  variant={"outline"}
-                  className={cn(
-                    "w-[35%] justify-start border-2 border-[##f5f5f5] px-4 py-2 text-left font-normal",
-                    !date && "text-muted-foreground",
-                  )}
-                >
-                  <span className="primaryTitleText">{endTime}</span>
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent>
-                <Command>
-                  <CommandGroup className="h-56 overflow-auto">
-                    {timeStamps.map((time) => (
-                      <CommandItem
-                        key={time.value}
-                        value={time.value}
-                        onSelect={(currentValue) => {
-                          setValue(currentValue === value ? "" : currentValue);
-                          setOpen(false);
-                        }}
-                        className={cn({
-                          primaryTextColor: time.value === endTime,
-                        })}
-                        onClick={() => setStartTime(time.value)}
-                      >
-                        {time.value}
-                        {time.value === endTime && (
-                          <Check className={cn("ml-auto h-4 w-4")} />
-                        )}
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                </Command>
-              </PopoverContent>
-            </Popover>
-          </div>
-        </div>
         <Separator className="my-4" />
 
         <div className="flex justify-between px-4">
@@ -165,7 +67,6 @@ const DCalendarPopover = ({ className }) => {
                     year: "numeric",
                   })}
                 </span>
-                <span className="primaryTitleText">{startTime}</span>
               </span>
             </p>
             <p className="tertiaryText flex items-center">
@@ -178,11 +79,12 @@ const DCalendarPopover = ({ className }) => {
                     year: "numeric",
                   })}
                 </span>
-                <span className="primaryTitleText">{endTime}</span>
               </span>
             </p>
           </div>
-          <Button className="w-[100px]">Done</Button>
+          <Button className="w-[100px]" onClick={() => setOpen(false)}>
+            Done
+          </Button>
         </div>
       </div>
     </DPopover>

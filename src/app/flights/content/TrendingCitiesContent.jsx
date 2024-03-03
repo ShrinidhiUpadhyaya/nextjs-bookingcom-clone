@@ -18,14 +18,14 @@ const TrendingCitiesContent = ({ className }) => {
   }, []);
 
   return (
-    <div className={cn("contentWidth flexCol sectionSpacing", className)}>
+    <div className={cn("contentWidth sectionSpacing", className)}>
       <h3 className="secondaryTitle">Trending Cities</h3>
       <p className="tertiaryText">
         Book flights to a destination popular with travellers from Gerany{" "}
       </p>
       <PopularFlightsCarousel
         carouselData={trendingCityFlights}
-        className={"mt-4"}
+        className={"mt-2"}
       />
     </div>
   );

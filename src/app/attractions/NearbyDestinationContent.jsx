@@ -1,7 +1,10 @@
 import React from "react";
-import { nearbyDestinations } from "./constants";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
+import { nearbyDestinations } from "./constants";
+
 const NearbyDestinationContent = () => {
   return (
     <div className="contentWidth sectionSpacing">

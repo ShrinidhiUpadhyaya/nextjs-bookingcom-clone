@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { PopularFlightsContent } from "./content/PopularFlightsContent";
 import TrendingCitiesContent from "./content/TrendingCitiesContent";
@@ -7,7 +5,6 @@ import WorldwideContent from "./content/WorldwideContent";
 import FooterContent from "./content/FooterContent";
 import FAQContent from "./content/FAQContent";
 import SearchContent from "./content/SearchContent";
-import { Skeleton } from "@/components/ui/skeleton";
 
 const page = () => {
   return (

@@ -2,16 +2,13 @@ import React, { useState } from "react";
 
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { CalendarDays, UserrRound, Check } from "lucide-react";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { addDays } from "date-fns";
 import { Separator } from "@/components/ui/separator";
 import DPopover from "@/app/stays/components/DPopover";
+
+import { cn } from "@/lib/utils";
+import { addDays } from "date-fns";
+
+import { CalendarDays } from "lucide-react";
 
 const DCalendarPopover = ({ className }) => {
   const [date, setDate] = useState({

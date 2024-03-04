@@ -1,43 +1,30 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
+
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from "@/components/ui/command";
+import { Command, CommandGroup, CommandItem } from "@/components/ui/command";
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
-
-import { Check, ChevronDown, ArrowRightLeft } from "lucide-react";
-import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import DRowSpinbox from "../../stays/components/DRowSpinbox";
-import { Checkbox } from "@/components/ui/checkbox";
-import DCheckbox from "../../stays/components/DCheckbox";
 import LocationPopover from "@/app/stays/components/LocationPopover";
 import CheckInDatePopover from "@/app/stays/components/CheckInDatePopover";
-import PersonCountPopover from "@/app/stays/components/PersonCountPopover";
-import DPopoverInput from "@/app/stays/components/DPopoverInput";
+import DCheckbox from "@/app/stays/components/DCheckbox";
+import { Check, ChevronDown, ArrowRightLeft } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+
 const flightSearchFilters = [
   {
     id: "fl1",

@@ -1,6 +1,6 @@
 import React from "react";
-import ExploreContentCarousel from "../components/ExploreContentCarousel";
 import { useRouter } from "next/navigation";
+import ExploreContentCarousel from "../components/ExploreContentCarousel";
 
 const ExploreContent = ({ title, data }) => {
   const router = useRouter();

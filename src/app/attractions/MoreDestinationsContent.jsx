@@ -1,13 +1,12 @@
+"use client";
+
 import React, { useState } from "react";
-import {
-  coveredData,
-  destinationsContinent,
-  moreDestinations,
-  nearbyDestinations,
-} from "./constants";
-import DOutlineButton from "@/components/DOutlineButton";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import DOutlineButton from "@/components/DOutlineButton";
+
+import { destinationsContinent, moreDestinations } from "./constants";
 
 const MoreDestinationsContent = () => {
   const [currentDestinationContinent, setCurrentDestinationContinent] =

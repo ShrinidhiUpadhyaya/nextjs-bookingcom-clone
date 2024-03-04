@@ -1,34 +1,29 @@
 "use client";
 
-import { use } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import { Card, CardContent } from "@/components/ui/card";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Leaf } from "lucide-react";
-import { SlidersHorizontal } from "lucide-react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { DialogFooter } from "@/components/ui/dialog";
+import { Separator } from "@/components/ui/separator";
+
 import LocationPopover from "../stays/components/LocationPopover";
 import CheckInDatePopover from "../stays/components/CheckInDatePopover";
 import PersonCountPopover from "../stays/components/PersonCountPopover";
 import DCombobox from "../stays/components/DCombobox";
 import DBadge from "../stays/components/DBadge";
-import { Separator } from "@/components/ui/separator";
-import { filters } from "@/lib/hotelFiltersConstants";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import DDialog from "@/components/DDialog";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import DCheckbox from "../stays/components/DCheckbox";
 import DOutlineButton from "@/components/DOutlineButton";
+
+import { cn } from "@/lib/utils";
+
+import { Leaf, SlidersHorizontal } from "lucide-react";
+
 import getAllProperties from "@/lib/getAllProperties";
+import { filters } from "@/lib/hotelFiltersConstants";
 
 const page = () => {
   const [openFilterDialog, setOpenFilterDialog] = useState(false);

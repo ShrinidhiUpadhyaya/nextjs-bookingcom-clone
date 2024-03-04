@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
-import DPopover from "./DPopover";
-import { BedDouble, MapPin } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import DPopoverInput from "./DPopoverInput";
+
+import { cn } from "@/lib/utils";
+
+import { BedDouble, MapPin } from "lucide-react";
 
 const popularNearbyDestinations = [
   {

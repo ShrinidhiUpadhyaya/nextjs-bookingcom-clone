@@ -1,14 +1,14 @@
+"use client";
+
 import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { taxiSearchFilter } from "../constants";
-import LocationPopover from "@/app/stays/components/LocationPopover";
-import DCalendarPopover from "@/components/DCalendarPopover";
-import PersonCountPopover from "@/app/stays/components/PersonCountPopover";
 import { Button } from "@/components/ui/button";
-import CheckInDatePopover from "@/app/stays/components/CheckInDatePopover";
+import LocationPopover from "@/app/stays/components/LocationPopover";
 import PickUpPopover from "../components/PickUpPopover";
 import PassengersCountPopover from "../components/PassengersCountPopover";
+
+import { taxiSearchFilter } from "../constants";
 
 const SearchContent = () => {
   const [currentSeachFilter, setCurrentSearchFilter] = useState(0);

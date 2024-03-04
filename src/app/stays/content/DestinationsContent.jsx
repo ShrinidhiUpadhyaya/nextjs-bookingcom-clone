@@ -1,10 +1,12 @@
-import DOutlineButton from "@/components/DOutlineButton";
 import React, { useState } from "react";
+
+import DOutlineButton from "@/components/DOutlineButton";
+import DColumnTexts from "../components/DColumnTexts";
+
 import {
   destinationsButtonOptions,
   destinationsData,
 } from "@/lib/staysConstants";
-import DColumnTexts from "../components/DColumnTexts";
 
 const DestinationsContent = () => {
   const [destinationsFilter, setDestinationsFilter] = useState(

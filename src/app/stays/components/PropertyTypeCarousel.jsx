@@ -1,16 +1,11 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+
+import { Card, CardContent } from "@/components/ui/card";
+import { CarouselItem } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import DCarousel from "./DCarousel";
+
 import { cn } from "@/lib/utils";
 
 const PropertyTypeCarousel = ({ carouselData, className }) => {

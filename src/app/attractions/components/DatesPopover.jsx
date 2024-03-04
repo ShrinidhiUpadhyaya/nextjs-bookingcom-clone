@@ -1,26 +1,16 @@
+"use client";
+
 import React, { useState } from "react";
 
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { CalendarDays, UserrRound, Check } from "lucide-react";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { addDays, format } from "date-fns";
-import { DateRange } from "react-day-picker";
-
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from "@/components/ui/command";
+import { addDays } from "date-fns";
 import { Separator } from "@/components/ui/separator";
 import DPopover from "@/app/stays/components/DPopover";
+
+import { cn } from "@/lib/utils";
+
+import { CalendarDays } from "lucide-react";
 
 const DatesPopover = ({ className }) => {
   const [date, setDate] = useState({

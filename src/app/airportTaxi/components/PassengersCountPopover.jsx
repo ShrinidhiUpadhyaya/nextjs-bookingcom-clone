@@ -1,13 +1,13 @@
 import React from "react";
 
-import { UserRound } from "lucide-react";
-
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import DPopover from "@/app/stays/components/DPopover";
 import DRowSpinbox from "@/app/stays/components/DRowSpinbox";
 
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Separator } from "@/components/ui/separator";
+
+import { UserRound } from "lucide-react";
 
 const PassengersCountPopover = ({
   label = "Label",

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/button";
 const DOutlineLink = ({ label, Icon, active, href, onClick, className }) => {
   return (
     <div>

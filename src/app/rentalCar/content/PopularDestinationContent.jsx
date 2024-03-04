@@ -1,9 +1,11 @@
 "use client";
-import { popularDestinationCities, popularDestinations } from "../constants";
 import React, { useState } from "react";
-import DOutlineButton from "@/components/DOutlineButton";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import DOutlineButton from "@/components/DOutlineButton";
+
+import { popularDestinationCities, popularDestinations } from "../constants";
 
 const PopularDestinationContent = () => {
   const [popularDestinationCurrentIndex, setPopularDestinationCurrentIndex] =

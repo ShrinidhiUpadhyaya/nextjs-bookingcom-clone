@@ -1,9 +1,7 @@
-import DOutlineButton from "@/components/DOutlineButton";
 import React, { useState } from "react";
-import { Heart } from "lucide-react";
-import { tripPlannerButtonsData } from "@/lib/staysConstants";
+import DOutlineButton from "@/components/DOutlineButton";
 import TripPlannerCarousel from "../components/TripPlannerCarousel";
-import { Button } from "@/components/ui/button";
+import { tripPlannerButtonsData } from "@/lib/staysConstants";
 
 const TripPlannerContent = () => {
   const [optionsButtonState, setOptionsButtonState] = useState(

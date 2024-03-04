@@ -1,19 +1,13 @@
-import * as React from "react";
+import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import DCarousel from "./DCarousel";
-import { useRouter } from "next/navigation";
+
 import { cn } from "@/lib/utils";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const carouselData = [
   {

@@ -1,16 +1,15 @@
-"use client";
-
 import React from "react";
-import FooterContent from "../flights/content/FooterContent";
-import { coveredData } from "./constants";
+
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import DatesPopover from "./components/DatesPopover";
 import NearbyDestinationContent from "./NearbyDestinationContent";
 import OffersContent from "../rentalCar/content/OffersContent";
 import MoreDestinationsContent from "./MoreDestinationsContent";
 import LocationPopover from "@/app/stays/components/LocationPopover";
-import PickUpPopover from "../airportTaxi/components/PickUpPopover";
-import { Button } from "@/components/ui/button";
-import DatesPopover from "./DatesPopover";
+import FooterContent from "../flights/content/FooterContent";
+
+import { coveredData } from "./constants";
 
 const page = () => {
   return (

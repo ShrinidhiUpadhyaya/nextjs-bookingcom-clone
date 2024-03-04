@@ -1,9 +1,10 @@
 import React from "react";
-import { Input } from "@/components/ui/input";
-import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { footerTopContent, footerBottomContent } from "@/lib/staysConstants";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+
+import { footerTopContent, footerBottomContent } from "@/lib/staysConstants";
 
 const FooterContent = () => {
   return (

@@ -1,11 +1,14 @@
 import React from "react";
-import DCarousel from "./DCarousel";
+import Image from "next/image";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Image from "next/image";
-import { tripPlannerRomanceData } from "@/lib/staysConstants";
 import { CarouselItem } from "@/components/ui/carousel";
+import DCarousel from "./DCarousel";
+
 import { cn } from "@/lib/utils";
+
+import { tripPlannerRomanceData } from "@/lib/staysConstants";
 
 const TripPlannerCarousel = ({ className }) => {
   return (

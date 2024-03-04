@@ -1,30 +1,30 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
 
 import ".././globals.css";
-import LocationPopover from "./components/LocationPopover";
-import CheckInDatePopover from "./components/CheckInDatePopover";
-import PersonCountPopover from "./components/PersonCountPopover";
+
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import DCalendarPopover from "@/components/DCalendarPopover";
+
+import LocationPopover from "./components/LocationPopover";
+import PersonCountPopover from "./components/PersonCountPopover";
 import OffersContent from "./content/OffersContent";
 import ExploreContent from "./content/ExploreContent";
-import PropertyTypeCarousel from "./components/PropertyTypeCarousel";
 import PropertyTypeContent from "./content/PropertyTypeContent";
 import TrendingContent from "./content/TrendingContent";
+import TripPlannerContent from "./content/TripPlannerContent";
+import UniquePropertiesContent from "./content/UniquePropertiesContent";
+import DestinationsContent from "./content/DestinationsContent";
+import FooterContent from "./content/FooterContent";
 
 import {
   exploreData,
   propertyTypeData,
   trendingDestinationsData,
 } from "@/lib/staysConstants";
-import TripPlannerContent from "./content/TripPlannerContent";
-import UniquePropertiesContent from "./content/UniquePropertiesContent";
-import DestinationsContent from "./content/DestinationsContent";
-import FooterContent from "./content/FooterContent";
-import DCalendarPopover from "@/components/DCalendarPopover";
 
 const page = () => {
   return (

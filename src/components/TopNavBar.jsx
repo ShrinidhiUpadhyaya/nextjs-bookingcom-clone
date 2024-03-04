@@ -1,19 +1,18 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/button";
-import DSquareButton from "./DSquareButton";
-import { Globe } from "lucide-react";
-import { HelpCircle } from "lucide-react";
-import { Menu } from "lucide-react";
-import { CircleUser } from "lucide-react";
-import DHoverBox from "./DHoverBox";
-import { suggestedCurrencies, currencyDialogStrings } from "@/lib/constants";
-import DDialog from "./DDialog";
 import { useRouter } from "next/navigation";
+
+import DSquareButton from "./DSquareButton";
+import DHoverBox from "./DHoverBox";
+import DDialog from "./DDialog";
+
+import { cn } from "@/lib/utils";
+
+import { Globe, Menu, CircleUser } from "lucide-react";
+
+import { suggestedCurrencies, currencyDialogStrings } from "@/lib/constants";
 
 const TopNavBar = () => {
   const [currencyDialog, setCurrencyDialog] = useState(false);

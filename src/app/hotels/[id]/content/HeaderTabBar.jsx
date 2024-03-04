@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-
 import { Separator } from "@/components/ui/separator";
-
 import { hotelOverviewOptions } from "@/lib/hotelFiltersConstants";
 
 const HeaderTabBar = () => {

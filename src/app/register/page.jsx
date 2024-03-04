@@ -1,13 +1,12 @@
-"use client";
+import React from "react";
+import Link from "next/link";
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import React from "react";
 import DOutlineButton from "@/components/DOutlineButton";
+
 import { registerOptions } from "@/lib/constants";
-import Image from "next/image";
-import Link from "next/link";
 
 const page = () => {
   return (

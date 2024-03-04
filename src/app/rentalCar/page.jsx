@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import FooterContent from "../stays/content/FooterContent";
 import SearchContent from "./content/SearchContent";

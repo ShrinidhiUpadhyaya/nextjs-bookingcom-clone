@@ -1,7 +1,6 @@
 import React from "react";
-
-import { houseRules } from "../constants";
 import { Separator } from "@/components/ui/separator";
+import { houseRules } from "../constants";
 
 const HouseRulesContent = () => {
   return (

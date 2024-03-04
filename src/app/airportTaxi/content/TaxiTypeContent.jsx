@@ -1,7 +1,9 @@
+"use client";
+
 import React, { useState } from "react";
-import { taxiType } from "../constants";
 import DOutlineButton from "@/components/DOutlineButton";
 import { Briefcase, Check, UserRound } from "lucide-react";
+import { taxiType } from "../constants";
 
 const TaxiTypeContent = () => {
   const [currentTaxiTypeIndex, setCurrentTaxiTypeIndex] = useState(0);

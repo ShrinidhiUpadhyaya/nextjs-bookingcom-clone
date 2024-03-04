@@ -1,4 +1,5 @@
 import React from "react";
+
 const flightFAQ = [
   {
     id: "ff1",
@@ -42,6 +43,7 @@ const flightFAQ = [
       "No, we dont charge any credit card fees. You can always see exactly what you re paying for in the price breakdown when you review your booking.",
   },
 ];
+
 const FAQContent = () => {
   return (
     <div className="contentWidth  sectionSpacing">

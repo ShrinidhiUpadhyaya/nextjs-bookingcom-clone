@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Accordion,
@@ -6,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { faqList } from "../constants";
+
 const FAQContent = () => {
   return (
     <div className="contentWidth sectionSpacing flex">

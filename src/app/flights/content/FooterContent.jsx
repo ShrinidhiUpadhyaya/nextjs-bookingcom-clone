@@ -1,6 +1,6 @@
 import React from "react";
-import { footerContent } from "../constants/constants";
 import Link from "next/link";
+import { footerContent } from "../constants/constants";
 
 const FooterContent = () => {
   return (

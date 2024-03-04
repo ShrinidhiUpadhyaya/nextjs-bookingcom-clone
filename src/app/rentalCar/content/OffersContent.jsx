@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const OffersContent = () => {
   return (

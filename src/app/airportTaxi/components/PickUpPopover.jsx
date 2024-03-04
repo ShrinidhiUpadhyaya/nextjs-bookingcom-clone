@@ -1,22 +1,20 @@
-import DPopover from "@/app/stays/components/DPopover";
+"use client";
+
 import React, { useState } from "react";
-import { cn } from "@/lib/utils";
-import { CalendarDays, UserrRound, Check } from "lucide-react";
 import { Command, CommandGroup, CommandItem } from "@/components/ui/command";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Calendar } from "@/components/ui/calendar";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import DCalendarCarousel from "@/app/stays/components/DCalendarCarousel";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-} from "@radix-ui/react-popover";
-import { addDays, format } from "date-fns";
+} from "@/components/ui/popover";
+import DPopover from "@/app/stays/components/DPopover";
+
+import { cn } from "@/lib/utils";
+
+import { CalendarDays, Check } from "lucide-react";
 
 const generateTimeStamps = () => {
   const timestamps = [];

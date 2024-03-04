@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+
 const HotelFacilities = ({ label, Icon, facilities }) => {
   return (
     <div className="mt-4 gap-4">

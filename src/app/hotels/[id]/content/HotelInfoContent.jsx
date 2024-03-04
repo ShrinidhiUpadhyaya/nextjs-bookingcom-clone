@@ -1,8 +1,6 @@
 import React from "react";
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
 import { Grip, Heart, Share2, MapPin } from "lucide-react";
 
 const HotelInfoContent = () => {

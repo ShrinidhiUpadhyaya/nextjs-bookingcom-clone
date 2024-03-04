@@ -7,13 +7,13 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-
-import { CalendarDays, UserrRound } from "lucide-react";
-
 import DCalendarCarousel from "./DCalendarCarousel";
 import DPopover from "./DPopover";
+
 import { cn } from "@/lib/utils";
-import { addDays, format } from "date-fns";
+import { addDays } from "date-fns";
+
+import { CalendarDays } from "lucide-react";
 
 function convertDate(date) {
   return date?.toLocaleDateString("en-US", {

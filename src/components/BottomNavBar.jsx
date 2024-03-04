@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { router, usePathname } from "next/navigation";
+
+import DOutlineLink from "./DOutlineLink";
+
+import { cn, getCurrentPath } from "@/lib/utils";
 
 import { BedDouble, Plane, TreeDeciduous, CarTaxiFront } from "lucide-react";
-import DOutlineLink from "./DOutlineLink";
-import { router, useRouter, usePathname } from "next/navigation";
-import { cn, getCurrentPath } from "@/lib/utils";
+
 const bottomNavBarOptions = [
   {
     id: "stays",

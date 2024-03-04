@@ -4,11 +4,11 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { CarouselItem } from "@/components/ui/carousel";
-import DCarousel from "./DCarousel";
+import DCarousel from "@/components/DCarousel";
 
 import { cn } from "@/lib/utils";
 
-import { tripPlannerRomanceData } from "@/lib/staysConstants";
+import { tripPlannerRomanceData } from "@/app/stays/constants/staysConstants";
 
 const UniquePropertiesCarousel = ({ className }) => {
   return (

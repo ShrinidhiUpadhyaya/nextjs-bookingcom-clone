@@ -10,7 +10,7 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
-import DPopover from "@/app/stays/components/DPopover";
+import DPopover from "@/components/DPopover";
 
 import { cn } from "@/lib/utils";
 

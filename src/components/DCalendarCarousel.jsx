@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CarouselItem } from "@/components/ui/carousel";
 import DCalendarCarouselBox from "./DCalendarCarouselBox";
 import DCarousel from "./DCarousel";
-import { monthNames } from "@/lib/constants";
+import { monthNames } from "@/app/stays/constants/constants";
 
 const DCalendarCarousel = () => {
   const getCurrentAndNextMonths = () => {

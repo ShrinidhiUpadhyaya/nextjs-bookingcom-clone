@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DOutlineButton from "@/components/DOutlineButton";
 import TripPlannerCarousel from "../components/TripPlannerCarousel";
-import { tripPlannerButtonsData } from "@/lib/staysConstants";
+import { tripPlannerButtonsData } from "@/app/stays/constants/staysConstants";
 
 const TripPlannerContent = () => {
   const [optionsButtonState, setOptionsButtonState] = useState(

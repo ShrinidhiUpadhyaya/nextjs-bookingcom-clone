@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import DOutlineButton from "@/components/DOutlineButton";
 
-import { registerOptions } from "@/lib/constants";
+import { registerOptions } from "@/app/stays/constants/constants";
 
 const page = () => {
   return (

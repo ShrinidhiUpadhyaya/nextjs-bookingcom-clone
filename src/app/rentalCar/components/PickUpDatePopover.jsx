@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/popover";
 import { Command, CommandGroup, CommandItem } from "@/components/ui/command";
 import { Separator } from "@/components/ui/separator";
-import DPopover from "@/app/stays/components/DPopover";
+import DPopover from "@/components/DPopover";
 
 import { cn } from "@/lib/utils";
 import { addDays } from "date-fns";

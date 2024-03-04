@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { hotelOverviewOptions } from "@/lib/hotelFiltersConstants";
+import { hotelOverviewOptions } from "@/app/cities/constants/hotelFiltersConstants";
 
 const HeaderTabBar = () => {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import DCarousel from "./DCarousel";
+import DCarousel from "@/components/DCarousel";
 
 import { cn } from "@/lib/utils";
 

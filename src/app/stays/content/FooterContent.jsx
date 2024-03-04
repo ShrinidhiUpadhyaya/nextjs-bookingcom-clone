@@ -4,7 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { footerTopContent, footerBottomContent } from "@/lib/staysConstants";
+import {
+  footerTopContent,
+  footerBottomContent,
+} from "@/app/stays/constants/staysConstants";
 
 const FooterContent = () => {
   return (

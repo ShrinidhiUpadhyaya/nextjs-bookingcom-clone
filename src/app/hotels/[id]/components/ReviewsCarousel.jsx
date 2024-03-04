@@ -1,7 +1,7 @@
 import React from "react";
 
 import { CarouselItem } from "@/components/ui/carousel";
-import DCarousel from "@/app/stays/components/DCarousel";
+import DCarousel from "@/components/DCarousel";
 
 import { cn } from "@/lib/utils";
 

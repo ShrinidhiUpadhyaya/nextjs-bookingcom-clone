@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import LocationPopover from "@/app/stays/components/LocationPopover";
+import LocationPopover from "@/components/LocationPopover";
 import PickUpPopover from "../components/PickUpPopover";
 import PassengersCountPopover from "../components/PassengersCountPopover";
 

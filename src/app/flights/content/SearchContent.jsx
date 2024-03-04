@@ -17,10 +17,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import DRowSpinbox from "../../stays/components/DRowSpinbox";
-import LocationPopover from "@/app/stays/components/LocationPopover";
-import CheckInDatePopover from "@/app/stays/components/CheckInDatePopover";
-import DCheckbox from "@/app/stays/components/DCheckbox";
+import DRowSpinbox from "@/components/DRowSpinbox";
+import LocationPopover from "@/components/LocationPopover";
+import CheckInDatePopover from "@/components/CheckInDatePopover";
+import DCheckbox from "@/components/DCheckbox";
 import { Check, ChevronDown, ArrowRightLeft } from "lucide-react";
 
 import { cn } from "@/lib/utils";

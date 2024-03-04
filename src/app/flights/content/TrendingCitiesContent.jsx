@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import PopularFlightsCarousel from "../components/PopularFlightsCarousel";
 import { cn } from "@/lib/utils";
-import getPopularFlights from "@/lib/getPopularFlights";
+import getPopularFlights from "@/utils/getPopularFlights";
 
 const TrendingCitiesContent = ({ className }) => {
   const [trendingCityFlights, setTrendingCityFlights] = useState([]);

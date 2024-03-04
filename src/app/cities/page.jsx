@@ -9,21 +9,21 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { DialogFooter } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 
-import LocationPopover from "../stays/components/LocationPopover";
-import CheckInDatePopover from "../stays/components/CheckInDatePopover";
+import LocationPopover from "@/components/LocationPopover";
+import CheckInDatePopover from "../../components/CheckInDatePopover";
 import PersonCountPopover from "../stays/components/PersonCountPopover";
-import DCombobox from "../stays/components/DCombobox";
-import DBadge from "../stays/components/DBadge";
+import DCombobox from "@/components/DCombobox";
+import DBadge from "@/components/DBadge";
 import DDialog from "@/components/DDialog";
-import DCheckbox from "../stays/components/DCheckbox";
+import DCheckbox from "@/components/DCheckbox";
 import DOutlineButton from "@/components/DOutlineButton";
 
 import { cn } from "@/lib/utils";
 
 import { Leaf, SlidersHorizontal } from "lucide-react";
 
-import getAllProperties from "@/lib/getAllProperties";
-import { filters } from "@/lib/hotelFiltersConstants";
+import getAllProperties from "@/utils/getAllProperties";
+import { filters } from "@/app/cities/constants/hotelFiltersConstants";
 
 const page = () => {
   const [openFilterDialog, setOpenFilterDialog] = useState(false);

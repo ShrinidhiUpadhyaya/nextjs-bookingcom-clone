@@ -6,7 +6,7 @@ import DatesPopover from "./components/DatesPopover";
 import NearbyDestinationContent from "./NearbyDestinationContent";
 import OffersContent from "../rentalCar/content/OffersContent";
 import MoreDestinationsContent from "./MoreDestinationsContent";
-import LocationPopover from "@/app/stays/components/LocationPopover";
+import LocationPopover from "@/components/LocationPopover";
 import FooterContent from "../flights/content/FooterContent";
 
 import { coveredData } from "./constants";

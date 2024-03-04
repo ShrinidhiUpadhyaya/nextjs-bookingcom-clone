@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
-import DProgressBar from "@/app/stays/components/DProgressBar";
+import DProgressBar from "@/components/DProgressBar";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 
 import { reviewCategories } from "../constants";

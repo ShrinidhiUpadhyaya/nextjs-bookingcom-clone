@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import DPopover from "./DPopover";
-import DRowSpinbox from "./DRowSpinbox";
+import DPopover from "@/components/DPopover";
+import DRowSpinbox from "@/components/DRowSpinbox";
 
 import { cn } from "@/lib/utils";
 

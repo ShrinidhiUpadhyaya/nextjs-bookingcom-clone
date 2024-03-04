@@ -1,5 +1,5 @@
 import React from "react";
-import DIconLabel from "@/app/stays/components/DIconLabel";
+import DIconLabel from "@/components/DIconLabel";
 import HotelFacilities from "@/app/stays/components/HotelFacilities";
 import { hotelPopularFacilities, hotelFacilities } from "../constants";
 

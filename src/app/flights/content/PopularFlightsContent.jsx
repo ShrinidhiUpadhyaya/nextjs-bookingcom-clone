@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import PopularFlightsCarousel from "../components/PopularFlightsCarousel";
-import getPopularFlights from "@/lib/getPopularFlights";
+import getPopularFlights from "@/utils/getPopularFlights";
 
 export const PopularFlightsContent = () => {
   const [popularFlights, setPopularFlights] = useState([]);

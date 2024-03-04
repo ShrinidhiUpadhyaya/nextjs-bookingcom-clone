@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import DPopover from "@/app/stays/components/DPopover";
+import DPopover from "./DPopover";
 
 import { cn } from "@/lib/utils";
 import { addDays } from "date-fns";

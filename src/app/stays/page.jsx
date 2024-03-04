@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import DCalendarPopover from "@/components/DCalendarPopover";
 
-import LocationPopover from "./components/LocationPopover";
+import LocationPopover from "@/components/LocationPopover";
 import PersonCountPopover from "./components/PersonCountPopover";
 import OffersContent from "./content/OffersContent";
 import ExploreContent from "./content/ExploreContent";
@@ -24,7 +24,7 @@ import {
   exploreData,
   propertyTypeData,
   trendingDestinationsData,
-} from "@/lib/staysConstants";
+} from "@/app/stays/constants/staysConstants";
 
 const page = () => {
   return (

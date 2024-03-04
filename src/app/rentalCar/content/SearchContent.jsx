@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import PickUpDatePopover from "../components/PickUpDatePopover";
-import LocationPopover from "@/app/stays/components/LocationPopover";
+import LocationPopover from "@/components/LocationPopover";
 import { cn } from "@/lib/utils";
 
 const SearchContent = ({ className }) => {

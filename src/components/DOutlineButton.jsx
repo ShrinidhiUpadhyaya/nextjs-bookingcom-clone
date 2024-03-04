@@ -1,8 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 const DOutlineButton = ({
   className,

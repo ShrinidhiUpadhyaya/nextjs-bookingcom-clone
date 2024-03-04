@@ -2,8 +2,8 @@ import React from "react";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import DPopover from "@/app/stays/components/DPopover";
-import DRowSpinbox from "@/app/stays/components/DRowSpinbox";
+import DPopover from "@/components/DPopover";
+import DRowSpinbox from "@/components/DRowSpinbox";
 
 import { cn } from "@/lib/utils";
 

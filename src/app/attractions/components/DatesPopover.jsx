@@ -6,7 +6,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { addDays } from "date-fns";
 import { Separator } from "@/components/ui/separator";
-import DPopover from "@/app/stays/components/DPopover";
+import DPopover from "@/components/DPopover";
 
 import { cn } from "@/lib/utils";
 

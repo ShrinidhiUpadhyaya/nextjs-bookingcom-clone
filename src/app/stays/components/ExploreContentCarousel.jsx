@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import DCarousel from "./DCarousel";
+import DCarousel from "@/components/DCarousel";
 
 import { cn } from "@/lib/utils";
 

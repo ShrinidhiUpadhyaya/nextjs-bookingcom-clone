@@ -12,7 +12,10 @@ import { cn } from "@/lib/utils";
 
 import { Globe, Menu, CircleUser } from "lucide-react";
 
-import { suggestedCurrencies, currencyDialogStrings } from "@/lib/constants";
+import {
+  suggestedCurrencies,
+  currencyDialogStrings,
+} from "@/app/stays/constants/constants";
 
 const TopNavBar = () => {
   const [currencyDialog, setCurrencyDialog] = useState(false);

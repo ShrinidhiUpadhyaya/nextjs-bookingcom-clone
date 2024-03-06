@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Grip, Heart, Share2, MapPin } from "lucide-react";
 
 const HotelInfoContent = () => {
@@ -18,7 +21,15 @@ const HotelInfoContent = () => {
         <div className="primaryTextColor flexVCenter gap-6">
           <Heart />
           <Share2 />
-          <Button>Reserve</Button>
+          <Link
+            href={"/payment/"}
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "px-4 py-2 hover:bg-[#003B95]",
+            )}
+          >
+            Reserve
+          </Link>
         </div>
       </div>
 

@@ -50,7 +50,7 @@ const BottomNavBar = () => {
   const [navBarOptions, setNavBarOptions] = useState(bottomNavBarOptions);
   const [currentPageIndex, setCurrentPageIndex] = useState();
   const currentPath = usePathname();
-  const isLogin = router === "/register";
+  const isPayment = currentPath === "/payment";
 
   useEffect(() => {
     setCurrentPageIndex(getCurrentPath(currentPath));
@@ -67,9 +67,9 @@ const BottomNavBar = () => {
   return (
     <div
       className={cn(
-        { "flexVCenter my-2 hidden gap-4": !isLogin },
+        { "flexVCenter my-2 hidden gap-4": !isPayment },
         {
-          hidden: isLogin,
+          hidden: isPayment,
         },
       )}
     >

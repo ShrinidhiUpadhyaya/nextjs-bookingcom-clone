@@ -6,17 +6,30 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
+import { X } from "lucide-react";
 
-const DDialog = ({ open, title, description, onOpenChange, children }) => {
+const DDialog = ({
+  open,
+  title,
+  description,
+  onOpenChange,
+  children,
+  className,
+}) => {
   return (
-    <Dialog
-      open={open}
-      onOpenChange={onOpenChange}
-      className="h-10 overflow-auto border border-red-500"
-    >
-      <DialogContent className="border-red flexCol h-[80%] max-h-[80%] max-w-[50%] justify-between gap-0 overflow-auto border p-4">
-        <DialogHeader className="flex h-10 justify-between">
-          <DialogTitle className="flexHCenter">{title}</DialogTitle>
+    <Dialog open={open} onOpenChange={onOpenChange} className="overflow-auto">
+      <DialogContent className={cn("block space-y-8 overflow-auto", className)}>
+        <DialogHeader>
+          <DialogTitle className="relative mb-4 flex justify-center">
+            {title}
+            <div
+              className="applyHover absolute -top-2 right-0 rounded-full p-2"
+              onClick={() => onOpenChange(false)}
+            >
+              <X />
+            </div>
+          </DialogTitle>
           <Separator />
         </DialogHeader>
         {children}

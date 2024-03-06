@@ -15,20 +15,7 @@ import DPopover from "@/components/DPopover";
 import { cn } from "@/lib/utils";
 
 import { CalendarDays, Check } from "lucide-react";
-
-const generateTimeStamps = () => {
-  const timestamps = [];
-
-  for (let i = 0; i <= 24; i++) {
-    const timestamp = `${i < 10 ? "0" : ""}${i}:00`; // Format hours with leading zero if necessary
-    timestamps.push({ value: timestamp });
-  }
-
-  console.log("##");
-  console.log(timestamps);
-
-  return timestamps;
-};
+import { generateTimeStamps } from "@/utils/generateTimeStamps";
 
 function convertDate(date) {
   return date?.toLocaleDateString("en-US", {

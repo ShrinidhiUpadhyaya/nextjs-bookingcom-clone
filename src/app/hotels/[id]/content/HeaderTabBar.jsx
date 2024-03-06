@@ -24,8 +24,6 @@ const HeaderTabBar = () => {
             )}
           </div>
         ))}
-
-        <Separator className="absolute bottom-0 w-full" />
       </div>
     </div>
   );

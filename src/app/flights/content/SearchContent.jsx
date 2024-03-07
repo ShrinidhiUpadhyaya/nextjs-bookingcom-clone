@@ -224,7 +224,7 @@ const SearchContent = () => {
         </div>
 
         <LocationPopover />
-        <CheckInDatePopover className="h-full" />
+        <CheckInDatePopover />
         <Button className="w-full py-6 text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
           Search
         </Button>

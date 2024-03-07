@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import DIconLabel from "@/components/DIconLabel";
 import HotelFacilities from "@/app/stays/components/HotelFacilities";
 import { hotelPopularFacilities, hotelFacilities } from "../constants";
 
-const FacilitiesContent = () => {
+const FacilitiesContent = forwardRef((props, ref) => {
   return (
-    <div>
+    <div ref={ref}>
       <h2 className="text-2xl font-semibold">Facilities</h2>
       <h3 className="mt-4 text-lg font-semibold">Most popular facilities</h3>
       <div className="mt-2 flex gap-4">
@@ -25,6 +25,6 @@ const FacilitiesContent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default FacilitiesContent;

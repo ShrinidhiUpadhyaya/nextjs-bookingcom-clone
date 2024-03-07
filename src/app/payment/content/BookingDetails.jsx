@@ -7,7 +7,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const BookingDetails = () => {
   return (
-    <div className="sectionSpacing mt-8 flex justify-between gap-8">
+    <div className="sectionSpacing mt-4 flex justify-between gap-8">
       <div className="space-y-4 rounded-md border p-4">
         <div className="relative flex gap-32">
           <div className="flex-1">
@@ -71,6 +71,13 @@ const BookingDetails = () => {
             <p className="tertiaryText">
               Brennerstraße 20 , St. Georg, 20099 Hamburg, Germany
             </p>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center rounded-sm bg-[#003B95] p-1 text-sm text-white">
+                9.4
+              </div>
+              <p className="tertiaryText">Very good · </p>
+              <p className="tertiaryText">8095 reviews</p>
+            </div>
           </div>
         </div>
 

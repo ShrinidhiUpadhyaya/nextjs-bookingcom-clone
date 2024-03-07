@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { forwardRef } from "react";
+import Link from "next/link";
 import {
   Table,
   TableBody,
@@ -15,17 +15,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import CheckInDatePopover from "@/components/CheckInDatePopover";
+import PersonCountPopover from "@/app/stays/components/PersonCountPopover";
+
+import { cn } from "@/lib/utils";
 
 import { Utensils, Check } from "lucide-react";
 
 import { hotelFeatures } from "../constants";
 
-const RoomsListContent = () => {
+const RoomsListContent = forwardRef((props, ref) => {
   return (
-    <div className="sectionSpacing mt-4">
+    <div className="sectionSpacing mt-4" ref={ref}>
       <p className="text-2xl font-semibold">All available rooms</p>
-
+      <div className="my-4 max-w-[75%] items-center gap-1 space-y-1 rounded-md bg-[#FFB700] p-1 md:flex md:h-12 md:space-y-0">
+        <CheckInDatePopover />
+        <PersonCountPopover />
+        <Button className="w-full text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
+          Search
+        </Button>
+      </div>
       <div className="flex gap-4">
         <Table>
           <TableHeader>
@@ -89,12 +99,18 @@ const RoomsListContent = () => {
           </TableBody>
         </Table>
 
-        <Button className="mt-[5%]" type="submit">
+        <Link
+          href={"/payment/"}
+          className={cn(
+            buttonVariants({ variant: "default" }),
+            "mt-[5%] px-4 py-2 hover:bg-[#003B95]",
+          )}
+        >
           Reserve
-        </Button>
+        </Link>
       </div>
     </div>
   );
-};
+});
 
 export default RoomsListContent;

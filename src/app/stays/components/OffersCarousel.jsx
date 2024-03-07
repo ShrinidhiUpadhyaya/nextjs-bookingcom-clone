@@ -55,7 +55,7 @@ const OffersCarousel = ({ className }) => {
 
                   <Button
                     onClick={() => router.push(data.link)}
-                    className="mt-4 px-4 py-2 hover:bg-[#006CE4]/95 hover:shadow-sm"
+                    className="mt-4 px-4 py-2"
                   >
                     {data.buttonText}
                   </Button>

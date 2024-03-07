@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -6,13 +6,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Grip, Heart, Share2, MapPin } from "lucide-react";
 
-const HotelInfoContent = () => {
+const HotelInfoContent = forwardRef((props, ref) => {
   return (
-    <div className="sectionSpacing">
+    <div className="sectionSpacing mt-2" ref={ref}>
       <div className="flex justify-between">
         <div>
           <p className="text-xl font-semibold">CAB</p>
-          <p className="flex">
+          <p className="mt-2 flex">
             <MapPin className="primaryTextColor" />
             Brennerstraße 20 , St. Georg, 20099 Hamburg, Germany
           </p>
@@ -33,7 +33,7 @@ const HotelInfoContent = () => {
         </div>
       </div>
 
-      <div className="mt-2 flex gap-2">
+      <div className="mt-4 flex gap-2">
         <div className="relative max-w-[50%] flex-1">
           <Image
             src="/hotels/hotel1.png"
@@ -112,11 +112,20 @@ const HotelInfoContent = () => {
           <p className="text-sm font-light">
             Free private parking available at the hotel
           </p>
-          <Button className="mt-8">Reserve</Button>
+
+          <Link
+            href={"/payment/"}
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "mt-8 px-4 py-2 hover:bg-[#003B95]",
+            )}
+          >
+            Reserve
+          </Link>
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default HotelInfoContent;

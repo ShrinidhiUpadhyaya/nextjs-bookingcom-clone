@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Separator } from "@/components/ui/separator";
 import { houseRules } from "../constants";
 
-const HouseRulesContent = () => {
+const HouseRulesContent = forwardRef((props, ref) => {
   return (
-    <div className="sectionSpacing">
+    <div className="sectionSpacing" ref={ref}>
       <p className="text-2xl font-semibold">House Rules</p>
       <div className="mt-4 border">
         {houseRules.map((rule) => (
@@ -19,6 +19,6 @@ const HouseRulesContent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default HouseRulesContent;

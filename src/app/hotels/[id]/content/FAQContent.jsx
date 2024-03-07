@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import {
   Accordion,
@@ -9,9 +9,9 @@ import {
 
 import { faq } from "../constants";
 
-const FAQContent = () => {
+const FAQContent = forwardRef((props, ref) => {
   return (
-    <div className="sectionSpacing">
+    <div className="sectionSpacing" ref={ref}>
       <div className="mt-4 flex w-full">
         <div className="w-64 bg-[#EBF3FF] px-8 py-8 text-3xl font-semibold">
           FAQs about CAB20
@@ -39,6 +39,6 @@ const FAQContent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default FAQContent;

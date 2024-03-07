@@ -45,7 +45,7 @@ const page = () => {
           <LocationPopover />
           <DCalendarPopover />
           <PersonCountPopover />
-          <Button className="w-full py-6 text-lg hover:bg-[#006CE4]/95 md:w-20 md:text-sm lg:w-24 lg:text-lg">
+          <Button className="w-full py-6 text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
             Search
           </Button>
         </div>

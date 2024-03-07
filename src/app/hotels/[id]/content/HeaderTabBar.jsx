@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import { hotelOverviewOptions } from "@/app/cities/constants/hotelFiltersConstants";
 
-const HeaderTabBar = () => {
+const HeaderTabBar = ({ onCurrentIndexChanged }) => {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
   return (
     <div className="flex gap-4">
@@ -16,7 +16,10 @@ const HeaderTabBar = () => {
         {hotelOverviewOptions.map((option, index) => (
           <div
             className="relative flex cursor-pointer justify-center p-4 hover:bg-accent hover:text-[#006CE4]"
-            onClick={() => setCurrentTabIndex(index)}
+            onClick={() => {
+              setCurrentTabIndex(index);
+              onCurrentIndexChanged(index);
+            }}
           >
             {option.label}
             {currentTabIndex === index && (

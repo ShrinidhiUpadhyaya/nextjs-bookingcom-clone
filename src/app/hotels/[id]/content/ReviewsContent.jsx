@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
@@ -7,9 +7,9 @@ import ReviewsCarousel from "../components/ReviewsCarousel";
 
 import { reviewCategories } from "../constants";
 
-const ReviewsContent = () => {
+const ReviewsContent = forwardRef((props, ref) => {
   return (
-    <div className="sectionSpacing">
+    <div className="sectionSpacing" ref={ref}>
       <h2 className="mb-2 text-2xl font-semibold">Guest reviews</h2>
       <p className="mb-8 flex gap-2 text-sm">
         <span>Good </span>
@@ -29,6 +29,6 @@ const ReviewsContent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default ReviewsContent;

@@ -52,12 +52,12 @@ const sortByOptions = [
   },
 ];
 
-export default function DCombobox() {
+export default function DCombobox({ className }) {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+    <Popover open={open} onOpenChange={setOpen} className={cn(className)}>
       <PopoverTrigger asChild>
         <Button
           variant="outline"

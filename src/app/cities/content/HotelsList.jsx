@@ -32,15 +32,15 @@ const HotelsList = () => {
   }, []);
 
   return (
-    <div className="contentWidth flexCol justify-center gap-8 p-4 pt-0">
+    <div className="contentWidth flexCol justify-center gap-8">
       <h2 className="text-xl font-bold">
         Hamburg: {allProperties.length} properties found
       </h2>
       <div className="flex gap-4">
-        <div className="flex flex-1 gap-2">
+        <div className="hidden flex-1 gap-2 sm:flex">
           <DBadge>Property type: Hotels</DBadge>
-          <DBadge>Property rating: 4 stars</DBadge>
-          <DBadge>Facilities: Restaurents</DBadge>
+          <DBadge className="hidden md:flex">Property rating: 9 stars</DBadge>
+          <DBadge className="hidden lg:flex">Facilities: Restaurents</DBadge>
         </div>
         <Button
           className="rounded-3xl border border-[#868686] bg-white text-base font-normal text-[#1a1a1a] hover:bg-accent hover:text-[#006CE4]"
@@ -67,7 +67,7 @@ const HotelsList = () => {
               </div>
 
               <div className="flex gap-2">
-                <div className="leftDiv flexCol flex-1 gap-2">
+                <div className="leftDiv flexCol relative flex-1 gap-2">
                   <h2 className="primaryTextColor text-xl font-semibold">
                     {property.name}
                   </h2>
@@ -83,8 +83,22 @@ const HotelsList = () => {
                     Sustainable level
                   </div>
                   <div className="text-sm">{property.description}</div>
+
+                  <div className="absolute right-0 flex items-center justify-center rounded-sm bg-[#003B95] p-1 text-white md:hidden">
+                    {property.rating}
+                  </div>
+
+                  <Link
+                    href={"/hotels/" + property.id}
+                    className={cn(
+                      buttonVariants({ variant: "default" }),
+                      "mt-4 w-28 py-6 md:hidden",
+                    )}
+                  >
+                    Show prices
+                  </Link>
                 </div>
-                <div className="rightDiv flexCol gap-2">
+                <div className="rightDiv hidden gap-2 md:block">
                   <div className="flex gap-2">
                     <div>
                       <p className="text-base font-semibold">
@@ -103,7 +117,7 @@ const HotelsList = () => {
                     href={"/hotels/" + property.id}
                     className={cn(
                       buttonVariants({ variant: "default" }),
-                      "mt-8 px-4 py-2",
+                      "mt-8 hidden px-4 py-2 md:flex",
                     )}
                   >
                     Show prices
@@ -119,7 +133,7 @@ const HotelsList = () => {
         open={openFilterDialog}
         onOpenChange={setOpenFilterDialog}
         title="Filters"
-        className="max-h-[75%] max-w-[50%]"
+        className="max-h-[75%] md:max-w-[75%] lg:max-w-[50%]"
       >
         <div className="max-h-[80%] flex-1">
           <div className="flexCol h-full flex-1">

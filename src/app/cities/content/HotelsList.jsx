@@ -13,7 +13,6 @@ import DDialog from "@/components/DDialog";
 import DCheckbox from "@/components/DCheckbox";
 import DOutlineButton from "@/components/DOutlineButton";
 import { Leaf, SlidersHorizontal } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import getAllProperties from "@/utils/getAllProperties";
 import { filters } from "@/app/cities/constants/hotelFiltersConstants";
@@ -34,7 +33,9 @@ const HotelsList = () => {
 
   return (
     <div className="contentWidth flexCol justify-center gap-8 p-4 pt-0">
-      <h2 className="text-xl font-bold">Hamburg: 728 properties found</h2>
+      <h2 className="text-xl font-bold">
+        Hamburg: {allProperties.length} properties found
+      </h2>
       <div className="flex gap-4">
         <div className="flex flex-1 gap-2">
           <DBadge>Property type: Hotels</DBadge>

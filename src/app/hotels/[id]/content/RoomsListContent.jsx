@@ -17,8 +17,8 @@ import {
 } from "@/components/ui/select";
 import { Button, buttonVariants } from "@/components/ui/button";
 import CheckInDatePopover from "@/components/CheckInDatePopover";
-import PersonCountPopover from "@/app/stays/components/PersonCountPopover";
-
+import PersonCountPopover from "@/components/PersonCountPopover";
+import { useBookHotelStore } from "@/app/store/useBookHotelStore";
 import { cn } from "@/lib/utils";
 
 import { Utensils, Check } from "lucide-react";
@@ -26,12 +26,21 @@ import { Utensils, Check } from "lucide-react";
 import { hotelFeatures } from "../constants";
 
 const RoomsListContent = forwardRef((props, ref) => {
+  const bookingDate = useBookHotelStore((state) => state.bookingDate);
+  const travellersCount = useBookHotelStore((state) => state.travellersCount);
+  const updateTravellersCount = useBookHotelStore(
+    (state) => state.updateTravellersCount,
+  );
+
   return (
     <div className="sectionSpacing mt-4" ref={ref}>
       <p className="text-2xl font-semibold">All available rooms</p>
       <div className="my-4 max-w-[75%] items-center gap-1 space-y-1 rounded-md bg-[#FFB700] p-1 md:flex md:h-12 md:space-y-0">
-        <CheckInDatePopover />
-        <PersonCountPopover />
+        <CheckInDatePopover defaultDate={bookingDate} />
+        <PersonCountPopover
+          defaultValues={travellersCount}
+          onValuesChanged={updateTravellersCount}
+        />
         <Button className="w-full text-lg md:w-20 md:text-sm lg:w-24 lg:text-lg">
           Search
         </Button>

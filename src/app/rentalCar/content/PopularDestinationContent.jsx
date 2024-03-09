@@ -33,15 +33,14 @@ const PopularDestinationContent = () => {
         <div className="mt-4 grid grid-cols-3 gap-x-4 gap-y-8">
           {popularDestinationCities[popularDestinationCurrentIndex].data.map(
             (city) => (
-              <div className="group flex cursor-pointer items-center gap-4 rounded-md pr-2 hover:bg-[#F2F2F2]">
-                <div className="relative h-full min-w-[25%] max-w-[25%]">
+              <div className="group flex items-center gap-4 rounded-md pr-2 hover:bg-[#F2F2F2]">
+                <div className="min-w-[20%] max-w-[20%]">
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src={"/flights/barcelona.png"}
                       layout="fill"
-                      fill="true"
                       objectFit="cover"
-                      className="rounded-md group-hover:opacity-90"
+                      className="rounded-md"
                     />
                   </AspectRatio>
                 </div>

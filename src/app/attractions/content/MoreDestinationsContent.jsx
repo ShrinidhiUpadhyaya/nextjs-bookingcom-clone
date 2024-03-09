@@ -6,7 +6,7 @@ import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import DOutlineButton from "@/components/DOutlineButton";
 
-import { destinationsContinent, moreDestinations } from "./constants";
+import { destinationsContinent, moreDestinations } from "../constants";
 
 const MoreDestinationsContent = () => {
   const [currentDestinationContinent, setCurrentDestinationContinent] =
@@ -30,7 +30,7 @@ const MoreDestinationsContent = () => {
       </div>
       <div className="mt-4 grid grid-cols-4 gap-4">
         {moreDestinations.map((destination) => (
-          <div className="group relative cursor-pointer">
+          <div className="group relative">
             <AspectRatio ratio={4 / 3}>
               <Image
                 src={destination.imgSource}

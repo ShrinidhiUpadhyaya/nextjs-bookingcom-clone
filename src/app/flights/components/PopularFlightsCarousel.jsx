@@ -49,8 +49,8 @@ const PopularFlightsCarousel = ({ carouselData, onClick, className }) => {
           onClick={onClick}
         >
           <div className="flex-1">
-            <Card>
-              <CardContent className="applyHover p-0 pb-2">
+            <Card className="border-none">
+              <CardContent className="p-0 pb-2">
                 <div className="group-hover:opacity-90">
                   <AspectRatio ratio={4 / 3}>
                     <Image

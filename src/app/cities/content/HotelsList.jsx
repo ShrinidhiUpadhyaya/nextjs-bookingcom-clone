@@ -32,7 +32,7 @@ const HotelsList = () => {
   }, []);
 
   return (
-    <div className="contentWidth flexCol justify-center gap-8">
+    <div className="contentWidth space-y-8">
       <h2 className="text-xl font-bold">
         Hamburg: {allProperties.length} properties found
       </h2>
@@ -66,13 +66,13 @@ const HotelsList = () => {
                 />
               </div>
 
-              <div className="flex gap-2">
-                <div className="leftDiv flexCol relative flex-1 gap-2">
+              <div className="flex gap-8">
+                <div className="leftDiv relative space-y-1">
                   <h2 className="primaryTextColor text-xl font-semibold">
                     {property.name}
                   </h2>
                   <p className="text-sm">
-                    Location <span>1.1Km</span>
+                    Location <span className="font-semibold">1.1Km</span>
                   </p>
                   <div className="flex max-w-max items-center gap-2 bg-[#F1FEF6] px-2 py-1 text-xs text-[#008234]">
                     <div className="flex">
@@ -98,8 +98,8 @@ const HotelsList = () => {
                     Show prices
                   </Link>
                 </div>
-                <div className="rightDiv hidden gap-2 md:block">
-                  <div className="flex gap-2">
+                <div className="rightDiv hidden w-[35%] gap-2 md:block">
+                  <div className="flex justify-between gap-2">
                     <div>
                       <p className="text-base font-semibold">
                         {property.wordsRating}
@@ -136,10 +136,10 @@ const HotelsList = () => {
         className="max-h-[75%] md:max-w-[75%] lg:max-w-[50%]"
       >
         <div className="max-h-[80%] flex-1">
-          <div className="flexCol h-full flex-1">
+          <div className="h-full flex-1">
             <div className="grid h-full gap-4 overflow-y-auto py-4">
               {filterKeys.map(([key, filter]) => (
-                <div key={key} className="flexCol gap-2">
+                <div key={key} className="space-y-2">
                   <h2 className="text-lg font-medium">{filter.label}</h2>
                   <div className="grid grid-cols-3 gap-y-4">
                     {filter.values.map((value) => (

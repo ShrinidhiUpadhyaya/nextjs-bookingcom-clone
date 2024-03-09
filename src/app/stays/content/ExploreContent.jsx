@@ -1,8 +1,9 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import ExploreContentCarousel from "../components/ExploreContentCarousel";
+import { exploreData } from "@/app/stays/constants/staysConstants";
 
-const ExploreContent = ({ title, data }) => {
+const ExploreContent = () => {
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -11,13 +12,13 @@ const ExploreContent = ({ title, data }) => {
   };
   return (
     <div className="sectionSpacing">
-      <h2 className="primaryTitle">{title}</h2>
+      <h2 className="primaryTitle">{exploreData.title}</h2>
       <p className="tertiaryText">
         These popular destinations have a lot to offer
       </p>
       <ExploreContentCarousel
         className="mt-2"
-        carouselData={data}
+        carouselData={exploreData.data}
         onClick={handleClick}
       />
     </div>

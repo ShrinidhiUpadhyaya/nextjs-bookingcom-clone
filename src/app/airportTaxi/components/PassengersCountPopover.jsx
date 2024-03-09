@@ -20,10 +20,8 @@ const PassengersCountPopover = ({
       label={label}
       Icon={Icon}
     >
-      <div className="flexCol gap-2 p-4">
+      <div className="w-full p-4">
         <DRowSpinbox label="Passengers" />
-        <Separator className="mt-4" />
-        <Button className="mt-4 ">Done</Button>
       </div>
     </DPopover>
   );

@@ -14,7 +14,7 @@ const FooterContent = () => {
     <div className="mt-2 w-full">
       <div className="flexHCenter bg-[#00224F]">
         <div className="contentWidth flexCol items-center gap-4 py-12 text-white">
-          <div className="flexCol items-center">
+          <div className="items-center">
             <p className="text-3xl font-light">Save time, save money</p>
             <p className="mt-1 text-sm font-light">
               Sign up and we'll send the best deals to you
@@ -55,48 +55,48 @@ const FooterContent = () => {
       </div>
 
       <div className="flex gap-4 px-16 py-4 text-xs lg:justify-between lg:text-sm">
-        <div className="flexCol primaryTextColor">
+        <div className="primaryTextColor">
           {footerBottomContent.data1.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
         </div>
 
-        <div className="flexCol primaryTextColor">
+        <div className="primaryTextColor">
           {footerBottomContent.data2.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
         </div>
 
-        <div className="flexCol primaryTextColor">
+        <div className="primaryTextColor">
           {footerBottomContent.data3.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
         </div>
 
-        <div className="flexCol primaryTextColor">
+        <div className="primaryTextColor">
           {footerBottomContent.data4.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
         </div>
 
-        <div className="flexCol primaryTextColor">
+        <div className="primaryTextColor">
           {footerBottomContent.data4.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
         </div>
-        <div className="flexCol primaryTextColor">
+        <div className="primaryTextColor">
           {footerBottomContent.data5.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}

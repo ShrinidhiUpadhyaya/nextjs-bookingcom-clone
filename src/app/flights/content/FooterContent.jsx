@@ -7,9 +7,9 @@ const FooterContent = () => {
     <div className="contentWidth flex gap-8 py-4 text-xs lg:justify-between lg:text-sm">
       <div>
         <p className="labelText">{footerContent.support.label}</p>
-        <div className="flexCol primaryTextColor mt-4 gap-2">
+        <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.support.data.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
@@ -18,9 +18,9 @@ const FooterContent = () => {
 
       <div>
         <p className="labelText">{footerContent.discover.label}</p>
-        <div className="flexCol primaryTextColor mt-4 gap-2">
+        <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.discover.data.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
@@ -29,9 +29,9 @@ const FooterContent = () => {
 
       <div>
         <p className="labelText">{footerContent.termsAndSettings.label}</p>
-        <div className="flexCol primaryTextColor mt-4 gap-2">
+        <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.termsAndSettings.data.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
@@ -40,9 +40,9 @@ const FooterContent = () => {
 
       <div>
         <p className="labelText">{footerContent.partners.label}</p>
-        <div className="flexCol primaryTextColor mt-4 gap-2">
+        <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.partners.data.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}
@@ -51,9 +51,9 @@ const FooterContent = () => {
 
       <div>
         <p className="labelText">{footerContent.about.label}</p>
-        <div className="flexCol primaryTextColor mt-4 gap-2">
+        <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.about.data.map((content) => (
-            <Link href={content.href} className="hover:underline">
+            <Link href={content.href} className="block hover:underline">
               {content.label}
             </Link>
           ))}

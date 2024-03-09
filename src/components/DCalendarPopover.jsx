@@ -27,14 +27,12 @@ const DCalendarPopover = ({ className }) => {
           month: "short",
           year: "2-digit",
         }) +
-        ", " +
-        " -- " +
+        " - " +
         date?.to?.toLocaleDateString("en-GB", {
           day: "2-digit",
           month: "short",
           year: "2-digit",
-        }) +
-        ", "
+        })
       }
       Icon={CalendarDays}
       open={open}
@@ -49,40 +47,6 @@ const DCalendarPopover = ({ className }) => {
           onSelect={setDate}
           numberOfMonths={2}
         />
-
-        <Separator className="my-4" />
-
-        <div className="flex justify-between px-4">
-          <div className="space-y-2">
-            <p className="tertiaryText flex items-center">
-              <span className="min-w-10 text-right">From: </span>
-              <span className="flex-1">
-                <span className="secondaryTitleText px-2">
-                  {date?.from?.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-              </span>
-            </p>
-            <p className="tertiaryText flex items-center">
-              <span className="min-w-10 text-right">To: </span>
-              <span className="flex-1">
-                <span className="secondaryTitleText px-2">
-                  {date?.to?.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-              </span>
-            </p>
-          </div>
-          <Button className="w-[100px]" onClick={() => setOpen(false)}>
-            Done
-          </Button>
-        </div>
       </div>
     </DPopover>
   );

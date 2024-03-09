@@ -42,7 +42,7 @@ const CheckInDatePopover = ({
         selected={date}
         onSelect={(date) => {
           setDate(date);
-          onDateChange(date);
+          onDateChange && onDateChange(date);
         }}
         numberOfMonths={2}
       />

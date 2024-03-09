@@ -10,7 +10,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Command, CommandGroup, CommandItem } from "@/components/ui/command";
-import { Separator } from "@/components/ui/separator";
 import DPopover from "@/components/DPopover";
 
 import { cn } from "@/lib/utils";
@@ -80,13 +79,14 @@ const PickUpDatePopover = ({ className }) => {
                         key={time.value}
                         value={time.value}
                         onSelect={(currentValue) => {
-                          setValue(currentValue === value ? "" : currentValue);
+                          setStartTime(
+                            currentValue === value ? "" : currentValue,
+                          );
                           setOpen(false);
                         }}
                         className={cn({
                           primaryTextColor: time.value === startTime,
                         })}
-                        onClick={() => setStartTime(time.value)}
                       >
                         {time.value}
                         {time.value === startTime && (
@@ -123,13 +123,14 @@ const PickUpDatePopover = ({ className }) => {
                         key={time.value}
                         value={time.value}
                         onSelect={(currentValue) => {
-                          setValue(currentValue === value ? "" : currentValue);
+                          setEndTime(
+                            currentValue === value ? "" : currentValue,
+                          );
                           setOpen(false);
                         }}
                         className={cn({
                           primaryTextColor: time.value === endTime,
                         })}
-                        onClick={() => setStartTime(time.value)}
                       >
                         {time.value}
                         {time.value === endTime && (
@@ -142,39 +143,6 @@ const PickUpDatePopover = ({ className }) => {
               </PopoverContent>
             </Popover>
           </div>
-        </div>
-        <Separator className="my-4" />
-
-        <div className="flex justify-between px-4">
-          <div className="space-y-2">
-            <p className="tertiaryText flex items-center">
-              <span className="min-w-10 text-right">From: </span>
-              <span className="flex-1">
-                <span className="secondaryTitleText px-2">
-                  {date?.from?.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-                <span className="primaryTitleText">{startTime}</span>
-              </span>
-            </p>
-            <p className="tertiaryText flex items-center">
-              <span className="min-w-10 text-right">To: </span>
-              <span className="flex-1">
-                <span className="secondaryTitleText px-2">
-                  {date?.to?.toLocaleDateString("en-US", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-                <span className="primaryTitleText">{endTime}</span>
-              </span>
-            </p>
-          </div>
-          <Button className="w-[100px]">Done</Button>
         </div>
       </div>
     </DPopover>

@@ -8,7 +8,7 @@ import FAQContent from "./content/FAQContent";
 
 const page = () => {
   return (
-    <>
+    <div className="w-full ">
       <div className="flexHVCenter w-full bg-[#003B95] pb-20 pt-16">
         <div className="contentWidth">
           <h1 className="text-3xl font-semibold text-[white] transition xl:text-5xl">
@@ -24,14 +24,14 @@ const page = () => {
         <SearchContent className="contentWidth" />
       </div>
 
-      <div className="flexCol w-full items-center">
+      <div className="flexCol items-center">
         <PopularBrandsContent />
         <OffersContent />
         <PopularDestinationContent />
         <FAQContent />
         <FooterContent />
       </div>
-    </>
+    </div>
   );
 };
 

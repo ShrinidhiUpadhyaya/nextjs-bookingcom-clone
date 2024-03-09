@@ -92,9 +92,9 @@ const WorldwideContent = () => {
       </p>
       <DTabBar model={continentsList} />
       <Separator />
-      <div className="my-2 grid grid-cols-3 gap-4">
+      <div className="mt-4 grid grid-cols-3 gap-x-4 gap-y-8">
         {worldWideFlights.map((flight) => (
-          <div className="flex cursor-pointer items-center gap-2">
+          <div className="group flex items-center gap-4 rounded-md pr-2 hover:bg-[#F2F2F2]">
             <div className="min-w-[20%] max-w-[20%]">
               <AspectRatio ratio={4 / 3}>
                 <Image

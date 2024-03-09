@@ -8,22 +8,17 @@ import SearchContent from "./content/SearchContent";
 
 const page = () => {
   return (
-    <>
-      <div className="flexCol w-full items-center bg-[#F5F5F5] pb-14 pt-16">
-        <SearchContent />
-      </div>
+    <div className="flexCol w-full items-center justify-center">
+      <SearchContent />
+      <PopularFlightsContent />
+      <TrendingCitiesContent />
+      <WorldwideContent />
+      <FAQContent />
 
-      <div className="flexCol w-full items-center gap-4">
-        <PopularFlightsContent />
-        <TrendingCitiesContent />
-        <WorldwideContent />
-        <FAQContent />
-      </div>
-
-      <div className="flexCol mt-2 w-full items-center bg-[#F5F5F5] pb-20">
+      <div className="mt-2 flex w-full items-center justify-center bg-[#F5F5F5] pb-20">
         <FooterContent />
       </div>
-    </>
+    </div>
   );
 };
 

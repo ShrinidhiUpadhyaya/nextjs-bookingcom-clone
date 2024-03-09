@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-import { nearbyDestinations } from "./constants";
+import { nearbyDestinations } from "../constants";
 
 const NearbyDestinationContent = () => {
   return (
@@ -11,7 +11,7 @@ const NearbyDestinationContent = () => {
       <h3 className="secondaryTitle">Nearby destinations</h3>
       <div className="mt-4 grid grid-cols-3 gap-4">
         {nearbyDestinations.map((destination) => (
-          <div className="group relative cursor-pointer">
+          <div className="group relative">
             <AspectRatio ratio={4 / 3}>
               <Image
                 src={destination.imgSource}

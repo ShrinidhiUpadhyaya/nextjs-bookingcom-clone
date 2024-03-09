@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { trendingDestinationsData } from "@/app/stays/constants/staysConstants";
 
-const TrendingContent = ({ topData, bottomData }) => {
+const TrendingContent = () => {
   return (
     <div className="sectionSpacing">
       <h2 className="primaryTitle">Trending Choices</h2>
@@ -10,15 +11,15 @@ const TrendingContent = ({ topData, bottomData }) => {
         Most popular choices for travelers from Germany
       </p>
 
-      <div className="flex gap-4">
-        {topData.map((data) => (
-          <div className="relative flex-1 rounded-md">
+      <div className="mt-2 flex gap-4">
+        {trendingDestinationsData.topData.map((data) => (
+          <div className="group relative flex-1 rounded-md">
             <AspectRatio ratio={16 / 9}>
               <Image
                 src={data.imgSource}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-md"
+                className="rounded-md group-hover:opacity-90"
               />
             </AspectRatio>
 
@@ -30,14 +31,14 @@ const TrendingContent = ({ topData, bottomData }) => {
       </div>
 
       <div className="mt-4 flex gap-4">
-        {bottomData.map((data) => (
-          <div className="relative flex-1 rounded-md">
+        {trendingDestinationsData.bottomData.map((data) => (
+          <div className="group relative flex-1 rounded-md">
             <AspectRatio ratio={4 / 3}>
               <Image
                 src={data.imgSource}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-md"
+                className="rounded-md group-hover:opacity-90"
               />
             </AspectRatio>
 

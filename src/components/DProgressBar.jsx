@@ -3,7 +3,7 @@ import { Progress } from "@/components/ui/progress";
 
 const DProgressBar = ({ label, value }) => {
   return (
-    <div className="flexCol gap-2">
+    <div className="space-y-2">
       <div className="flex items-center justify-between text-sm font-medium">
         <span>{label}</span>
         <span>{value}</span>

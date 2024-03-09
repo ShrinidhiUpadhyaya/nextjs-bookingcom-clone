@@ -17,7 +17,7 @@ const UniquePropertiesCarousel = ({ className }) => {
         {tripPlannerRomanceData.map((data) => (
           <CarouselItem
             key={data.title}
-            className="basis-1/2 sm:basis-1/3 md:basis-1/4 "
+            className="group basis-1/2 sm:basis-1/3 md:basis-1/4 "
           >
             <Card className="border-none shadow-none">
               <CardContent className="p-0 pb-2">

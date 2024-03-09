@@ -99,25 +99,31 @@ const HotelInfoContent = forwardRef((props, ref) => {
           </p>
         </div>
 
-        <div className="flexCol min-w-[30%] gap-2 bg-[#EBF3FF] p-4">
+        <div className="min-w-[30%] space-y-8 bg-[#EBF3FF] p-4">
           <p className="font-semibold">Property highlights</p>
-          <p className="mt-2 text-sm font-semibold">
-            Perfect for a 10-night stay
-          </p>
-          <p className="text-sm font-light">
-            Top Location: Highly rated by recent guests (8.5)
-          </p>
-          <p className="mt-2 text-sm font-semibold">Rooms with:</p>
-          <p className="text-sm font-light">Quiet street view</p>
-          <p className="text-sm font-light">
-            Free private parking available at the hotel
-          </p>
+
+          <div className="space-y-1">
+            <p className="mt-2 text-sm font-semibold">
+              Perfect for a 10-night stay
+            </p>
+            <p className="text-sm font-light">
+              Top Location: Highly rated by recent guests (8.5)
+            </p>
+          </div>
+
+          <div className="space-y-1">
+            <p className="mt-2 text-sm font-semibold">Rooms with:</p>
+            <p className="text-sm font-light">Quiet street view</p>
+            <p className="text-sm font-light">
+              Free private parking available at the hotel
+            </p>
+          </div>
 
           <Link
             href={"/payment/"}
             className={cn(
               buttonVariants({ variant: "default" }),
-              "mt-8 px-4 py-2 hover:bg-[#003B95]",
+              "flex items-center justify-center px-4 py-2 hover:bg-[#003B95]",
             )}
           >
             Reserve

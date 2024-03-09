@@ -78,11 +78,6 @@ const PickUpPopover = ({ label, Icon = CalendarDays, className }) => {
             </PopoverContent>
           </Popover>
         </div>
-
-        <Separator className="my-4" />
-        <div className="flex justify-end">
-          <Button className="w-full">Confirm</Button>
-        </div>
       </div>
     </DPopover>
   );

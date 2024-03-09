@@ -49,7 +49,7 @@ const PersonCountPopover = ({
       open={openPopover}
       onOpenChange={(open) => setOpenPopover(open)}
     >
-      <div className="flexCol gap-2 p-4">
+      <div className="space-y-2 p-4">
         <DRowSpinbox
           label="Adults"
           defaultValue={travellersCount.adults}
@@ -65,11 +65,6 @@ const PersonCountPopover = ({
           defaultValue={travellersCount.rooms}
           onValueChange={updateRoomsCount}
         />
-
-        <Separator className="mt-4" />
-        <Button className="mt-4" onClick={() => setOpenPopover(false)}>
-          Done
-        </Button>
       </div>
     </DPopover>
   );

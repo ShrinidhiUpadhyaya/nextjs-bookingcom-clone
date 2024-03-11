@@ -32,6 +32,7 @@ const OffersContent = () => {
         <div>
           {wePriceMatchBenefits.map((benefit) => (
             <DIconLabel
+              key={benefit.description}
               Icon={Check}
               label={benefit.description}
               className="py-1"

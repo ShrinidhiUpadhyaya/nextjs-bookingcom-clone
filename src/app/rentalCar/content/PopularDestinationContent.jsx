@@ -22,7 +22,7 @@ const PopularDestinationContent = () => {
         <div className="flex gap-2">
           {popularDestinations.map((destination, index) => (
             <DOutlineButton
-              key={destination.id}
+              key={destination.label}
               label={destination.label}
               selected={popularDestinationCurrentIndex === index}
               onClick={() => handlePopularDestinationChange(index)}
@@ -33,7 +33,10 @@ const PopularDestinationContent = () => {
         <div className="mt-4 grid grid-cols-3 gap-x-4 gap-y-8">
           {popularDestinationCities[popularDestinationCurrentIndex].data.map(
             (city) => (
-              <div className="group flex items-center gap-4 rounded-md pr-2 hover:bg-[#F2F2F2]">
+              <div
+                key={city.name}
+                className="group flex items-center gap-4 rounded-md pr-2 hover:bg-[#F2F2F2]"
+              >
                 <div className="relative min-w-[20%] max-w-[20%]">
                   <AspectRatio ratio={4 / 3}>
                     <Image

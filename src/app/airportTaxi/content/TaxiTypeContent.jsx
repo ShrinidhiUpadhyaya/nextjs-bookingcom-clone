@@ -15,18 +15,20 @@ const TaxiTypeContent = () => {
         </h2>
         <div className="mt-4 flex">
           {taxiType.map((type, index) => (
-            <div>
-              <DOutlineButton
-                label={type.label}
-                selected={index === currentTaxiTypeIndex}
-                onClick={() => setCurrentTaxiTypeIndex(index)}
-              />
-            </div>
+            <DOutlineButton
+              key={type.label}
+              label={type.label}
+              selected={index === currentTaxiTypeIndex}
+              onClick={() => setCurrentTaxiTypeIndex(index)}
+            />
           ))}
         </div>
         <div className="my-4 flex gap-8">
           {taxiType[currentTaxiTypeIndex].data.map((data) => (
-            <div className="flex-1 rounded-md border border-[#e7e7e7] bg-white p-4">
+            <div
+              key={data.type}
+              className="flex-1 rounded-md border border-[#e7e7e7] bg-white p-4"
+            >
               <p className="primaryTitleText">{data.type}</p>
               <p className="tertiaryText">{data.car}</p>
 

@@ -8,7 +8,7 @@ const AdditionalUpgrades = () => {
     <div className="sectionSpacing rounded-md border p-4">
       <h3 className="text-xl font-semibold">Add to your stay</h3>
       {addToYourStay.map((option, index) => (
-        <div>
+        <div key={option.title}>
           <div className="flex justify-between px-2 py-4">
             <div className="flex items-start gap-2">
               <DCheckbox className="mt-1" />

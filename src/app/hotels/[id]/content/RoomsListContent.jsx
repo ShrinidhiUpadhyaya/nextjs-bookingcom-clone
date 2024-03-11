@@ -63,7 +63,7 @@ const RoomsListContent = forwardRef((props, ref) => {
                     Apartment
                   </p>
                   {hotelFeatures.map((feature) => (
-                    <p className="flexVCenter gap-1">
+                    <p key={feature.description} className="flexVCenter gap-1">
                       <Check size={14} />
                       {feature.description}
                     </p>

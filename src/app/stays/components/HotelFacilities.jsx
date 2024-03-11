@@ -11,7 +11,10 @@ const HotelFacilities = ({ label, Icon, facilities }) => {
       <div>
         {facilities &&
           facilities.map((facility) => (
-            <div className="my-1 flex items-center gap-2 text-sm">
+            <div
+              key={facility.label}
+              className="my-1 flex items-center gap-2 text-sm"
+            >
               {" "}
               <Check size={"16"} />
               <p>{facility.label}</p>{" "}

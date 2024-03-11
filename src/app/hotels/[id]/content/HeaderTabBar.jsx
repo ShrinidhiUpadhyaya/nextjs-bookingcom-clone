@@ -15,6 +15,7 @@ const HeaderTabBar = ({ onCurrentIndexChanged }) => {
       <div className="flex w-full">
         {hotelOverviewOptions.map((option, index) => (
           <div
+            key={option.label}
             className="relative flex cursor-pointer justify-center p-4 hover:bg-accent hover:text-[#006CE4]"
             onClick={() => {
               setCurrentTabIndex(index);

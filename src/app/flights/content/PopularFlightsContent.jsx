@@ -9,7 +9,6 @@ export const PopularFlightsContent = () => {
 
   async function fetchPopularFlights() {
     const response = await getPopularFlights();
-    console.log(response.data);
     setPopularFlights(response.data);
   }
 

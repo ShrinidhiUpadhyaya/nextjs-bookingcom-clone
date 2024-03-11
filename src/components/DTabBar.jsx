@@ -11,6 +11,7 @@ const DTabBar = ({ model, className }) => {
     <div className={cn("flex gap-4", className)}>
       {model?.map((data, index) => (
         <motion.div
+          key={data.label}
           className={cn(
             "relative cursor-pointer px-2 py-2 hover:bg-accent hover:text-[#006CE4]",
             index === currentTab && "primaryTextColor",

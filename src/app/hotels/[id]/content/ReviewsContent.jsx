@@ -17,7 +17,11 @@ const ReviewsContent = forwardRef((props, ref) => {
       </p>
       <div className="grid grid-cols-3 gap-4">
         {reviewCategories.map((category) => (
-          <DProgressBar label={category.label} value={category.value} />
+          <DProgressBar
+            key={category.label}
+            label={category.label}
+            value={category.value}
+          />
         ))}
       </div>
       <div className="mt-8">

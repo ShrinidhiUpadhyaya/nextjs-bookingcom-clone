@@ -21,6 +21,7 @@ const MoreDestinationsContent = () => {
       <div className="mt-4 flex gap-2">
         {destinationsContinent.map((destination, index) => (
           <DOutlineButton
+            key={destination.name}
             label={destination.name}
             selected={index === currentDestinationContinent}
             onClick={() => setCurrentDestinationContinent(index)}

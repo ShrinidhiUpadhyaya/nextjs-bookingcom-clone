@@ -72,15 +72,9 @@ const SearchContent = () => {
     },
   });
 
-  useEffect(() => {
-    console.log("Printing flight filter values", flightFilterValues);
-  }, [flightFilterValues]);
-
   const updateNumberofAdults = (value) => {
-    console.log("Updating number of adults", value);
     let tempValue = flightFilterValues.numberOfTravellers;
     tempValue.adults = value;
-    console.log(tempValue);
     setFlightFilterValues({
       ...flightFilterValues,
       numberOfTravellers: tempValue,
@@ -90,8 +84,6 @@ const SearchContent = () => {
   const updateNumberofChildrens = (value) => {
     let tempValue = flightFilterValues.numberOfTravellers;
     tempValue.children = value;
-    console.log("Updating number of childrens", value);
-    console.log(tempValue);
     setFlightFilterValues({
       ...flightFilterValues,
       numberOfTravellers: tempValue,

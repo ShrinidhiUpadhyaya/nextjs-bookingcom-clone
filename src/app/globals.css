@@ -127,6 +127,6 @@
 }
 
 .applyHover {
-  @apply hover:bg-[#F2F2F2]
+  @apply hover:bg-[#F2F2F2] hover:text-[#006CE4];
 }
 

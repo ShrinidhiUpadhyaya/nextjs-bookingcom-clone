@@ -14,4 +14,7 @@ export const useBookHotelStore = create((set) => ({
   updateBookingDate: (newDate) => set(() => ({ bookingDate: newDate })),
   updateTravellersCount: (newCount) =>
     set(() => ({ travellersCount: newCount })),
+
+  userEmail: null,
+  setUserEmail: (email) => set(() => ({ userEmail: email })),
 }));

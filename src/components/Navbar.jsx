@@ -1,6 +1,6 @@
 import React from "react";
 import BottomNavBar from "./BottomNavBar";
-import TopNavBar from "./TopNavBar";
+import TopNavBar from "./topNavbar/TopNavBar";
 
 const Navbar = () => {
   return (

@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-const DSquareButton = ({ label, Icon, onClick }) => {
+const DSquareButton = ({ label, Icon, onClick, className }) => {
   return (
     <Button
-      className="bg-transparent px-4 py-4 hover:bg-[#1A4FA0]"
+      className={cn("bg-transparent px-4 py-4 hover:bg-[#1A4FA0]", className)}
       onClick={onClick}
     >
       {label && label}

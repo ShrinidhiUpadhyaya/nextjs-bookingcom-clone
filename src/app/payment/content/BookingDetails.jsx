@@ -57,11 +57,11 @@ const BookingDetails = () => {
           <div className="min-w-40 max-w-40 flex-1">
             <AspectRatio ratio={4 / 3}>
               <Image
-                alt="Properties Image"
                 src="/propertyType/apartments.png"
                 fill={true}
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 className="rounded-md"
+                alt="Properties Image"
               />
             </AspectRatio>
           </div>

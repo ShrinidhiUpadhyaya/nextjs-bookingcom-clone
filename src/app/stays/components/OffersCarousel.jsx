@@ -66,8 +66,9 @@ const OffersCarousel = ({ className }) => {
                     <Image
                       src={data.imgSource}
                       fill
-                      objectFit="cover"
+                      style={{ objectFit: "cover" }}
                       className="rounded-md rounded-l-none"
+                      alt={`${data.buttonText} Offers`}
                     />
                   </div>
                 </div>

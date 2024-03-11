@@ -45,6 +45,7 @@ const FooterContent = () => {
         <div className="contentWidth grid grid-cols-3 grid-rows-2 justify-center gap-4 text-xs font-semibold text-white underline md:grid-cols-6 md:grid-rows-1">
           {footerTopContent.map((content) => (
             <Link
+              key={content.label}
               href={content.href}
               className="flexHVCenter p-4 hover:bg-[#00224F]"
             >
@@ -57,7 +58,11 @@ const FooterContent = () => {
       <div className="flex gap-4 px-16 py-4 text-xs lg:justify-between lg:text-sm">
         <div className="primaryTextColor">
           {footerBottomContent.data1.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}
@@ -65,7 +70,11 @@ const FooterContent = () => {
 
         <div className="primaryTextColor">
           {footerBottomContent.data2.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}
@@ -73,7 +82,11 @@ const FooterContent = () => {
 
         <div className="primaryTextColor">
           {footerBottomContent.data3.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}
@@ -81,7 +94,11 @@ const FooterContent = () => {
 
         <div className="primaryTextColor">
           {footerBottomContent.data4.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}
@@ -89,14 +106,22 @@ const FooterContent = () => {
 
         <div className="primaryTextColor">
           {footerBottomContent.data4.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}
         </div>
         <div className="primaryTextColor">
           {footerBottomContent.data5.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}

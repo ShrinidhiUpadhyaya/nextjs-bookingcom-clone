@@ -25,9 +25,10 @@ const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
                     <AspectRatio ratio={4 / 3}>
                       <Image
                         src={data.imgSource}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: "cover" }}
                         className="rounded-md"
+                        alt={data.title}
                       />
                     </AspectRatio>
                   </div>

@@ -24,8 +24,9 @@ const OffersContent = () => {
           <AspectRatio ratio={4 / 3}>
             <Image
               src={"/flights/globe.png"}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
+              alt="Globe Image"
               className="rounded-md group-hover:opacity-90"
             />
           </AspectRatio>

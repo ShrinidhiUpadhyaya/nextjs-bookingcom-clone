@@ -13,12 +13,13 @@ const TrendingContent = () => {
 
       <div className="mt-2 flex gap-4">
         {trendingDestinationsData.topData.map((data) => (
-          <div className="group relative flex-1 rounded-md">
+          <div key={data.title} className="group relative flex-1 rounded-md">
             <AspectRatio ratio={16 / 9}>
               <Image
                 src={data.imgSource}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
+                alt={data.title}
                 className="rounded-md group-hover:opacity-90"
               />
             </AspectRatio>
@@ -32,12 +33,13 @@ const TrendingContent = () => {
 
       <div className="mt-4 flex gap-4">
         {trendingDestinationsData.bottomData.map((data) => (
-          <div className="group relative flex-1 rounded-md">
+          <div key={data.title} className="group relative flex-1 rounded-md">
             <AspectRatio ratio={4 / 3}>
               <Image
                 src={data.imgSource}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
+                alt={data.title}
                 className="rounded-md group-hover:opacity-90"
               />
             </AspectRatio>

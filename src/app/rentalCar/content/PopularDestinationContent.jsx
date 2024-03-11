@@ -34,12 +34,13 @@ const PopularDestinationContent = () => {
           {popularDestinationCities[popularDestinationCurrentIndex].data.map(
             (city) => (
               <div className="group flex items-center gap-4 rounded-md pr-2 hover:bg-[#F2F2F2]">
-                <div className="min-w-[20%] max-w-[20%]">
+                <div className="relative min-w-[20%] max-w-[20%]">
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src={"/flights/barcelona.png"}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      alt={city.name}
                       className="rounded-md"
                     />
                   </AspectRatio>

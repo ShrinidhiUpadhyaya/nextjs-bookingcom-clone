@@ -55,8 +55,9 @@ const PopularFlightsCarousel = ({ carouselData, onClick, className }) => {
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src={data?.imgSource}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      alt={data?.from + " to " + data?.to}
                       className="rounded-md"
                     />
                   </AspectRatio>

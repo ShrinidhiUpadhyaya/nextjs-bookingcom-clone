@@ -100,7 +100,8 @@ const WorldwideContent = () => {
                 <Image
                   src={"/flights/barcelona.png"}
                   layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
+                  alt={`${flight.from} to ${flight.to}`}
                   className="rounded-md"
                 />
               </AspectRatio>

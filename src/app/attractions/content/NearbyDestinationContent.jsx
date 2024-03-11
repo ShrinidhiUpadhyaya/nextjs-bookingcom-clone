@@ -15,8 +15,9 @@ const NearbyDestinationContent = () => {
             <AspectRatio ratio={4 / 3}>
               <Image
                 src={destination.imgSource}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
+                alt={destination.name}
                 className="rounded-md group-hover:opacity-90"
               />
             </AspectRatio>

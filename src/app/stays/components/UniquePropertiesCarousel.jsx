@@ -21,12 +21,13 @@ const UniquePropertiesCarousel = ({ className }) => {
           >
             <Card className="border-none shadow-none">
               <CardContent className="p-0 pb-2">
-                <div className="flex-1 group-hover:opacity-90">
+                <div className="relative flex-1 group-hover:opacity-90">
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src="/cities/hamburg.png"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      alt={data.title}
                       className="rounded-md"
                     />
                   </AspectRatio>

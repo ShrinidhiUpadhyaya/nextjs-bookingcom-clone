@@ -53,6 +53,7 @@ const LocationPopover = ({ className }) => {
         <div className="space-y-2">
           {popularNearbyDestinations.map((destination) => (
             <div
+              key={destination.name}
               className="pt-2 hover:bg-[#F2F2F2]"
               onClick={() => {
                 getPlace();

@@ -58,10 +58,10 @@ const HotelsList = () => {
             <CardContent className="flex w-full gap-4 p-2">
               <div className="relative max-h-52 min-h-52 min-w-52">
                 <Image
-                  alt="Properties Image"
                   src="/propertyType/apartments.png"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  alt={property.name}
                   className="rounded-md"
                 />
               </div>

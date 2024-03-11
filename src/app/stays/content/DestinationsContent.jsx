@@ -26,6 +26,7 @@ const DestinationsContent = () => {
       <div className="mt-1 flex gap-2">
         {destinationsFilter.map((option, index) => (
           <DOutlineButton
+            key={option.label}
             label={option.label}
             selected={option.selected}
             onClick={() => handleDestinationsFilterChange(index)}
@@ -36,6 +37,7 @@ const DestinationsContent = () => {
       <div className="mt-4 grid grid-cols-2 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {destinationsData.map((data) => (
           <DColumnTexts
+            key={data.label}
             label={data.label}
             description={data.description + " properties"}
           />

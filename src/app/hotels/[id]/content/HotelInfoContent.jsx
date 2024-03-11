@@ -37,37 +37,37 @@ const HotelInfoContent = forwardRef((props, ref) => {
         <div className="relative max-w-[50%] flex-1">
           <Image
             src="/hotels/hotel1.png"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           ></Image>
         </div>
         <div className="relative grid h-full flex-1 grid-cols-2  grid-rows-2 gap-2">
-          <div className=" relative h-60 w-full">
+          <div className="relative h-60 w-full">
             <Image
               src="/hotels/hotel2.png"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
             ></Image>
           </div>
           <div className=" relative h-60 w-full">
             <Image
               src="/hotels/hotel3.png"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
             ></Image>
           </div>
           <div className="relative h-60 w-full">
             <Image
               src="/hotels/hotel4.png"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
             ></Image>
           </div>
           <div className="relative h-60 w-full">
             <Image
               src="/hotels/hotel5.png"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
             ></Image>
           </div>
           <div className="flexVCenter absolute bottom-6 right-6 gap-2 rounded-lg bg-white p-2 text-sm font-medium">

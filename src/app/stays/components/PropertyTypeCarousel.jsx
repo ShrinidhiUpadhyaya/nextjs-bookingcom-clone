@@ -23,12 +23,13 @@ const PropertyTypeCarousel = ({ carouselData, className }) => {
           <div>
             <Card className="h-full border-none shadow-none">
               <CardContent className="p-0 pb-2">
-                <div className="group-hover:opacity-90">
+                <div className="relative group-hover:opacity-90">
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src={data.imgSource}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      alt={`Property type ${data.title}`}
                       className="rounded-md"
                     />
                   </AspectRatio>

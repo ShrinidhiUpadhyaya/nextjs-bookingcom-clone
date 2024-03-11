@@ -171,7 +171,11 @@ const LoginDialog = () => {
                 >
                   <Link href="/api/auth/signin">
                     <div className="relative h-6 w-6">
-                      <Image fill={true} src={option.imgSource} />
+                      <Image
+                        fill={true}
+                        src={option.imgSource}
+                        alt={option.tooltip}
+                      />
                     </div>
                   </Link>
                 </DOutlineButton>

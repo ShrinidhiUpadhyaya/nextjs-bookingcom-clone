@@ -9,7 +9,11 @@ const FooterContent = () => {
         <p className="labelText">{footerContent.support.label}</p>
         <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.support.data.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}
@@ -53,7 +57,11 @@ const FooterContent = () => {
         <p className="labelText">{footerContent.about.label}</p>
         <div className="primaryTextColor mt-4 space-y-2">
           {footerContent.about.data.map((content) => (
-            <Link href={content.href} className="block hover:underline">
+            <Link
+              key={content.label}
+              href={content.href}
+              className="block hover:underline"
+            >
               {content.label}
             </Link>
           ))}

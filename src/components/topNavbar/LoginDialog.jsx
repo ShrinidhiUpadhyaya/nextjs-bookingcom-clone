@@ -5,8 +5,8 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Separator } from "../ui/separator";
 
-import DDialog from "../DDialog";
 import DOutlineButton from "../DOutlineButton";
+import DLoadingDialog from "./component/DLoadingDialog";
 
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
@@ -21,11 +21,17 @@ import { BadgeCheck, Eye, EyeOff } from "lucide-react";
 import { LoginContext } from "./context/LoginContext";
 import { useBookHotelStore } from "@/app/store/useBookHotelStore";
 import { registerOptions } from "@/app/stays/constants/constants";
+import addUser from "@/utils/addUser";
+
+async function signUpUser(data) {
+  await addUser(data);
+}
 
 const LoginDialog = () => {
   const [isNewUser, setIsNewUser] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [incorrectUsername, setIncorrectUsername] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const setUserEmail = useBookHotelStore((state) => state.setUserEmail);
 
@@ -39,14 +45,21 @@ const LoginDialog = () => {
   } = useForm();
 
   const loginSubmit = (data) => {
+    setLoading(true);
     checkUserExists(data.email, data.password);
   };
 
   const checkUserExists = async (email, password) => {
     try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
+      const data = {
+        email: user.user.email,
+        creationTime: user.user.metadata.creationTime,
+      };
       if (user) {
+        await signUpUser(data);
         setIsNewUser(true);
+        setLoading(false);
         reset();
       }
     } catch (error) {
@@ -59,6 +72,7 @@ const LoginDialog = () => {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
       if (user) {
+        setLoading(false);
         setLoginDialog(false);
         reset();
       }
@@ -74,9 +88,10 @@ const LoginDialog = () => {
   }, []);
 
   return (
-    <DDialog
+    <DLoadingDialog
       open={loginDialog}
       title="Log in or sign up"
+      loading={loading}
       onOpenChange={(open) => {
         if (!open) {
           setLoginDialog(false);
@@ -199,7 +214,7 @@ const LoginDialog = () => {
           </div>
         )}
       </div>
-    </DDialog>
+    </DLoadingDialog>
   );
 };
 

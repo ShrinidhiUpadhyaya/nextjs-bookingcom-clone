@@ -80,8 +80,6 @@ export default function DCombobox({ className }) {
                 key={option.value}
                 value={option.value}
                 onSelect={(currentValue) => {
-                  console.log(currentValue);
-                  console.log(sortByOptions.find((option) => option));
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
                 }}

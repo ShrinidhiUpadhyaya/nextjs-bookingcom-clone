@@ -32,7 +32,6 @@ const popularNearbyDestinations = [
 ];
 
 async function getPlace(value) {
-  console.log("Place search", value);
   fetch(
     "https://maps.googleapis.com/maps/api/place/textsearch/json?query",
   ).then((response) => console.log(response.json()));

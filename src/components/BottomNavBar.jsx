@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { router, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import DOutlineLink from "./DOutlineLink";
 
@@ -47,23 +47,9 @@ const bottomNavBarOptions = [
   },
 ];
 const BottomNavBar = () => {
-  const [navBarOptions, setNavBarOptions] = useState(bottomNavBarOptions);
-  const [currentPageIndex, setCurrentPageIndex] = useState();
   const currentPath = usePathname();
   const isPayment = currentPath === "/payment";
 
-  useEffect(() => {
-    setCurrentPageIndex(getCurrentPath(currentPath));
-  }, [currentPath]);
-
-  function setActive(index) {
-    setNavBarOptions((prevState) =>
-      prevState.map((item, tempIndex) => ({
-        ...item,
-        active: index === tempIndex,
-      })),
-    );
-  }
   return (
     <div
       className={cn(
@@ -73,14 +59,13 @@ const BottomNavBar = () => {
         },
       )}
     >
-      {navBarOptions.map((option, index) => (
+      {bottomNavBarOptions.map((option, index) => (
         <DOutlineLink
           key={option.id}
           label={option.label}
           Icon={option.Icon}
-          active={index === currentPageIndex}
+          active={`/en${option.href}` == currentPath}
           href={option.href}
-          onClick={() => setCurrentPageIndex(index)}
           className="mx-2"
         />
       ))}

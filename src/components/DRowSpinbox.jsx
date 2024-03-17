@@ -25,10 +25,6 @@ const DRowSpinbox = ({
     }
   };
 
-  // useEffect(() => {
-  //   console.log(value);
-  //   // onValueChange();
-  // }, [value]);
   return (
     <div className={cn("flex items-center justify-center gap-32", className)}>
       <p className="secondaryTitleText min-w-20 max-w-20">{label && label}</p>

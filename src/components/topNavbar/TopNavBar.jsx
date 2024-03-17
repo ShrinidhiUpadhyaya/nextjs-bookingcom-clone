@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 import DHoverBox from "../DHoverBox";
 import DDialog from "../DDialog";
 import { cn } from "@/lib/utils";
-import { useBookHotelStore } from "@/app/store/useBookHotelStore";
+import { useBookHotelStore } from "@/app/[locale]/store/useBookHotelStore";
 
 import {
   suggestedCurrencies,
   currencyDialogStrings,
-} from "@/app/stays/constants/constants";
+} from "@/app/[locale]/stays/constants/constants";
 
 import { LoginContext } from "./context/LoginContext";
 

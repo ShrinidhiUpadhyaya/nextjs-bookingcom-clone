@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import DSquareButton from "../DSquareButton";
 import { cn } from "@/lib/utils";
 import { Globe } from "lucide-react";
-import { useBookHotelStore } from "@/app/store/useBookHotelStore";
+import { useBookHotelStore } from "@/app/[locale]/store/useBookHotelStore";
 import { LoginContext } from "./context/LoginContext";
 
 const LargeScreenContent = () => {

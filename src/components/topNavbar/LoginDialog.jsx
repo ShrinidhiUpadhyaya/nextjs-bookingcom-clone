@@ -19,8 +19,8 @@ import { auth } from "@/utils/firebase-config";
 import { BadgeCheck, Eye, EyeOff } from "lucide-react";
 
 import { LoginContext } from "./context/LoginContext";
-import { useBookHotelStore } from "@/app/store/useBookHotelStore";
-import { registerOptions } from "@/app/stays/constants/constants";
+import { useBookHotelStore } from "@/app/[locale]/store/useBookHotelStore";
+import { registerOptions } from "@/app/[locale]/stays/constants/constants";
 import addUser from "@/utils/addUser";
 
 async function signUpUser(data) {

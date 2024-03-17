@@ -8,7 +8,7 @@ import {
 import { signOut } from "firebase/auth";
 import { auth } from "@/utils/firebase-config";
 import { UserCircle } from "lucide-react";
-import { useBookHotelStore } from "@/app/store/useBookHotelStore";
+import { useBookHotelStore } from "@/app/[locale]/store/useBookHotelStore";
 
 const LoggedInContent = () => {
   const userEmail = useBookHotelStore((state) => state.userEmail);

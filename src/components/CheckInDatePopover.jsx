@@ -11,7 +11,6 @@ import { addDays } from "date-fns";
 import { CalendarDays } from "lucide-react";
 
 function convertDate(date) {
-  console.log("Date change", date);
   return date?.toLocaleDateString("en-US", {
     day: "numeric",
     month: "short",

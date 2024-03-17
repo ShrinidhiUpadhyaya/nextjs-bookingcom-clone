@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import DSquareButton from "../DSquareButton";
 import { Menu, UserCircle } from "lucide-react";
-import { useBookHotelStore } from "@/app/store/useBookHotelStore";
+import { useBookHotelStore } from "@/app/[locale]/store/useBookHotelStore";
 import { LoginContext } from "./context/LoginContext";
 
 const SmallScreenContent = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,8 +9,10 @@ import DCarousel from "@/components/DCarousel";
 import { cn } from "@/lib/utils";
 
 import { tripPlannerRomanceData } from "@/app/[locale]/stays/constants/staysConstants";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const TripPlannerCarousel = ({ className }) => {
+  const t = useContext(StaysTranslationContext);
   return (
     <div className={cn(className)}>
       <DCarousel prevButtonStyle="-mt-8" nextButtonStyle="-mt-8">
@@ -33,7 +35,9 @@ const TripPlannerCarousel = ({ className }) => {
                   </AspectRatio>
                 </div>
                 <h3 className="secondaryTitleText pt-2">{data.title}</h3>
-                <p className="tertiaryText">{data.description}</p>
+                <p className="tertiaryText">
+                  {`${data.description}  km  ${t("Away")}`}
+                </p>
               </CardContent>
             </Card>
           </CarouselItem>

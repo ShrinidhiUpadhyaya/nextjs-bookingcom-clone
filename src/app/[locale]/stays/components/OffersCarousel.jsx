@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -8,30 +8,27 @@ import { Button } from "@/components/ui/button";
 import DCarousel from "@/components/DCarousel";
 
 import { cn } from "@/lib/utils";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const carouselData = [
   {
-    id: "flight",
-    title: "Fly to your dream vacation",
-    description: "Get inspired - compare and book flights with flexibility",
-    buttonText: "Search for flights",
+    title: "Offer1",
+    description: "Offer1SubText",
+    buttonText: "Offer1ButtonText",
     imgSource: "/images/plane.png",
     link: "/flights",
   },
   {
-    id: "properties",
-    title: "Take your longest vacation yet",
-    description:
-      "Browse properties offering long term stays, many at reduced monthly rates.",
-    buttonText: "Find a stay",
+    title: "Offer2",
+    description: "Offer2SubText",
+    buttonText: "Offer2ButtonText",
     imgSource: "/images/hotel.png",
     link: "/cities",
   },
   {
-    id: "adventure",
-    title: "New year, new adventures",
-    description: "Save 15% or more when you book and stay before April 1,2024",
-    buttonText: "Find Early 2024 Deals",
+    title: "Offer3",
+    description: "Offer3SubText",
+    buttonText: "Offer3ButtonText",
     imgSource: "/images/surfing.png",
     link: "/flights",
   },
@@ -39,25 +36,26 @@ const carouselData = [
 
 const OffersCarousel = ({ className }) => {
   const router = useRouter();
+  const t = useContext(StaysTranslationContext);
 
   return (
     <DCarousel className={cn(className)}>
       {carouselData.map((data) => (
-        <CarouselItem key={data.id} className="h-40 lg:basis-1/2">
+        <CarouselItem key={data.title} className="h-40 lg:basis-1/2">
           <Card className="h-full">
             <CardContent className="h-full p-0">
               <div className="flex h-full justify-between">
                 <div className="p-4">
                   <div>
-                    <h3 className="primaryTitleText">{data.title}</h3>
-                    <p className="tertiaryText">{data.description}</p>
+                    <h3 className="primaryTitleText">{t(`${data.title}`)}</h3>
+                    <p className="tertiaryText">{t(`${data.description}`)}</p>
                   </div>
 
                   <Button
                     onClick={() => router.push(data.link)}
                     className="mt-4 px-4 py-2"
                   >
-                    {data.buttonText}
+                    {t(`${data.buttonText}`)}
                   </Button>
                 </div>
 

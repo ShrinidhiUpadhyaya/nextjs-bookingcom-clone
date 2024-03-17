@@ -50,6 +50,11 @@ const BottomNavBar = () => {
   const currentPath = usePathname();
   const isPayment = currentPath === "/payment";
 
+  function removeLocaleAndGetPath(pathname) {
+    const pathWithoutLocale = pathname.split("/").slice(2).join("/");
+    return `/${pathWithoutLocale}`;
+  }
+
   return (
     <div
       className={cn(
@@ -64,7 +69,7 @@ const BottomNavBar = () => {
           key={option.id}
           label={option.label}
           Icon={option.Icon}
-          active={`/en${option.href}` == currentPath}
+          active={option.href == removeLocaleAndGetPath(currentPath)}
           href={option.href}
           className="mx-2"
         />

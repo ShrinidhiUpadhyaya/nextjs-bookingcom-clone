@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { trendingDestinationsData } from "@/app/[locale]/stays/constants/staysConstants";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const TrendingContent = () => {
+  const t = useContext(StaysTranslationContext);
+
   return (
     <div className="sectionSpacing">
-      <h2 className="primaryTitle">Trending Choices</h2>
-      <p className="tertiaryText">
-        Most popular choices for travelers from Germany
-      </p>
+      <h2 className="primaryTitle">{t("TrendingH2")}</h2>
+      <p className="tertiaryText">{t("TrendingSubText")}</p>
 
       <div className="mt-2 flex gap-4">
         {trendingDestinationsData.topData.map((data) => (

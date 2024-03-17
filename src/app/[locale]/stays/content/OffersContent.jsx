@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import OffersCarousel from "../components/OffersCarousel";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const OffersContent = () => {
+  const t = useContext(StaysTranslationContext);
+
   return (
     <div className="sectionSpacing">
-      <h2 className="primaryTitle">Offers</h2>
-      <p className="tertiaryText">
-        Promotions, deals, and special offers for you
-      </p>
+      <h2 className="primaryTitle">{t("OffersH2")}</h2>
+      <p className="tertiaryText">{t("OffersSubText")}</p>
       <OffersCarousel className="mt-2" />
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,8 +7,10 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import DCarousel from "@/components/DCarousel";
 
 import { cn } from "@/lib/utils";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
+  const t = useContext(StaysTranslationContext);
   return (
     <DCarousel className={cn(className)}>
       {carouselData?.map((data) => (
@@ -33,7 +35,9 @@ const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
                     </AspectRatio>
                   </div>
                   <h3 className="primaryTitleText pt-2">{data.title}</h3>
-                  <p className="tertiaryText">{data.description}</p>
+                  <p className="tertiaryText">
+                    {data.description + t("Properties")}
+                  </p>
                 </>
               </CardContent>
             </Card>

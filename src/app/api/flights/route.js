@@ -40,6 +40,5 @@ const popularFlights = [
 ];
 
 export async function GET() {
-  console.log("#############");
   return NextResponse.json({ data: popularFlights }, { status: 200 });
 }

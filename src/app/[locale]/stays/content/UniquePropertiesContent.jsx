@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import UniquePropertiesCarousel from "../components/UniquePropertiesCarousel";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const UniquePropertiesContent = () => {
+  const t = useContext(StaysTranslationContext);
+
   return (
     <div className="sectionSpacing">
-      <h2 className="primaryTitle">Stay at our top unique properties</h2>
-      <p className="tertiaryText">
-        From castles and villas to boats and igloos, we have it all
-      </p>
+      <h2 className="primaryTitle">{t("UniquePropertiesH2")}</h2>
+      <p className="tertiaryText">{t("UniqurePropertiesSubText")}</p>
       <UniquePropertiesCarousel className="mt-2" />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import DOutlineButton from "@/components/DOutlineButton";
 import DColumnTexts from "@/components/DColumnTexts";
@@ -7,28 +7,22 @@ import {
   destinationsButtonOptions,
   destinationsData,
 } from "@/app/[locale]/stays/constants/staysConstants";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const DestinationsContent = () => {
-  const [destinationsFilter, setDestinationsFilter] = useState(
-    destinationsButtonOptions,
-  );
-  const handleDestinationsFilterChange = (index) => {
-    const temp = destinationsFilter.map((data, tempIndex) => ({
-      ...data,
-      selected: index === tempIndex,
-    }));
-    setDestinationsFilter(temp);
-  };
+  const [currentFilterIndex, setCurrentFilterIndex] = useState(0);
+  const t = useContext(StaysTranslationContext);
+
   return (
     <div className="sectionSpacing">
-      <h2 className="primaryTitle">Destinations we love</h2>
+      <h2 className="primaryTitle">{t("DestinationsH2")}</h2>
       <div className="mt-1 flex gap-2">
-        {destinationsFilter.map((option, index) => (
+        {destinationsButtonOptions.map((option, index) => (
           <DOutlineButton
             key={option.label}
-            label={option.label}
-            selected={option.selected}
-            onClick={() => handleDestinationsFilterChange(index)}
+            label={t(`${option.label}`)}
+            selected={index === currentFilterIndex}
+            onClick={() => setCurrentFilterIndex(index)}
           />
         ))}
       </div>
@@ -38,7 +32,7 @@ const DestinationsContent = () => {
           <DColumnTexts
             key={data.label}
             label={data.label}
-            description={data.description + " properties"}
+            description={data.description + t("Properties")}
           />
         ))}
       </div>

@@ -37,11 +37,11 @@ async function getPlace(value) {
   ).then((response) => console.log(response.json()));
 }
 
-const LocationPopover = ({ className }) => {
+const LocationPopover = ({ label = "Where are you going?", className }) => {
   return (
     <DPopoverInput
       className={cn("h-full flex-1", className)}
-      label="Where are you going?"
+      label={label}
       Icon={BedDouble}
       onInputChange={(e) => getPlace(e.target.value)}
     >

@@ -33,47 +33,47 @@ export const exploreData = {
   data: [
     {
       title: "Hamburg",
-      description: "722 properties",
+      description: "722",
       imgSource: "/images/cities/hamburg.png",
     },
     {
       title: "Berlin",
-      description: "1748 properties",
+      description: "1748",
       imgSource: "/images/cities/berlin.png",
     },
     {
       title: "Munich",
-      description: "720 properties",
+      description: "720",
       imgSource: "/images/cities/munich.png",
     },
     {
       title: "Cologne",
-      description: "15647 properties",
+      description: "15647",
       imgSource: "/images/cities/cologne.png",
     },
     {
       title: "Frankfurt",
-      description: "25603 properties",
+      description: "25603",
       imgSource: "/images/cities/frankfurt.png",
     },
     {
       title: "Allgau",
-      description: "756 properties",
+      description: "756",
       imgSource: "/images/cities/allgau.png",
     },
     {
       title: "Dresden",
-      description: "368 properties",
+      description: "368",
       imgSource: "/images/cities/dresden.png",
     },
     {
       title: "Baltic Sea",
-      description: "2436 properties",
+      description: "2436",
       imgSource: "/images/cities/balticsea.png",
     },
     {
       title: "Dusseldorf",
-      description: "562 properties",
+      description: "562",
       imgSource: "/images/cities/dusseldorf.png",
     },
   ],
@@ -208,77 +208,71 @@ export const trendingDestinationsData = {
 import { Heart, Building, Flower, Bike } from "lucide-react";
 export const tripPlannerButtonsData = [
   {
-    label: "Romance",
+    label: "PlannerOption1",
     Icon: Heart,
-    selected: true,
   },
   {
-    label: "Beach",
+    label: "PlannerOption2",
     Icon: Heart,
-    selected: false,
   },
   {
-    label: "Ski",
+    label: "PlannerOption3",
     Icon: Heart,
-    selected: false,
   },
   {
-    label: "Relax",
+    label: "PlannerOption4",
     Icon: Flower,
-    selected: false,
   },
   {
-    label: "City",
+    label: "PlannerOption5",
     Icon: Building,
-    selected: false,
   },
   {
-    label: "Outdoors",
+    label: "PlannerOption6",
     Icon: Bike,
-    selected: false,
   },
 ];
 
 export const tripPlannerRomanceData = [
   {
     title: "Volkach",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Zirndof",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Wurzburg",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Veitschochhleim",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
 
   {
     title: "WeiBenstadt",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Suhl",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Zella-Mehlis",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Tauberbischofsheim",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
@@ -288,38 +282,35 @@ export const tripPlannerRomanceData = [
   },
   {
     title: "Weirtheim",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Waldassen",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Tambach-Dietharz",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
   {
     title: "Wolframs-Eschenbach",
-    description: "47 km away",
+    description: "47",
     imgSource: "/images/cities/munich.png",
   },
 ];
 
 export const destinationsButtonOptions = [
   {
-    label: "Regions",
-    selected: true,
+    label: "DestinationsOption1",
   },
   {
-    label: "Cities",
-    selected: false,
+    label: "DestinationsOption2",
   },
   {
-    label: "Place of interst",
-    selected: false,
+    label: "DestinationsOption3",
   },
 ];
 
@@ -404,27 +395,27 @@ export const destinationsData = [
 
 export const footerTopContent = [
   {
-    label: "Mobile version",
+    label: "MobileVersion",
     href: "/",
   },
   {
-    label: "Your account",
+    label: "YourAccount",
     href: "/",
   },
   {
-    label: "Make changes online to your booking",
+    label: "MakeChangesOnlineToYourBanking",
     href: "/",
   },
   {
-    label: "Customer Service Help",
+    label: "CustomerServiceHelp",
     href: "/",
   },
   {
-    label: "Become an affiliate",
+    label: "BecomeAnAffiliate",
     href: "/",
   },
   {
-    label: "Booking.com for Business",
+    label: "BookingForBusiness",
     href: "/",
   },
 ];
@@ -432,195 +423,195 @@ export const footerTopContent = [
 export const footerBottomContent = {
   data1: [
     {
-      label: "Countries",
+      label: "FooterBottomContentData1.Label1",
       href: "/",
     },
     {
-      label: "Regions",
+      label: "FooterBottomContentData1.Label2",
       href: "/",
     },
     {
-      label: "Cities",
+      label: "FooterBottomContentData1.Label3",
       href: "/",
     },
     {
-      label: "Districts",
+      label: "FooterBottomContentData1.Label4",
       href: "/",
     },
     {
-      label: "Airports",
+      label: "FooterBottomContentData1.Label5",
       href: "/",
     },
     {
-      label: "Hotels",
+      label: "FooterBottomContentData1.Label6",
       href: "/",
     },
     {
-      label: "Places of interest",
+      label: "FooterBottomContentData1.Label7",
       href: "/",
     },
   ],
   data2: [
     {
-      label: "Homes",
+      label: "FooterBottomContentData2.Label1",
       href: "/",
     },
     {
-      label: "Apartments",
+      label: "FooterBottomContentData2.Label2",
       href: "/",
     },
     {
-      label: "Resorts",
+      label: "FooterBottomContentData2.Label3",
       href: "/",
     },
     {
-      label: "Villas",
+      label: "FooterBottomContentData2.Label4",
       href: "/",
     },
     {
-      label: "Hostels",
+      label: "FooterBottomContentData2.Label5",
       href: "/",
     },
     {
-      label: "B&Bs",
+      label: "FooterBottomContentData2.Label6",
       href: "/",
     },
     {
-      label: "Guest Houses",
+      label: "FooterBottomContentData2.Label7",
       href: "/",
     },
   ],
   data3: [
     {
-      label: "Unique places to staty",
+      label: "FooterBottomContentData3.Label1",
       href: "/",
     },
     {
-      label: "All destinations",
+      label: "FooterBottomContentData3.Label2",
       href: "/",
     },
     {
-      label: "All flight destintions",
+      label: "FooterBottomContentData3.Label3",
       href: "/",
     },
     {
-      label: "All car rental locations",
+      label: "FooterBottomContentData3.Label4",
       href: "/",
     },
     {
-      label: "Discover",
+      label: "FooterBottomContentData3.Label5",
       href: "/",
     },
     {
-      label: "Reviews",
+      label: "FooterBottomContentData3.Label6",
       href: "/",
     },
     {
-      label: "Discover monthly stays",
+      label: "FooterBottomContentData3.Label7",
       href: "/",
     },
     {
-      label: "Unpacked: Travel articles",
+      label: "FooterBottomContentData3.Label8",
       href: "/",
     },
     {
-      label: "Seasonal and holiday deals",
+      label: "FooterBottomContentData3.Label9",
       href: "/",
     },
     {
-      label: "Traveller review awards",
+      label: "FooterBottomContentData3.Label10",
       href: "/",
     },
   ],
   data4: [
     {
-      label: "Car rental",
+      label: "FooterBottomContentData4.Label1",
       href: "/",
     },
     {
-      label: "Flight finder",
+      label: "FooterBottomContentData4.Label2",
       href: "/",
     },
     {
-      label: "Restaurent reservations",
+      label: "FooterBottomContentData4.Label3",
       href: "/",
     },
     {
-      label: "Booking.com for travel agents",
+      label: "FooterBottomContentData4.Label4",
       href: "/",
     },
   ],
   data5: [
     {
-      label: "Coronavirus (COVID-19) FAQs",
+      label: "FooterBottomContentData5.Label1",
       href: "/",
     },
     {
-      label: "About Booking.com",
+      label: "FooterBottomContentData5.Label2",
       href: "/",
     },
     {
-      label: "Customer Service Help",
+      label: "FooterBottomContentData5.Label3",
       href: "/",
     },
     {
-      label: "Partner Help",
+      label: "FooterBottomContentData5.Label4",
       href: "/",
     },
     {
-      label: "Careers",
+      label: "FooterBottomContentData5.Label5",
       href: "/",
     },
     {
-      label: "Sustainability",
+      label: "FooterBottomContentData5.Label6",
       href: "/",
     },
     {
-      label: "Press center",
+      label: "FooterBottomContentData5.Label7",
       href: "/",
     },
     {
-      label: "Safety resource center",
+      label: "FooterBottomContentData5.Label8",
       href: "/",
     },
     {
-      label: "Investor relations",
+      label: "FooterBottomContentData5.Label9",
       href: "/",
     },
     {
-      label: "Terms & Conditions",
+      label: "FooterBottomContentData5.Label10",
       href: "/",
     },
     {
-      label: "Partner dispute",
+      label: "FooterBottomContentData5.Label11",
       href: "/",
     },
     {
-      label: "How we work",
+      label: "FooterBottomContentData5.Label12",
       href: "/",
     },
     {
-      label: "Privacy & cookie statement",
+      label: "FooterBottomContentData5.Label13",
       href: "/",
     },
     {
-      label: "Manage cookie settings",
+      label: "FooterBottomContentData5.Label14",
       href: "/",
     },
     {
-      label: "Managed personalized recommendations",
+      label: "FooterBottomContentData5.Label15",
       href: "/",
     },
     {
-      label: "MSA statement",
+      label: "FooterBottomContentData5.Label16",
       href: "/",
     },
     {
-      label: "Corporate contact",
+      label: "FooterBottomContentData5.Label17",
       href: "/",
     },
     {
-      label: "Content guidelines and reporting",
+      label: "FooterBottomContentData5.Label18",
       href: "/",
     },
   ],

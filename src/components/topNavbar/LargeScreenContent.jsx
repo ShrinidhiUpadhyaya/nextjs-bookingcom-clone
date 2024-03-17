@@ -8,13 +8,17 @@ import { LoginContext } from "./context/LoginContext";
 
 const LargeScreenContent = () => {
   const userEmail = useBookHotelStore((state) => state.userEmail);
-  const { setLoginDialog, setCurrencyDialog } = useContext(LoginContext);
+  const { setLoginDialog, setCurrencyDialog, setLanguageDialog } =
+    useContext(LoginContext);
 
   return (
     <div className="hidden items-center gap-2 lg:flex">
       <div className="flex gap-2">
         <DSquareButton label="EUR" onClick={() => setCurrencyDialog(true)} />
-        <DSquareButton Icon={<Globe />} />
+        <DSquareButton
+          Icon={<Globe />}
+          onClick={() => setLanguageDialog(true)}
+        />
         {/* <DSquareButton Icon={<HelpCircle />} /> */}
       </div>
 

@@ -121,6 +121,17 @@ export const suggestedCurrencies = [
   },
 ];
 
+export const allLanguages = [
+  {
+    name: "English",
+    locale: "en",
+  },
+  {
+    name: "Deutsch",
+    locale: "de",
+  },
+];
+
 export const currencyDialogStrings = {
   title: "Select your currency",
   description:

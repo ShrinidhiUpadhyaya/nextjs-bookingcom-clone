@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,8 +9,11 @@ import DCarousel from "@/components/DCarousel";
 import { cn } from "@/lib/utils";
 
 import { tripPlannerRomanceData } from "@/app/[locale]/stays/constants/staysConstants";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
 const UniquePropertiesCarousel = ({ className }) => {
+  const t = useContext(StaysTranslationContext);
+
   return (
     <div className={cn(className)}>
       <DCarousel prevButtonStyle="-mt-8" nextButtonStyle="-mt-8">
@@ -34,7 +37,7 @@ const UniquePropertiesCarousel = ({ className }) => {
                 </div>
                 <div className="py-2">
                   <h3 className="secondaryTitleText">{data.title}</h3>
-                  <p className="tertiaryText">{data.description}</p>
+                  <p className="tertiaryText">{`${data.description} km ${t("Away")}`}</p>
                   <div className="flexVCenter mt-2 gap-1 text-xs">
                     <p className="rounded-md bg-[#003B95] p-1 text-white">
                       8.7

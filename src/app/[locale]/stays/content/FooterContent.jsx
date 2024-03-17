@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -8,25 +9,26 @@ import {
   footerTopContent,
   footerBottomContent,
 } from "@/app/[locale]/stays/constants/staysConstants";
+import { StaysTranslationContext } from "../context/TranslationProvider";
 
-const FooterContent = () => {
+const FooterContent = ({ t }) => {
   return (
     <div className="mt-2 w-full">
       <div className="flexHCenter bg-[#00224F]">
         <div className="contentWidth flexCol items-center gap-4 py-12 text-white">
           <div className="items-center">
-            <p className="text-3xl font-light">Save time, save money</p>
-            <p className="mt-1 text-sm font-light">
-              Sign up and we'll send the best deals to you
-            </p>
+            <h3 className="text-3xl font-light">{t("Footerh3")}</h3>
+            <p className="mt-1 text-sm font-light">{t("Footerh3SubText")}</p>
           </div>
 
           <div className="flex w-full gap-2 sm:w-[75%] md:w-[60%]">
             <Input
               className="text-xl font-extralight text-black"
-              placeholder="Your email address"
+              placeholder={t("FooterEmailInputPlaceholder")}
             />
-            <Button className="text-xl font-extralight">Subscribe</Button>
+            <Button className="text-xl font-extralight">
+              {t("FooterSubscribeButton")}
+            </Button>
           </div>
         </div>
       </div>
@@ -36,7 +38,7 @@ const FooterContent = () => {
           href="/"
           className={"rounded-md border border-white p-2 font-light"}
         >
-          List your property
+          {t("ListYourProperty")}
         </Link>
       </div>
 
@@ -49,7 +51,7 @@ const FooterContent = () => {
               href={content.href}
               className="flexHVCenter p-4 hover:bg-[#00224F]"
             >
-              {content.label}
+              {t(`${content.label}`)}
             </Link>
           ))}
         </div>
@@ -63,11 +65,10 @@ const FooterContent = () => {
               href={content.href}
               className="block hover:underline"
             >
-              {content.label}
+              {t(`${content.label}`)}
             </Link>
           ))}
         </div>
-
         <div className="primaryTextColor">
           {footerBottomContent.data2.map((content) => (
             <Link
@@ -75,11 +76,10 @@ const FooterContent = () => {
               href={content.href}
               className="block hover:underline"
             >
-              {content.label}
+              {t(`${content.label}`)}
             </Link>
           ))}
         </div>
-
         <div className="primaryTextColor">
           {footerBottomContent.data3.map((content) => (
             <Link
@@ -87,11 +87,10 @@ const FooterContent = () => {
               href={content.href}
               className="block hover:underline"
             >
-              {content.label}
+              {t(`${content.label}`)}
             </Link>
           ))}
         </div>
-
         <div className="primaryTextColor">
           {footerBottomContent.data4.map((content) => (
             <Link
@@ -99,19 +98,7 @@ const FooterContent = () => {
               href={content.href}
               className="block hover:underline"
             >
-              {content.label}
-            </Link>
-          ))}
-        </div>
-
-        <div className="primaryTextColor">
-          {footerBottomContent.data4.map((content) => (
-            <Link
-              key={content.label}
-              href={content.href}
-              className="block hover:underline"
-            >
-              {content.label}
+              {t(`${content.label}`)}
             </Link>
           ))}
         </div>
@@ -122,7 +109,7 @@ const FooterContent = () => {
               href={content.href}
               className="block hover:underline"
             >
-              {content.label}
+              {t(`${content.label}`)}
             </Link>
           ))}
         </div>

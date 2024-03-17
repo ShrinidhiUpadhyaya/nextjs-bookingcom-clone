@@ -18,3 +18,8 @@ export const useBookHotelStore = create((set) => ({
   userEmail: null,
   setUserEmail: (email) => set(() => ({ userEmail: email })),
 }));
+
+export const useGlobalSettingsStore = create((set) => ({
+  currentLocale: "en",
+  setCurrentLocale: (newLocale) => set(() => ({ currentLocale: newLocale })),
+}));

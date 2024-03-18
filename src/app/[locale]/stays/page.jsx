@@ -56,7 +56,7 @@ const page = ({ params: { locale } }) => {
           </div>
         </div>
       </StaysTranslationContext.Provider>
-      <FooterContent t={t} />
+      <FooterContent locale={locale} />
     </div>
   );
 };

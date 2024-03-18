@@ -10,8 +10,10 @@ import {
   footerBottomContent,
 } from "@/app/[locale]/stays/constants/staysConstants";
 import { StaysTranslationContext } from "../context/TranslationProvider";
+import { useTranslation } from "@/app/i18n/client";
 
-const FooterContent = ({ t }) => {
+const FooterContent = ({ locale }) => {
+  const { t } = useTranslation(locale, "stays");
   return (
     <div className="mt-2 w-full">
       <div className="flexHCenter bg-[#00224F]">

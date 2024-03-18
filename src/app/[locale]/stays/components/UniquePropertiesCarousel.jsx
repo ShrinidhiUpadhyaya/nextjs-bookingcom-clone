@@ -16,7 +16,7 @@ const UniquePropertiesCarousel = ({ className }) => {
 
   return (
     <div className={cn(className)}>
-      <DCarousel prevButtonStyle="-mt-8" nextButtonStyle="-mt-8">
+      <DCarousel prevButtonStyle="-mt-12" nextButtonStyle="-mt-12">
         {tripPlannerRomanceData.map((data) => (
           <CarouselItem
             key={data.title}

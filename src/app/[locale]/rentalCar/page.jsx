@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import FooterContent from "../stays/content/FooterContent";
 import SearchContent from "./content/SearchContent";
@@ -10,8 +8,6 @@ import FAQContent from "./content/FAQContent";
 import { useTranslation } from "@/app/i18n/client";
 
 const page = ({ params: { locale } }) => {
-  const { t } = useTranslation(locale, "stays");
-
   return (
     <div className="w-full ">
       <div className="flexHVCenter w-full bg-[#003B95] pb-20 pt-16">
@@ -34,7 +30,7 @@ const page = ({ params: { locale } }) => {
         <OffersContent />
         <PopularDestinationContent />
         <FAQContent />
-        <FooterContent t={t} />
+        <FooterContent locale={locale} />
       </div>
     </div>
   );

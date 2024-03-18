@@ -12,7 +12,11 @@ import { StaysTranslationContext } from "../context/TranslationProvider";
 const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
   const t = useContext(StaysTranslationContext);
   return (
-    <DCarousel className={cn(className)}>
+    <DCarousel
+      className={cn(className)}
+      prevButtonStyle="-mt-8"
+      nextButtonStyle="-mt-8"
+    >
       {carouselData?.map((data) => (
         <CarouselItem
           key={data.title}

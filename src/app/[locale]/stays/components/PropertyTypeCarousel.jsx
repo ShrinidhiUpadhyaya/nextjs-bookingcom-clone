@@ -11,15 +11,12 @@ import { cn } from "@/lib/utils";
 const PropertyTypeCarousel = ({ carouselData, className }) => {
   return (
     <DCarousel
-      prevButtonStyle="-mt-8"
-      nextButtonStyle="-mt-8"
+      prevButtonStyle="-mt-4"
+      nextButtonStyle="-mt-4"
       className={cn(className)}
     >
       {carouselData?.map((data) => (
-        <CarouselItem
-          key={data.title}
-          className="group h-56 basis-1/2 md:basis-1/4"
-        >
+        <CarouselItem key={data.title} className="group basis-1/2 md:basis-1/4">
           <div>
             <Card className="h-full border-none shadow-none">
               <CardContent className="p-0 pb-2">

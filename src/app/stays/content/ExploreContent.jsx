@@ -6,10 +6,10 @@ import { exploreData } from "@/app/stays/constants/staysConstants";
 const ExploreContent = () => {
   const router = useRouter();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push("/cities");
+  const handleClick = (index) => {
+    router.push(`/properties/${exploreData.data[index].title}`);
   };
+
   return (
     <div className="sectionSpacing">
       <h2 className="primaryTitle">{exploreData.title}</h2>
@@ -19,7 +19,7 @@ const ExploreContent = () => {
       <ExploreContentCarousel
         className="mt-2"
         carouselData={exploreData.data}
-        onClick={handleClick}
+        onClick={(index) => handleClick(index)}
       />
     </div>
   );

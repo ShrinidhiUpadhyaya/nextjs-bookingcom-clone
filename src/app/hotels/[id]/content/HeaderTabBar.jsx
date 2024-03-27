@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Separator } from "@/components/ui/separator";
-import { hotelOverviewOptions } from "@/app/cities/constants/hotelFiltersConstants";
+import { hotelOverviewOptions } from "@/app/properties/[id]/constants/hotelFiltersConstants";
 
 const HeaderTabBar = ({ onCurrentIndexChanged }) => {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);

@@ -15,7 +15,7 @@ import DOutlineButton from "@/components/DOutlineButton";
 import { Leaf, SlidersHorizontal } from "lucide-react";
 import { cn } from "@/lib/utils";
 import getAllProperties from "@/utils/getAllProperties";
-import { filters } from "@/app/cities/constants/hotelFiltersConstants";
+import { filters } from "../constants/hotelFiltersConstants";
 
 const HotelsList = () => {
   const [allProperties, setAllProperties] = useState([]);
@@ -54,7 +54,7 @@ const HotelsList = () => {
 
       <div className="mt-4 grid w-full grid-cols-1 gap-4">
         {allProperties?.map((property) => (
-          <Card key={property.name} className="cursor-pointer">
+          <Card key={property.name}>
             <CardContent className="flex w-full gap-4 p-2">
               <div className="relative max-h-52 min-h-52 min-w-52">
                 <Image
@@ -89,7 +89,7 @@ const HotelsList = () => {
                   </div>
 
                   <Link
-                    href={"/hotels/" + property.id}
+                    href={`/hotels/${property.id}`}
                     className={cn(
                       buttonVariants({ variant: "default" }),
                       "mt-4 w-28 py-6 md:hidden",

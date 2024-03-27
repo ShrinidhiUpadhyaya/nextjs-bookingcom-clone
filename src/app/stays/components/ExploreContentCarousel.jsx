@@ -11,11 +11,14 @@ import { cn } from "@/lib/utils";
 const ExploreContentCarousel = ({ carouselData, onClick, className }) => {
   return (
     <DCarousel className={cn(className)}>
-      {carouselData?.map((data) => (
+      {carouselData?.map((data, index) => (
         <CarouselItem
           key={data.title}
           className="group basis-1/3 cursor-pointer gap-0 md:basis-1/6"
-          onClick={onClick}
+          onClick={(e) => {
+            e.preventDefault();
+            onClick(index);
+          }}
         >
           <div>
             <Card className="border-none">

@@ -25,7 +25,7 @@ const carouselData = [
       "Browse properties offering long term stays, many at reduced monthly rates.",
     buttonText: "Find a stay",
     imgSource: "/hotel.png",
-    link: "/cities",
+    link: "/properties",
   },
   {
     id: "adventure",
